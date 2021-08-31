@@ -1,0 +1,598 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4132144426DE618C0078BE04 /* Windows11App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132144326DE618C0078BE04 /* Windows11App.swift */; };
+		4132144626DE618C0078BE04 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132144526DE618C0078BE04 /* ContentView.swift */; };
+		4132144826DE618D0078BE04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4132144726DE618D0078BE04 /* Assets.xcassets */; };
+		4132144B26DE618D0078BE04 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4132144A26DE618D0078BE04 /* Preview Assets.xcassets */; };
+		4132145726DE618D0078BE04 /* Windows11Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132145626DE618D0078BE04 /* Windows11Tests.swift */; };
+		4132146226DE618D0078BE04 /* Windows11UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132146126DE618D0078BE04 /* Windows11UITests.swift */; };
+		4132147026DE62380078BE04 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132146F26DE62380078BE04 /* BackgroundView.swift */; };
+		4132147226DE68F40078BE04 /* BottomToolBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132147126DE68F40078BE04 /* BottomToolBarView.swift */; };
+		4132147426DE69050078BE04 /* StatusBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132147326DE69050078BE04 /* StatusBarView.swift */; };
+		4132147626DE69340078BE04 /* ShortcutMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132147526DE69340078BE04 /* ShortcutMenuView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4132145326DE618D0078BE04 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4132143826DE618C0078BE04 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4132143F26DE618C0078BE04;
+			remoteInfo = Windows11;
+		};
+		4132145E26DE618D0078BE04 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4132143826DE618C0078BE04 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4132143F26DE618C0078BE04;
+			remoteInfo = Windows11;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4132144026DE618C0078BE04 /* Windows11.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Windows11.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4132144326DE618C0078BE04 /* Windows11App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Windows11App.swift; sourceTree = "<group>"; };
+		4132144526DE618C0078BE04 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4132144726DE618D0078BE04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4132144A26DE618D0078BE04 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4132144C26DE618D0078BE04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4132144D26DE618D0078BE04 /* Windows11.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Windows11.entitlements; sourceTree = "<group>"; };
+		4132145226DE618D0078BE04 /* Windows11Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Windows11Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4132145626DE618D0078BE04 /* Windows11Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Windows11Tests.swift; sourceTree = "<group>"; };
+		4132145826DE618D0078BE04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4132145D26DE618D0078BE04 /* Windows11UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Windows11UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4132146126DE618D0078BE04 /* Windows11UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Windows11UITests.swift; sourceTree = "<group>"; };
+		4132146326DE618D0078BE04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4132146F26DE62380078BE04 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
+		4132147126DE68F40078BE04 /* BottomToolBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomToolBarView.swift; sourceTree = "<group>"; };
+		4132147326DE69050078BE04 /* StatusBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarView.swift; sourceTree = "<group>"; };
+		4132147526DE69340078BE04 /* ShortcutMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutMenuView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4132143D26DE618C0078BE04 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4132144F26DE618D0078BE04 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4132145A26DE618D0078BE04 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4132143726DE618C0078BE04 = {
+			isa = PBXGroup;
+			children = (
+				4132144226DE618C0078BE04 /* Windows11 */,
+				4132145526DE618D0078BE04 /* Windows11Tests */,
+				4132146026DE618D0078BE04 /* Windows11UITests */,
+				4132144126DE618C0078BE04 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4132144126DE618C0078BE04 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4132144026DE618C0078BE04 /* Windows11.app */,
+				4132145226DE618D0078BE04 /* Windows11Tests.xctest */,
+				4132145D26DE618D0078BE04 /* Windows11UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4132144226DE618C0078BE04 /* Windows11 */ = {
+			isa = PBXGroup;
+			children = (
+				4132144326DE618C0078BE04 /* Windows11App.swift */,
+				4132144526DE618C0078BE04 /* ContentView.swift */,
+				4132146F26DE62380078BE04 /* BackgroundView.swift */,
+				4132147126DE68F40078BE04 /* BottomToolBarView.swift */,
+				4132147526DE69340078BE04 /* ShortcutMenuView.swift */,
+				4132147326DE69050078BE04 /* StatusBarView.swift */,
+				4132144726DE618D0078BE04 /* Assets.xcassets */,
+				4132144C26DE618D0078BE04 /* Info.plist */,
+				4132144D26DE618D0078BE04 /* Windows11.entitlements */,
+				4132144926DE618D0078BE04 /* Preview Content */,
+			);
+			path = Windows11;
+			sourceTree = "<group>";
+		};
+		4132144926DE618D0078BE04 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				4132144A26DE618D0078BE04 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4132145526DE618D0078BE04 /* Windows11Tests */ = {
+			isa = PBXGroup;
+			children = (
+				4132145626DE618D0078BE04 /* Windows11Tests.swift */,
+				4132145826DE618D0078BE04 /* Info.plist */,
+			);
+			path = Windows11Tests;
+			sourceTree = "<group>";
+		};
+		4132146026DE618D0078BE04 /* Windows11UITests */ = {
+			isa = PBXGroup;
+			children = (
+				4132146126DE618D0078BE04 /* Windows11UITests.swift */,
+				4132146326DE618D0078BE04 /* Info.plist */,
+			);
+			path = Windows11UITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4132143F26DE618C0078BE04 /* Windows11 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4132146626DE618D0078BE04 /* Build configuration list for PBXNativeTarget "Windows11" */;
+			buildPhases = (
+				4132143C26DE618C0078BE04 /* Sources */,
+				4132143D26DE618C0078BE04 /* Frameworks */,
+				4132143E26DE618C0078BE04 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Windows11;
+			productName = Windows11;
+			productReference = 4132144026DE618C0078BE04 /* Windows11.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4132145126DE618D0078BE04 /* Windows11Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4132146926DE618D0078BE04 /* Build configuration list for PBXNativeTarget "Windows11Tests" */;
+			buildPhases = (
+				4132144E26DE618D0078BE04 /* Sources */,
+				4132144F26DE618D0078BE04 /* Frameworks */,
+				4132145026DE618D0078BE04 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4132145426DE618D0078BE04 /* PBXTargetDependency */,
+			);
+			name = Windows11Tests;
+			productName = Windows11Tests;
+			productReference = 4132145226DE618D0078BE04 /* Windows11Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4132145C26DE618D0078BE04 /* Windows11UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4132146C26DE618D0078BE04 /* Build configuration list for PBXNativeTarget "Windows11UITests" */;
+			buildPhases = (
+				4132145926DE618D0078BE04 /* Sources */,
+				4132145A26DE618D0078BE04 /* Frameworks */,
+				4132145B26DE618D0078BE04 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4132145F26DE618D0078BE04 /* PBXTargetDependency */,
+			);
+			name = Windows11UITests;
+			productName = Windows11UITests;
+			productReference = 4132145D26DE618D0078BE04 /* Windows11UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4132143826DE618C0078BE04 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					4132143F26DE618C0078BE04 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					4132145126DE618D0078BE04 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 4132143F26DE618C0078BE04;
+					};
+					4132145C26DE618D0078BE04 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 4132143F26DE618C0078BE04;
+					};
+				};
+			};
+			buildConfigurationList = 4132143B26DE618C0078BE04 /* Build configuration list for PBXProject "Windows11" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4132143726DE618C0078BE04;
+			productRefGroup = 4132144126DE618C0078BE04 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4132143F26DE618C0078BE04 /* Windows11 */,
+				4132145126DE618D0078BE04 /* Windows11Tests */,
+				4132145C26DE618D0078BE04 /* Windows11UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4132143E26DE618C0078BE04 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4132144B26DE618D0078BE04 /* Preview Assets.xcassets in Resources */,
+				4132144826DE618D0078BE04 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4132145026DE618D0078BE04 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4132145B26DE618D0078BE04 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4132143C26DE618C0078BE04 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4132147626DE69340078BE04 /* ShortcutMenuView.swift in Sources */,
+				4132147026DE62380078BE04 /* BackgroundView.swift in Sources */,
+				4132147426DE69050078BE04 /* StatusBarView.swift in Sources */,
+				4132147226DE68F40078BE04 /* BottomToolBarView.swift in Sources */,
+				4132144626DE618C0078BE04 /* ContentView.swift in Sources */,
+				4132144426DE618C0078BE04 /* Windows11App.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4132144E26DE618D0078BE04 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4132145726DE618D0078BE04 /* Windows11Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4132145926DE618D0078BE04 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4132146226DE618D0078BE04 /* Windows11UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4132145426DE618D0078BE04 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4132143F26DE618C0078BE04 /* Windows11 */;
+			targetProxy = 4132145326DE618D0078BE04 /* PBXContainerItemProxy */;
+		};
+		4132145F26DE618D0078BE04 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4132143F26DE618C0078BE04 /* Windows11 */;
+			targetProxy = 4132145E26DE618D0078BE04 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		4132146426DE618D0078BE04 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4132146526DE618D0078BE04 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		4132146726DE618D0078BE04 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Windows11/Windows11.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"Windows11/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Windows11/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jinxiansen.Windows11;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		4132146826DE618D0078BE04 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Windows11/Windows11.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"Windows11/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Windows11/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jinxiansen.Windows11;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		4132146A26DE618D0078BE04 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Windows11Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jinxiansen.Windows11Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Windows11.app/Contents/MacOS/Windows11";
+			};
+			name = Debug;
+		};
+		4132146B26DE618D0078BE04 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Windows11Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jinxiansen.Windows11Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Windows11.app/Contents/MacOS/Windows11";
+			};
+			name = Release;
+		};
+		4132146D26DE618D0078BE04 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Windows11UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jinxiansen.Windows11UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Windows11;
+			};
+			name = Debug;
+		};
+		4132146E26DE618D0078BE04 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Windows11UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jinxiansen.Windows11UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Windows11;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4132143B26DE618C0078BE04 /* Build configuration list for PBXProject "Windows11" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4132146426DE618D0078BE04 /* Debug */,
+				4132146526DE618D0078BE04 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4132146626DE618D0078BE04 /* Build configuration list for PBXNativeTarget "Windows11" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4132146726DE618D0078BE04 /* Debug */,
+				4132146826DE618D0078BE04 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4132146926DE618D0078BE04 /* Build configuration list for PBXNativeTarget "Windows11Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4132146A26DE618D0078BE04 /* Debug */,
+				4132146B26DE618D0078BE04 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4132146C26DE618D0078BE04 /* Build configuration list for PBXNativeTarget "Windows11UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4132146D26DE618D0078BE04 /* Debug */,
+				4132146E26DE618D0078BE04 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4132143826DE618C0078BE04 /* Project object */;
+}
