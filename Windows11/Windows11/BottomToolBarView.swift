@@ -19,7 +19,7 @@ struct BottomToolBarView: View {
                 StatusBarView()
             }
         }
-        .frame(height: 40.0)
+        .frame(height: 50.0)
         .background(Color.white).opacity(0.85)
     }
 }

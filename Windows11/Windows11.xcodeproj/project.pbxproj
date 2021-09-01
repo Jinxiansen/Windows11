@@ -17,6 +17,7 @@
 		4132147226DE68F40078BE04 /* BottomToolBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132147126DE68F40078BE04 /* BottomToolBarView.swift */; };
 		4132147426DE69050078BE04 /* StatusBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132147326DE69050078BE04 /* StatusBarView.swift */; };
 		4132147626DE69340078BE04 /* ShortcutMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132147526DE69340078BE04 /* ShortcutMenuView.swift */; };
+		4132147826DFC3260078BE04 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132147726DFC3260078BE04 /* CalendarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		4132147126DE68F40078BE04 /* BottomToolBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomToolBarView.swift; sourceTree = "<group>"; };
 		4132147326DE69050078BE04 /* StatusBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarView.swift; sourceTree = "<group>"; };
 		4132147526DE69340078BE04 /* ShortcutMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutMenuView.swift; sourceTree = "<group>"; };
+		4132147726DFC3260078BE04 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				4132147126DE68F40078BE04 /* BottomToolBarView.swift */,
 				4132147526DE69340078BE04 /* ShortcutMenuView.swift */,
 				4132147326DE69050078BE04 /* StatusBarView.swift */,
+				4132147726DFC3260078BE04 /* CalendarView.swift */,
 				4132144726DE618D0078BE04 /* Assets.xcassets */,
 				4132144C26DE618D0078BE04 /* Info.plist */,
 				4132144D26DE618D0078BE04 /* Windows11.entitlements */,
@@ -274,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4132147626DE69340078BE04 /* ShortcutMenuView.swift in Sources */,
+				4132147826DFC3260078BE04 /* CalendarView.swift in Sources */,
 				4132147026DE62380078BE04 /* BackgroundView.swift in Sources */,
 				4132147426DE69050078BE04 /* StatusBarView.swift in Sources */,
 				4132147226DE68F40078BE04 /* BottomToolBarView.swift in Sources */,
