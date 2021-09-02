@@ -18,6 +18,10 @@
 		4132147426DE69050078BE04 /* StatusBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132147326DE69050078BE04 /* StatusBarView.swift */; };
 		4132147626DE69340078BE04 /* ShortcutMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132147526DE69340078BE04 /* ShortcutMenuView.swift */; };
 		4132147826DFC3260078BE04 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132147726DFC3260078BE04 /* CalendarView.swift */; };
+		4132147A26E0FE320078BE04 /* AppMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132147926E0FE320078BE04 /* AppMenuView.swift */; };
+		4132147C26E10AE70078BE04 /* DesktopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132147B26E10AE70078BE04 /* DesktopView.swift */; };
+		4132147E26E10B250078BE04 /* LockScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132147D26E10B250078BE04 /* LockScreenView.swift */; };
+		4132148026E10E9A0078BE04 /* UserLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132147F26E10E9A0078BE04 /* UserLoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +60,10 @@
 		4132147326DE69050078BE04 /* StatusBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarView.swift; sourceTree = "<group>"; };
 		4132147526DE69340078BE04 /* ShortcutMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutMenuView.swift; sourceTree = "<group>"; };
 		4132147726DFC3260078BE04 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		4132147926E0FE320078BE04 /* AppMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMenuView.swift; sourceTree = "<group>"; };
+		4132147B26E10AE70078BE04 /* DesktopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesktopView.swift; sourceTree = "<group>"; };
+		4132147D26E10B250078BE04 /* LockScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockScreenView.swift; sourceTree = "<group>"; };
+		4132147F26E10E9A0078BE04 /* UserLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,7 +116,11 @@
 			children = (
 				4132144326DE618C0078BE04 /* Windows11App.swift */,
 				4132144526DE618C0078BE04 /* ContentView.swift */,
+				4132147D26E10B250078BE04 /* LockScreenView.swift */,
+				4132147F26E10E9A0078BE04 /* UserLoginView.swift */,
+				4132147B26E10AE70078BE04 /* DesktopView.swift */,
 				4132146F26DE62380078BE04 /* BackgroundView.swift */,
+				4132147926E0FE320078BE04 /* AppMenuView.swift */,
 				4132147126DE68F40078BE04 /* BottomToolBarView.swift */,
 				4132147526DE69340078BE04 /* ShortcutMenuView.swift */,
 				4132147326DE69050078BE04 /* StatusBarView.swift */,
@@ -278,9 +290,13 @@
 			files = (
 				4132147626DE69340078BE04 /* ShortcutMenuView.swift in Sources */,
 				4132147826DFC3260078BE04 /* CalendarView.swift in Sources */,
+				4132147A26E0FE320078BE04 /* AppMenuView.swift in Sources */,
 				4132147026DE62380078BE04 /* BackgroundView.swift in Sources */,
+				4132147C26E10AE70078BE04 /* DesktopView.swift in Sources */,
 				4132147426DE69050078BE04 /* StatusBarView.swift in Sources */,
 				4132147226DE68F40078BE04 /* BottomToolBarView.swift in Sources */,
+				4132147E26E10B250078BE04 /* LockScreenView.swift in Sources */,
+				4132148026E10E9A0078BE04 /* UserLoginView.swift in Sources */,
 				4132144626DE618C0078BE04 /* ContentView.swift in Sources */,
 				4132144426DE618C0078BE04 /* Windows11App.swift in Sources */,
 			);

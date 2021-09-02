@@ -225,7 +225,7 @@ private extension Date {
     }
 }
 
-private extension DateFormatter {
+extension DateFormatter {
     convenience init(dateFormat: String, calendar: Calendar) {
         self.init()
         self.dateFormat = dateFormat

@@ -8,24 +8,27 @@
 import SwiftUI
 
 struct BottomToolBarView: View {
+    
+    @State var isDesktop: Bool
     var body: some View {
-        
         ZStack {
             VStack {
-                ShortcutMenuView()
+                if isDesktop {
+                    ShortcutMenuView()
+                }
             }
             HStack {
                 Spacer()
-                StatusBarView()
+                StatusBarView(isDesktop: isDesktop)
             }
         }
         .frame(height: 50.0)
-        .background(Color.white).opacity(0.85)
+        .background(isDesktop ? Color.white: Color.clear).opacity(0.85)
     }
 }
 
 struct BottomToolBarView_Previews: PreviewProvider {
     static var previews: some View {
-        BottomToolBarView()
+        BottomToolBarView(isDesktop: true)
     }
 }

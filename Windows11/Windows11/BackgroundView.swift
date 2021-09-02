@@ -10,13 +10,7 @@ import SwiftUI
 struct BackgroundView: View {
     let image = Image("backgroundBlack")
     var body: some View {
-        image
-            .resizable().aspectRatio(contentMode: .fit)
-            .frame(
-                idealWidth: .infinity,
-                idealHeight: .infinity,
-                alignment: .center
-            )
+        image.resizable().aspectRatio(contentMode: .fit)
     }
 }
 
