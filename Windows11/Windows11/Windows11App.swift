@@ -16,7 +16,7 @@ enum WindowStatus: Int, CaseIterable {
 @main
 struct Windows11App: App {
     
-    @State var status = WindowStatus.lockScreen
+    @State var status = WindowStatus.desktop
     
     var body: some Scene {
         WindowGroup {
@@ -41,6 +41,6 @@ struct Windows11App: App {
         //        guard status != .desktop else {
         //            print("Desktop view: \(arc4random())")
         //            return }
-        status = WindowStatus(rawValue: status.rawValue + 1) ?? .lockScreen
+//        status = WindowStatus(rawValue: status.rawValue + 1) ?? .lockScreen
     }
 }
