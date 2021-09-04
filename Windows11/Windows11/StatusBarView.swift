@@ -54,8 +54,6 @@ struct StatusBarView: View {
                     }.onTapGesture {
                         showingCalendar.toggle()
                         selectedType = .time
-                    }.popover(isPresented: $showingCalendar, arrowEdge: .bottom) {
-                        ContentContentView(calendar: Calendar(identifier: .republicOfChina)).frame(width: 320.0, height: 320.0)
                     }
                 }
                 

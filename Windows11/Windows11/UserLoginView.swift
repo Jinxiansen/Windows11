@@ -9,11 +9,13 @@ import SwiftUI
 
 struct UserLoginView: View {
     
+    @EnvironmentObject var windowObject: WindowStatusObject
+    
     @State var pinCode: String = "jinxiansen"
     @State private var selectedType: StatusBarMenuType?
 
     var body: some View {
-        BackgroundView()
+        BackgroundView().blur(radius: 20.0)
         VStack {
             HStack {
                 loginPopupView
@@ -80,6 +82,7 @@ struct UserLoginView: View {
             Spacer()
             Button {
                 print("Arrow")
+                windowObject.status = .desktop
             } label: {
                 Text("􀰑").bold().font(.largeTitle).foregroundColor(.white.opacity(0.75))
             }.buttonStyle(PlainButtonStyle())

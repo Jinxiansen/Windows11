@@ -9,17 +9,21 @@ import SwiftUI
 
 struct LockScreenView: View {
     
+    @EnvironmentObject var windowObject: WindowStatusObject
     @State private var selectedType: StatusBarMenuType?
 
     var body: some View {
-        BackgroundView()
-        VStack {
-            HStack {
-                lockTime
+        ZStack {
+            VStack {
+                HStack {
+                    lockTime
+                    Spacer()
+                }
                 Spacer()
+                BottomToolBarView(isDesktop: false, selectedType: $selectedType)
             }
-            Spacer()
-            BottomToolBarView(isDesktop: false, selectedType: $selectedType)
+        }.onTapGesture {
+            windowObject.status = .login
         }
     }
         

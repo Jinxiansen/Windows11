@@ -17,6 +17,9 @@ struct ContentContentView: View {
     @State private var selectedDate = Self.now
     private static var now = Date() // Cache now
     
+    static let size = CGSize(width: 360, height: 360)
+    @State private var offset:CGFloat = Self.size.width
+
     init(calendar: Calendar) {
         self.calendar = calendar
         self.monthFormatter = DateFormatter(dateFormat: "MMMM", calendar: calendar)
@@ -40,7 +43,7 @@ struct ContentContentView: View {
                                     : calendar.isDateInToday(date) ? .blue
                                     : .clear
                             )
-                            .cornerRadius(8)
+                            .clipShape(Circle())
                             .accessibilityHidden(true)
                             .overlay(
                                 Text(dayFormatter.string(from: date))
@@ -107,9 +110,19 @@ struct ContentContentView: View {
                 }
             )
             .equatable()
+            .padding(EdgeInsets(top: 10.0, leading: 15.0, bottom: 0.0, trailing: 15.0))
             Spacer()
         }
-        .padding([.leading,.bottom,.trailing], 10.0)
+        .background(Color.white)
+        .shadow(color: .clear, radius: 0, x: 0, y: 0)
+        .clipShape(RoundedRectangle(cornerRadius: 5.0))
+        .frame(width: Self.size.width, height: Self.size.height)
+        .offset(x: 0.0, y: offset)
+        .onAppear {
+            withAnimation(.easeInOut) {
+                self.offset = 0.0
+            }
+        }
     }
 }
 

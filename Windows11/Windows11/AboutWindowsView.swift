@@ -34,7 +34,6 @@ struct AboutWindowsView: View {
                 .background(Color(red: 0.8, green: 0.8, blue: 0.9).opacity(0.1))
             
         }.frame(width: 500.0)
-        .border(Color.black.opacity(0.25), width: 1.0)
         .background(Color.white)
         .clipShape(RoundedRectangle(cornerRadius: 3.0))
         .shadow(color: .black.opacity(0.55), radius: 3, x: 0, y: 2)

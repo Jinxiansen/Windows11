@@ -24,6 +24,8 @@
 		4132148026E10E9A0078BE04 /* UserLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132147F26E10E9A0078BE04 /* UserLoginView.swift */; };
 		4132148226E28FEE0078BE04 /* AboutWindowsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132148126E28FEE0078BE04 /* AboutWindowsView.swift */; };
 		413A02DC26E3187A009E8406 /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A02DB26E3187A009E8406 /* NotificationsView.swift */; };
+		413A031626E37706009E8406 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A031526E37706009E8406 /* Const.swift */; };
+		413A031826E37DC9009E8406 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A031726E37DC9009E8406 /* LaunchView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,8 @@
 		4132147F26E10E9A0078BE04 /* UserLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginView.swift; sourceTree = "<group>"; };
 		4132148126E28FEE0078BE04 /* AboutWindowsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutWindowsView.swift; sourceTree = "<group>"; };
 		413A02DB26E3187A009E8406 /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
+		413A031526E37706009E8406 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		413A031726E37DC9009E8406 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +124,7 @@
 			children = (
 				4132144326DE618C0078BE04 /* Windows11App.swift */,
 				4132144526DE618C0078BE04 /* ContentView.swift */,
+				413A031726E37DC9009E8406 /* LaunchView.swift */,
 				4132147D26E10B250078BE04 /* LockScreenView.swift */,
 				4132147F26E10E9A0078BE04 /* UserLoginView.swift */,
 				4132147B26E10AE70078BE04 /* DesktopView.swift */,
@@ -131,6 +136,7 @@
 				4132147526DE69340078BE04 /* ShortcutMenuView.swift */,
 				4132147326DE69050078BE04 /* StatusBarView.swift */,
 				4132147726DFC3260078BE04 /* CalendarView.swift */,
+				413A031526E37706009E8406 /* Const.swift */,
 				4132144726DE618D0078BE04 /* Assets.xcassets */,
 				4132144C26DE618D0078BE04 /* Info.plist */,
 				4132144D26DE618D0078BE04 /* Windows11.entitlements */,
@@ -295,6 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4132147626DE69340078BE04 /* ShortcutMenuView.swift in Sources */,
+				413A031826E37DC9009E8406 /* LaunchView.swift in Sources */,
 				4132147826DFC3260078BE04 /* CalendarView.swift in Sources */,
 				4132147A26E0FE320078BE04 /* AppMenuView.swift in Sources */,
 				4132147026DE62380078BE04 /* BackgroundView.swift in Sources */,
@@ -307,6 +314,7 @@
 				413A02DC26E3187A009E8406 /* NotificationsView.swift in Sources */,
 				4132148226E28FEE0078BE04 /* AboutWindowsView.swift in Sources */,
 				4132144426DE618C0078BE04 /* Windows11App.swift in Sources */,
+				413A031626E37706009E8406 /* Const.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

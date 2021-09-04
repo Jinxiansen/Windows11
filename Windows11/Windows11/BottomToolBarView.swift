@@ -24,7 +24,7 @@ struct BottomToolBarView: View {
                 StatusBarView(isDesktop: isDesktop, selectedType: $selectedType)
             }
         }
-        .frame(height: 50.0)
+        .frame(height: Const.bottomStatusHeight)
         .background(isDesktop ? Color.white: Color.clear).opacity(0.85)
     }
 }

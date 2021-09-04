@@ -7,7 +7,12 @@
 
 import SwiftUI
 
+class WindowStatusObject: ObservableObject {
+    @Published var status = WindowStatus.launch
+}
+
 enum WindowStatus: Int, CaseIterable {
+    case launch
     case lockScreen
     case login
     case desktop
@@ -16,19 +21,23 @@ enum WindowStatus: Int, CaseIterable {
 @main
 struct Windows11App: App {
     
-    @State var status = WindowStatus.desktop
+    @StateObject var windowObject = WindowStatusObject()
     
     var body: some Scene {
         WindowGroup {
             ZStack {
-                if status == .lockScreen { // not support `switch`
+                if windowObject.status == .launch {  // not support `switch`
+                    LaunchView()
+                } else if windowObject.status == .lockScreen {
                     LockScreenView()
-                } else if status == .login {
+                } else if windowObject.status == .login {
                     UserLoginView()
                 } else {
                     DesktopView()
                 }
-            }.onTapGesture {
+            }
+            .environmentObject(windowObject)
+            .onTapGesture {
                 withAnimation {
                     statusChanged()
                 }

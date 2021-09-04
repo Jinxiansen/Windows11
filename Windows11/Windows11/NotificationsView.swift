@@ -9,9 +9,9 @@ import SwiftUI
 
 struct NotificationsView: View {
     
-    static let width: CGFloat = 300.0
+    private static let width: CGFloat = 300.0
     @State private var offset:CGFloat = width
-
+    
     var body: some View {
         HStack {
             VStack {
@@ -22,16 +22,18 @@ struct NotificationsView: View {
                 Spacer()
                 Text("No new notifications").multilineTextAlignment(.center)
                 Spacer()
-                
                 serverStatusView
             }
         }.frame(width: Self.width)
-        .border(Color.black.opacity(0.25), width: 1.0)
+//        .border(Color.black.opacity(0.25), width: 1.0)
         .background(Color.white)
         .shadow(color: .clear, radius: 0, x: 0, y: 0)
+//        .transition(.asymmetric(insertion: .scale, removal: .opacity))
         .offset(x: offset, y: 0.0)
         .onAppear {
-            withAnimation(.easeInOut) { self.offset = 0.0 }
+            withAnimation(.easeInOut) {
+                self.offset = 0.0
+            }
         }
         
     }
