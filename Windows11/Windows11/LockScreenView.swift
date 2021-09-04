@@ -14,6 +14,7 @@ struct LockScreenView: View {
 
     var body: some View {
         ZStack {
+            BackgroundView()
             VStack {
                 HStack {
                     lockTime

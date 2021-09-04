@@ -11,18 +11,21 @@ struct LaunchView: View {
     
     @EnvironmentObject var windowObject: WindowStatusObject
     @State private var selectedType: StatusBarMenuType?
-    
-    @State private var isLoading = false
-    
+        
     var body: some View {
         BackgroundView()
         VStack {
             Spacer()
+            Image("Screensaver").resizable().frame(width: 150.0, height: 150.0).padding(20.0)
             ActivityIndicator()
                 .frame(width: 50.0, height: 50.0)
                 .foregroundColor(.white)
             Spacer()
             BottomToolBarView(isDesktop: false, selectedType: $selectedType)
+        }.onAppear {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                windowObject.status = .lockScreen
+            }
         }
     }
     
@@ -42,7 +45,6 @@ struct ActivityIndicator: View {
                 .animation(Animation
                             .timingCurve(0.5, 0.15 + Double(index)/5, 0.25, 1, duration: 1.5)
                             .repeatForever(autoreverses: false))
-//                            .repeatCount(1))
             }
         }
         .aspectRatio(1, contentMode: .fit)
