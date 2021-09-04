@@ -10,7 +10,8 @@ import SwiftUI
 struct UserLoginView: View {
     
     @State var pinCode: String = "jinxiansen"
-    
+    @State private var selectedType: StatusBarMenuType?
+
     var body: some View {
         BackgroundView()
         VStack {
@@ -19,7 +20,7 @@ struct UserLoginView: View {
                 Spacer()
             }
             Spacer()
-            BottomToolBarView(isDesktop: false)
+            BottomToolBarView(isDesktop: false, selectedType: $selectedType)
         }
     }
     

@@ -7,9 +7,19 @@
 
 import SwiftUI
 
+enum StatusBarMenuType {
+    case notification
+    case time
+    case loudspeaker
+    case battery
+    case wifi
+    case more
+}
+
 struct StatusBarView: View {
     
     @State var isDesktop: Bool
+    @Binding var selectedType: StatusBarMenuType?
     @State private var showingCalendar = false
 
     var body: some View {
@@ -18,12 +28,14 @@ struct StatusBarView: View {
             HStack {
                 Button {
                     print("WiFi")
+                    selectedType = .wifi
                 } label: {
                     Text("WiFi")
                 }.buttonStyle(PlainButtonStyle())
                 
                 Button {
                     print("Battery")
+                    selectedType = .battery
                 } label: {
                     Text("🔋")
                 }.buttonStyle(PlainButtonStyle())
@@ -31,6 +43,7 @@ struct StatusBarView: View {
                 if isDesktop {
                     Button {
                         print("loudspeaker")
+                        selectedType = .loudspeaker
                     } label: {
                         Text("🔈")
                     }.buttonStyle(PlainButtonStyle())
@@ -40,13 +53,15 @@ struct StatusBarView: View {
                         Text("7/20/2021").font(.caption2)
                     }.onTapGesture {
                         showingCalendar.toggle()
+                        selectedType = .time
                     }.popover(isPresented: $showingCalendar, arrowEdge: .bottom) {
                         ContentContentView(calendar: Calendar(identifier: .republicOfChina)).frame(width: 320.0, height: 320.0)
                     }
                 }
                 
                 Button {
-                    print("Blank.")
+                    print("Notification.")
+                    selectedType = .notification
                 } label: {
                     Image("Blank").resizable().frame(maxWidth: 30.0, maxHeight: 30.0)
                 }.buttonStyle(PlainButtonStyle())
@@ -60,6 +75,6 @@ struct StatusBarView: View {
 
 struct StatusBarView_Previews: PreviewProvider {
     static var previews: some View {
-        StatusBarView(isDesktop: false)
+        StatusBarView(isDesktop: false, selectedType: .constant(nil))
     }
 }

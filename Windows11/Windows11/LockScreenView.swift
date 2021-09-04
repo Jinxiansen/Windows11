@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct LockScreenView: View {
+    
+    @State private var selectedType: StatusBarMenuType?
+
     var body: some View {
         BackgroundView()
         VStack {
@@ -16,7 +19,7 @@ struct LockScreenView: View {
                 Spacer()
             }
             Spacer()
-            BottomToolBarView(isDesktop: false)
+            BottomToolBarView(isDesktop: false, selectedType: $selectedType)
         }
     }
         

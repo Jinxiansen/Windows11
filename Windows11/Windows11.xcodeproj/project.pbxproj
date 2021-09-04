@@ -23,6 +23,7 @@
 		4132147E26E10B250078BE04 /* LockScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132147D26E10B250078BE04 /* LockScreenView.swift */; };
 		4132148026E10E9A0078BE04 /* UserLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132147F26E10E9A0078BE04 /* UserLoginView.swift */; };
 		4132148226E28FEE0078BE04 /* AboutWindowsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132148126E28FEE0078BE04 /* AboutWindowsView.swift */; };
+		413A02DC26E3187A009E8406 /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A02DB26E3187A009E8406 /* NotificationsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		4132147D26E10B250078BE04 /* LockScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockScreenView.swift; sourceTree = "<group>"; };
 		4132147F26E10E9A0078BE04 /* UserLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginView.swift; sourceTree = "<group>"; };
 		4132148126E28FEE0078BE04 /* AboutWindowsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutWindowsView.swift; sourceTree = "<group>"; };
+		413A02DB26E3187A009E8406 /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 				4132147F26E10E9A0078BE04 /* UserLoginView.swift */,
 				4132147B26E10AE70078BE04 /* DesktopView.swift */,
 				4132146F26DE62380078BE04 /* BackgroundView.swift */,
+				413A02DB26E3187A009E8406 /* NotificationsView.swift */,
 				4132148126E28FEE0078BE04 /* AboutWindowsView.swift */,
 				4132147926E0FE320078BE04 /* AppMenuView.swift */,
 				4132147126DE68F40078BE04 /* BottomToolBarView.swift */,
@@ -301,6 +304,7 @@
 				4132147E26E10B250078BE04 /* LockScreenView.swift in Sources */,
 				4132148026E10E9A0078BE04 /* UserLoginView.swift in Sources */,
 				4132144626DE618C0078BE04 /* ContentView.swift in Sources */,
+				413A02DC26E3187A009E8406 /* NotificationsView.swift in Sources */,
 				4132148226E28FEE0078BE04 /* AboutWindowsView.swift in Sources */,
 				4132144426DE618C0078BE04 /* Windows11App.swift in Sources */,
 			);
