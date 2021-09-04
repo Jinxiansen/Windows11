@@ -36,7 +36,7 @@ struct DesktopView: View {
         if selectedType == .notification {
             HStack {
                 Spacer()
-                NotificationsView().padding(EdgeInsets(top: 0.1, leading: 0, bottom: Const.bottomStatusHeight + 0.1, trailing: 0.1))
+                NotificationsView().padding(EdgeInsets(top: 0.1, leading: 0, bottom: Const.bottomStatusHeight + 2, trailing: 0.1))
             }.shadow(color: .black.opacity(0.35), radius: 3, x: -1, y: 0)
         } else if selectedType == .time {
             VStack {

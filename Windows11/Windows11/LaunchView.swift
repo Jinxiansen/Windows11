@@ -11,22 +11,22 @@ struct LaunchView: View {
     
     @EnvironmentObject var windowObject: WindowStatusObject
     @State private var selectedType: StatusBarMenuType?
-        
+
     var body: some View {
-        BackgroundView()
         VStack {
             Spacer()
-            Image("Screensaver").resizable().frame(width: 150.0, height: 150.0).padding(20.0)
+            Image("windows11").resizable().frame(width: 150.0, height: 150.0).padding(20.0)
             ActivityIndicator()
                 .frame(width: 50.0, height: 50.0)
                 .foregroundColor(.white)
+                .padding(.top, 100.0)
             Spacer()
             BottomToolBarView(isDesktop: false, selectedType: $selectedType)
         }.onAppear {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
                 windowObject.status = .lockScreen
             }
-        }
+        }.background(Color.black)
     }
     
 }

@@ -26,6 +26,7 @@
 		413A02DC26E3187A009E8406 /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A02DB26E3187A009E8406 /* NotificationsView.swift */; };
 		413A031626E37706009E8406 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A031526E37706009E8406 /* Const.swift */; };
 		413A031826E37DC9009E8406 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A031726E37DC9009E8406 /* LaunchView.swift */; };
+		413A031A26E3AFD6009E8406 /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A031926E3AFD6009E8406 /* Color+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		413A02DB26E3187A009E8406 /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
 		413A031526E37706009E8406 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		413A031726E37DC9009E8406 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
+		413A031926E3AFD6009E8406 /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 				4132147326DE69050078BE04 /* StatusBarView.swift */,
 				4132147726DFC3260078BE04 /* CalendarView.swift */,
 				413A031526E37706009E8406 /* Const.swift */,
+				413A031926E3AFD6009E8406 /* Color+.swift */,
 				4132144726DE618D0078BE04 /* Assets.xcassets */,
 				4132144C26DE618D0078BE04 /* Info.plist */,
 				4132144D26DE618D0078BE04 /* Windows11.entitlements */,
@@ -301,6 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4132147626DE69340078BE04 /* ShortcutMenuView.swift in Sources */,
+				413A031A26E3AFD6009E8406 /* Color+.swift in Sources */,
 				413A031826E37DC9009E8406 /* LaunchView.swift in Sources */,
 				4132147826DFC3260078BE04 /* CalendarView.swift in Sources */,
 				4132147A26E0FE320078BE04 /* AppMenuView.swift in Sources */,

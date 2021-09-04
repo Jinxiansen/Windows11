@@ -15,7 +15,7 @@ struct AboutWindowsView: View {
     
     var body: some View {
         if isShowing {
-            contentView.transition(.scale(scale: 0.8)).animation(.easeOut(duration: 0.66))
+            contentView.transition(.scale(scale: 0.8)).animation(.easeOut(duration: 0.36))
         } else {
             EmptyView()
         }
@@ -27,6 +27,12 @@ struct AboutWindowsView: View {
                 Text("About Windows")
                     .padding([.top,.leading], 10.0)
                 Spacer()
+                Button {
+                    isShowing.toggle()
+                } label: {
+                    Image(systemName: "xmark").resizable().renderingMode(.template).foregroundColor(Color.gray).frame(width: 15.0, height: 15.0).padding([.top,.trailing], 10.0)
+                }.buttonStyle(PlainButtonStyle())
+
             }.frame(height: 25.0)
             
             descriptionView
@@ -53,24 +59,26 @@ struct AboutWindowsView: View {
     private var descriptionView: some View {
         VStack {
             HStack {
-                Image("Computer").resizable().frame(width: 65.0, height: 65.0)
-                Text("Windows 11").font(.system(size: 45.0)).bold().foregroundColor(.blue)
-            }
+                Image("windows11").resizable().frame(width: 65.0, height: 65.0)
+                Text("Windows 11").font(.system(size: 45.0)).bold().foregroundColor(.main)
+            }.padding(.top, 10.0)
             Divider()
             Group {
                 HStack {
-                    Text("Microsoft Windows (in SwiftUI)\nVersion 21H4(OS Build 23500.92)\n© Blue Edge. All right reserved.")
+                    Text("Microsoft Windows (use SwiftUI)\nVersion Dev(OS Build 21996.1)\n© Microsoft Corporation. All right reserved.")
                     Spacer()
                 }
                 
-                Text("Windows has always existed to be a stage for the world’s innovation. It’s been the backbone of global businesses and where scrappy startups became household names. The web was born and grew up on Windows. It’s the place where many of us wrote our first email, played our first PC game and wrote our first line of code. Windows is the place people go to create, to connect, to learn and to achieve – a platform over a billion people today rely on.").padding(.top, 5.0)
+                Text("The Windows 11 Pro operating system and its user interface are protected by trademark and other pending or existing intellectual property rights in the United States and other countries/regions.").padding(.top, 5.0)
             }
             .fixedSize(horizontal: false, vertical: true)
             
             HStack {
-                Text("This product is licensed with xxx\ncontact: hi@jinxiansen.com\nThis is current status.").fixedSize(horizontal: false, vertical: true)
+                Text("This product is licensed with").fixedSize(horizontal: false, vertical: true)
+                Link("MIT License.", destination: URL(string: Const.licenseURL)!)
+//                Link(Const.email, destination: URL(string: Const.contactMe)!)
                 Spacer()
-            }.padding(.top, 5.0)
+            }.padding(.top, 20.0)
             
             HStack {
                 Spacer()
@@ -82,7 +90,7 @@ struct AboutWindowsView: View {
                         .frame(width: 100.0, height: 30.0)
                         .contentShape(Rectangle())
                 }
-                .border(Color.blue, width: 1.5)
+                .border(Color.main, width: 1.5)
                 .background(Color.white)
                 .buttonStyle(PlainButtonStyle())
                 

@@ -38,7 +38,7 @@ struct UserLoginView: View {
                 Button {
                     print("Forgot password.")
                 } label: {
-                    Text("I forgot my password").font(.title2).foregroundColor(.white)
+                    Image("").font(.title2).foregroundColor(.white)
                 }.padding(.top, 10.0)
                 .buttonStyle(PlainButtonStyle())
 
@@ -53,7 +53,7 @@ struct UserLoginView: View {
                     Button {
                         print("keyboard")
                     } label: {
-                        Image("Keyboard").resizable().frame(width: 40.0, height: 40.0)
+                        Image("keyboard").resizable().frame(width: 40.0, height: 40.0)
                     }.buttonStyle(PlainButtonStyle())
                     
                     Button {

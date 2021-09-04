@@ -19,8 +19,8 @@ enum ShortcutMenuType: CaseIterable {
     var icon: Image {
         switch self {
 //        case .launchPad: return Image("")
-        case .search: return Image("Search")
-        case .setting: return Image("Settings")
+        case .search: return Image("search")
+        case .setting: return Image("settings")
         }
     }
 }
@@ -40,7 +40,7 @@ struct ShortcutMenuView: View {
                 Button {
                     menuItemClick(type: type)
                 } label: {
-                    type.icon.resizable().frame(maxWidth: 30.0, maxHeight: 30.0).padding(5.0)
+                    type.icon.resizable().frame(maxWidth: 25.0, maxHeight: 25.0).padding(5.0)
                 }.buttonStyle(PlainButtonStyle())
             }
         }.alert(isPresented: $showingCalendar) {
@@ -53,7 +53,6 @@ struct ShortcutMenuView: View {
     }
     
     func menuItemClick(type: ShortcutMenuType) {
-        
         switch type {
         case .search:
             print("Search...")

@@ -11,7 +11,7 @@ struct AppMenuView: View {
     
     @State private var showingCalendar = false
     
-    let names = ["Computer","Settings","User","Video file","Zip","Help","Folder Desktop"]
+    let names = ["code","settings","excel","winWord","msoffice","movies","help","oneDrive"]
     
     var body: some View {
         VStack {

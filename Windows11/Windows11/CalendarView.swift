@@ -39,8 +39,8 @@ struct ContentContentView: View {
                             .padding(8)
                             .foregroundColor(.clear)
                             .background(
-                                calendar.isDate(date, inSameDayAs: selectedDate) ? Color.blue
-                                    : calendar.isDateInToday(date) ? .blue
+                                calendar.isDate(date, inSameDayAs: selectedDate) ? Color.main
+                                    : calendar.isDateInToday(date) ? Color.main
                                     : .clear
                             )
                             .clipShape(Circle())
@@ -119,7 +119,7 @@ struct ContentContentView: View {
         .frame(width: Self.size.width, height: Self.size.height)
         .offset(x: 0.0, y: offset)
         .onAppear {
-            withAnimation(.easeInOut) {
+            withAnimation(.easeIn(duration: 0.25)) {
                 self.offset = 0.0
             }
         }
