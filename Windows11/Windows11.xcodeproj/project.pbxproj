@@ -18,13 +18,13 @@
 		4132147626DE69340078BE04 /* BottomShortcutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132147526DE69340078BE04 /* BottomShortcutView.swift */; };
 		4132147826DFC3260078BE04 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132147726DFC3260078BE04 /* CalendarView.swift */; };
 		4132147A26E0FE320078BE04 /* LeadingShortcutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132147926E0FE320078BE04 /* LeadingShortcutView.swift */; };
-		4132147C26E10AE70078BE04 /* DesktopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132147B26E10AE70078BE04 /* DesktopView.swift */; };
-		4132147E26E10B250078BE04 /* LockScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132147D26E10B250078BE04 /* LockScreenView.swift */; };
-		4132148026E10E9A0078BE04 /* UserLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132147F26E10E9A0078BE04 /* UserLoginView.swift */; };
+		4132147C26E10AE70078BE04 /* DesktopScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132147B26E10AE70078BE04 /* DesktopScreen.swift */; };
+		4132147E26E10B250078BE04 /* LockScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132147D26E10B250078BE04 /* LockScreen.swift */; };
+		4132148026E10E9A0078BE04 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132147F26E10E9A0078BE04 /* LoginScreen.swift */; };
 		4132148226E28FEE0078BE04 /* AboutWindowsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132148126E28FEE0078BE04 /* AboutWindowsView.swift */; };
 		413A02DC26E3187A009E8406 /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A02DB26E3187A009E8406 /* NotificationsView.swift */; };
 		413A031626E37706009E8406 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A031526E37706009E8406 /* Const.swift */; };
-		413A031826E37DC9009E8406 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A031726E37DC9009E8406 /* LaunchView.swift */; };
+		413A031826E37DC9009E8406 /* LaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A031726E37DC9009E8406 /* LaunchScreen.swift */; };
 		413A031A26E3AFD6009E8406 /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A031926E3AFD6009E8406 /* Color+.swift */; };
 		413A031C26E48DF4009E8406 /* QuickMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A031B26E48DF4009E8406 /* QuickMenuCell.swift */; };
 		413A031E26E490FE009E8406 /* QuickMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A031D26E490FE009E8406 /* QuickMenuItem.swift */; };
@@ -70,13 +70,13 @@
 		4132147526DE69340078BE04 /* BottomShortcutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomShortcutView.swift; sourceTree = "<group>"; };
 		4132147726DFC3260078BE04 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		4132147926E0FE320078BE04 /* LeadingShortcutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeadingShortcutView.swift; sourceTree = "<group>"; };
-		4132147B26E10AE70078BE04 /* DesktopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesktopView.swift; sourceTree = "<group>"; };
-		4132147D26E10B250078BE04 /* LockScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockScreenView.swift; sourceTree = "<group>"; };
-		4132147F26E10E9A0078BE04 /* UserLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginView.swift; sourceTree = "<group>"; };
+		4132147B26E10AE70078BE04 /* DesktopScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesktopScreen.swift; sourceTree = "<group>"; };
+		4132147D26E10B250078BE04 /* LockScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockScreen.swift; sourceTree = "<group>"; };
+		4132147F26E10E9A0078BE04 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		4132148126E28FEE0078BE04 /* AboutWindowsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutWindowsView.swift; sourceTree = "<group>"; };
 		413A02DB26E3187A009E8406 /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
 		413A031526E37706009E8406 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
-		413A031726E37DC9009E8406 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
+		413A031726E37DC9009E8406 /* LaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreen.swift; sourceTree = "<group>"; };
 		413A031926E3AFD6009E8406 /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
 		413A031B26E48DF4009E8406 /* QuickMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickMenuCell.swift; sourceTree = "<group>"; };
 		413A031D26E490FE009E8406 /* QuickMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickMenuItem.swift; sourceTree = "<group>"; };
@@ -199,7 +199,7 @@
 		413A032726E4F7A5009E8406 /* Launch */ = {
 			isa = PBXGroup;
 			children = (
-				413A031726E37DC9009E8406 /* LaunchView.swift */,
+				413A031726E37DC9009E8406 /* LaunchScreen.swift */,
 			);
 			path = Launch;
 			sourceTree = "<group>";
@@ -207,7 +207,7 @@
 		413A032826E4F7AA009E8406 /* LockScreen */ = {
 			isa = PBXGroup;
 			children = (
-				4132147D26E10B250078BE04 /* LockScreenView.swift */,
+				4132147D26E10B250078BE04 /* LockScreen.swift */,
 			);
 			path = LockScreen;
 			sourceTree = "<group>";
@@ -215,7 +215,7 @@
 		413A032926E4F7B7009E8406 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				4132147F26E10E9A0078BE04 /* UserLoginView.swift */,
+				4132147F26E10E9A0078BE04 /* LoginScreen.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -223,7 +223,15 @@
 		413A032A26E4F7C2009E8406 /* Desktop */ = {
 			isa = PBXGroup;
 			children = (
-				4132147B26E10AE70078BE04 /* DesktopView.swift */,
+				4132147B26E10AE70078BE04 /* DesktopScreen.swift */,
+				413A032D26E50949009E8406 /* Subviews */,
+			);
+			path = Desktop;
+			sourceTree = "<group>";
+		};
+		413A032D26E50949009E8406 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
 				413A031F26E492E4009E8406 /* DoubleClickView.swift */,
 				413A02DB26E3187A009E8406 /* NotificationsView.swift */,
 				413A031B26E48DF4009E8406 /* QuickMenuCell.swift */,
@@ -234,7 +242,7 @@
 				4132147526DE69340078BE04 /* BottomShortcutView.swift */,
 				4132147326DE69050078BE04 /* StatusBarView.swift */,
 			);
-			path = Desktop;
+			path = Subviews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -369,20 +377,20 @@
 				413A032226E4D77F009E8406 /* PreferencesStore.swift in Sources */,
 				4132147626DE69340078BE04 /* BottomShortcutView.swift in Sources */,
 				413A031A26E3AFD6009E8406 /* Color+.swift in Sources */,
-				413A031826E37DC9009E8406 /* LaunchView.swift in Sources */,
+				413A031826E37DC9009E8406 /* LaunchScreen.swift in Sources */,
 				4132147826DFC3260078BE04 /* CalendarView.swift in Sources */,
 				4132147A26E0FE320078BE04 /* LeadingShortcutView.swift in Sources */,
 				413A031E26E490FE009E8406 /* QuickMenuItem.swift in Sources */,
 				4132147026DE62380078BE04 /* BackgroundView.swift in Sources */,
-				4132147C26E10AE70078BE04 /* DesktopView.swift in Sources */,
+				4132147C26E10AE70078BE04 /* DesktopScreen.swift in Sources */,
 				413A031C26E48DF4009E8406 /* QuickMenuCell.swift in Sources */,
 				413A032C26E502B6009E8406 /* DesktopObject.swift in Sources */,
 				4132147426DE69050078BE04 /* StatusBarView.swift in Sources */,
 				413A032426E4F751009E8406 /* WindowStatusObject.swift in Sources */,
 				4132147226DE68F40078BE04 /* BottomToolBarView.swift in Sources */,
 				413A032026E492E4009E8406 /* DoubleClickView.swift in Sources */,
-				4132147E26E10B250078BE04 /* LockScreenView.swift in Sources */,
-				4132148026E10E9A0078BE04 /* UserLoginView.swift in Sources */,
+				4132147E26E10B250078BE04 /* LockScreen.swift in Sources */,
+				4132148026E10E9A0078BE04 /* LoginScreen.swift in Sources */,
 				413A02DC26E3187A009E8406 /* NotificationsView.swift in Sources */,
 				4132148226E28FEE0078BE04 /* AboutWindowsView.swift in Sources */,
 				4132144426DE618C0078BE04 /* Windows11App.swift in Sources */,

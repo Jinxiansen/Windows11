@@ -1,5 +1,5 @@
 //
-//  LockScreenView.swift
+//  LockScreen.swift
 //  Windows11
 //
 //  Created by 晋先森 on 9/2/21.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct LockScreenView: View {
+struct LockScreen: View {
     
     @EnvironmentObject var windowObject: WindowStatusObject
     
@@ -31,15 +31,11 @@ struct LockScreenView: View {
         HStack {
             Spacer()
             VStack {
-                Text(timeText).bold().font(.system(size: 50.0)).foregroundColor(textColor).padding(.top, 75.0)
-                Text(fullText).font(.system(size: 15.0)).foregroundColor(textColor)
+                Text(timeText).bold().font(.system(size: 50.0)).foregroundColor(.white).padding(.top, 75.0)
+                Text(fullText).font(.system(size: 15.0)).foregroundColor(.white)
             }
             Spacer()
         }
-    }
-    
-    private var textColor: Color {
-        Color.textWhite
     }
     
     let formatter = DateFormatter()
@@ -55,8 +51,8 @@ struct LockScreenView: View {
     
 }
 
-struct LockScreenView_Previews: PreviewProvider {
+struct LockScreen_Previews: PreviewProvider {
     static var previews: some View {
-        LockScreenView()
+        LockScreen()
     }
 }

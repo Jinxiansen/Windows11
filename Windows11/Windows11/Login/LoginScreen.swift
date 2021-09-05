@@ -1,5 +1,5 @@
 //
-//  UserLoginView.swift
+//  LoginScreen.swift
 //  Windows11
 //
 //  Created by 晋先森 on 9/2/21.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct UserLoginView: View {
+struct LoginScreen: View {
     
     @EnvironmentObject var windowObject: WindowStatusObject
     
@@ -17,7 +17,7 @@ struct UserLoginView: View {
         BackgroundView().blur(radius: 20.0)
         VStack {
             HStack {
-                loginPopupView
+                contentView
                 Spacer()
             }
             Spacer()
@@ -25,7 +25,7 @@ struct UserLoginView: View {
         }
     }
     
-    var loginPopupView: some View {
+    var contentView: some View {
         HStack {
             Spacer()
             VStack {
@@ -37,15 +37,15 @@ struct UserLoginView: View {
                 Button {
                     print("Forgot password.")
                 } label: {
-                    Image("").font(.title2).foregroundColor(.white)
+                    Text("I forgot my password").font(.title3).foregroundColor(.gray)
                 }.padding(.top, 10.0)
                 .buttonStyle(PlainButtonStyle())
 
                 Button {
                     print("Sign-In options")
                 } label: {
-                    Text("Sign-In options").font(.title2).foregroundColor(.white)
-                }.padding(.top, 10.0)
+                    Text("Sign-In options").font(.title3).foregroundColor(.gray)
+                }.padding(.top, 15.0)
                 .buttonStyle(PlainButtonStyle())
                 
                 HStack {
@@ -58,7 +58,7 @@ struct UserLoginView: View {
                     Button {
                         print("Key")
                     } label: {
-                        Image("Key").resizable().frame(width: 40.0, height: 40.0)
+                        Image("keyboard").resizable().frame(width: 40.0, height: 40.0)
                     }.buttonStyle(PlainButtonStyle())
 
                 }
@@ -102,8 +102,8 @@ struct UserLoginView: View {
     }
 }
 
-struct UserLoginView_Previews: PreviewProvider {
+struct LoginScreen_Previews: PreviewProvider {
     static var previews: some View {
-        UserLoginView()
+        LoginScreen()
     }
 }

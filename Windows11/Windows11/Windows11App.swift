@@ -21,6 +21,7 @@ struct Windows11App: App {
                 contentView
             }
             .environmentObject(windowObject)
+            .environmentObject(desktopObject)
             .preferredColorScheme(store.colorScheme.colorScheme)
             
             .frame(minWidth: 1280.0, idealWidth: 2560, maxWidth: 3840, minHeight: 800.0, idealHeight: 1600.0, maxHeight: 2400.0, alignment: .center)
@@ -29,10 +30,10 @@ struct Windows11App: App {
     
     var contentView: AnyView {
         switch windowObject.status {
-            case .launch: return AnyView(LaunchView())
-            case .lockScreen: return AnyView(LockScreenView())
-            case .login: return AnyView(UserLoginView())
-        case .desktop: return AnyView(DesktopView().environmentObject(desktopObject))
+        case .launch: return AnyView(LaunchScreen())
+        case .lockScreen: return AnyView(LockScreen())
+        case .login: return AnyView(LoginScreen())
+        case .desktop: return AnyView(DesktopScreen())
         }
     }
 }

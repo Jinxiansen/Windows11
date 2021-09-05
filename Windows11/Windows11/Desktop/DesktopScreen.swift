@@ -1,5 +1,5 @@
 //
-//  DesktopView.swift
+//  DesktopScreen.swift
 //  Windows11
 //
 //  Created by 晋先森 on 9/2/21.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct DesktopView: View {
+struct DesktopScreen: View {
         
     @State private var offset:Float = 0
     @EnvironmentObject var desktopObject: DesktopObject
@@ -54,8 +54,8 @@ struct DesktopView: View {
     }
 }
 
-struct DesktopView_Previews: PreviewProvider {
+struct DesktopScreen_Previews: PreviewProvider {
     static var previews: some View {
-        DesktopView()
+        DesktopScreen()
     }
 }

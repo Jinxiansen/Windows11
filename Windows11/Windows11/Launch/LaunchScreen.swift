@@ -1,5 +1,5 @@
 //
-//  LaunchView.swift
+//  LaunchScreen.swift
 //  Windows11
 //
 //  Created by 晋先森 on 9/4/21.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct LaunchView: View {
+struct LaunchScreen: View {
     
     @EnvironmentObject var windowObject: WindowStatusObject
 
@@ -61,8 +61,8 @@ struct ActivityIndicator: View {
     }
 }
 
-struct LaunchView_Previews: PreviewProvider {
+struct LaunchScreen_Previews: PreviewProvider {
     static var previews: some View {
-        LaunchView()
+        LaunchScreen()
     }
 }
