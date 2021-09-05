@@ -26,7 +26,7 @@ struct LaunchView: View {
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
                 windowObject.status = .lockScreen
             }
-        }.background(Color.black)
+        }.background(Color.textBlack)
     }
     
 }

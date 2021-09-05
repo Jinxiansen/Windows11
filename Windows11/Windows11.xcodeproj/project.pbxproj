@@ -30,6 +30,7 @@
 		413A031C26E48DF4009E8406 /* QuickMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A031B26E48DF4009E8406 /* QuickMenuCell.swift */; };
 		413A031E26E490FE009E8406 /* QUickMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A031D26E490FE009E8406 /* QUickMenuItem.swift */; };
 		413A032026E492E4009E8406 /* DoubleClickView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A031F26E492E4009E8406 /* DoubleClickView.swift */; };
+		413A032226E4D77F009E8406 /* PreferencesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A032126E4D77F009E8406 /* PreferencesStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		413A031B26E48DF4009E8406 /* QuickMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickMenuCell.swift; sourceTree = "<group>"; };
 		413A031D26E490FE009E8406 /* QUickMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QUickMenuItem.swift; sourceTree = "<group>"; };
 		413A031F26E492E4009E8406 /* DoubleClickView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleClickView.swift; sourceTree = "<group>"; };
+		413A032126E4D77F009E8406 /* PreferencesStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 				4132147526DE69340078BE04 /* ShortcutMenuView.swift */,
 				4132147326DE69050078BE04 /* StatusBarView.swift */,
 				4132147726DFC3260078BE04 /* CalendarView.swift */,
+				413A032126E4D77F009E8406 /* PreferencesStore.swift */,
 				413A031526E37706009E8406 /* Const.swift */,
 				413A031926E3AFD6009E8406 /* Color+.swift */,
 				4132144726DE618D0078BE04 /* Assets.xcassets */,
@@ -312,6 +315,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				413A032226E4D77F009E8406 /* PreferencesStore.swift in Sources */,
 				4132147626DE69340078BE04 /* ShortcutMenuView.swift in Sources */,
 				413A031A26E3AFD6009E8406 /* Color+.swift in Sources */,
 				413A031826E37DC9009E8406 /* LaunchView.swift in Sources */,

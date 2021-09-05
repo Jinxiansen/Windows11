@@ -14,13 +14,14 @@ enum StatusBarMenuType {
     case battery
     case wifi
     case more
+    case nightLight
 }
 
 struct StatusBarView: View {
     
     @State var isDesktop: Bool
     @Binding var selectedType: StatusBarMenuType?
-    @Environment(\.colorScheme) var colorScheme: ColorScheme
+    
     @State private var showingCalendar = false
 
     var body: some View {
@@ -32,6 +33,11 @@ struct StatusBarView: View {
                 }
                 generateMenuButton(iconName: "battery") {
                     selectedType = .battery
+                }
+                
+                generateMenuButton(iconName: "moon") {
+                    selectedType = .nightLight
+                    PreferencesStore.shared.changeDarkMode()
                 }
                 
                 if isDesktop {
@@ -69,7 +75,7 @@ struct StatusBarView: View {
     }
     
     var iconColor: Color {
-        colorScheme == .light ? .black:.white
+        Color.textBlack
     }
 }
 

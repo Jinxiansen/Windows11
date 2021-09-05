@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DoubleClickView: View {
- 
+    
     var body: some View {
         VStack {
             
@@ -30,7 +30,6 @@ struct DoubleClickView: View {
                 } label: {
                     Text("• ").bold().font(.system(size: 15)) + Text("Small icons")
                 }
-                
                 
                 Divider()
                 

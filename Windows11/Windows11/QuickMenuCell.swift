@@ -27,7 +27,8 @@ struct QuickMenuCell: View {
                     Spacer()
                 }.padding([.top,.leading], 5.0)
             }
-        }.background(item.isSelected ? Color.main:Color.white)
+        }
+        .background(item.isSelected ? Color.main:Color.white)
         .overlay(RoundedRectangle(cornerRadius: 5).stroke(Color.black.opacity(0.2)))
     }
 }

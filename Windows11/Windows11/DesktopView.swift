@@ -17,6 +17,7 @@ struct DesktopView: View {
             .onTapGesture {
                 selectedType = nil
                 print("Click background.")
+                
             }.contextMenu {
                 DoubleClickView()
             }

@@ -40,7 +40,7 @@ struct AboutWindowsView: View {
                 .background(Color(red: 0.8, green: 0.8, blue: 0.9).opacity(0.1))
             
         }.frame(width: 500.0)
-        .background(Color.white)
+        .background(Color.textWhite)
         .clipShape(RoundedRectangle(cornerRadius: 3.0))
         .shadow(color: .black.opacity(0.55), radius: 3, x: 0, y: 2)
         .offset(x: position.width + dragOffset.width, y: position.height + dragOffset.height)
@@ -93,7 +93,7 @@ struct AboutWindowsView: View {
                         .contentShape(Rectangle())
                 }
                 .border(Color.main, width: 1.5)
-                .background(Color.white)
+                .background(Color.textWhite)
                 .buttonStyle(PlainButtonStyle())
                 
             }.padding([.bottom], 20.0)

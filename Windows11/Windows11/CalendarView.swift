@@ -47,7 +47,7 @@ struct ContentContentView: View {
                             .accessibilityHidden(true)
                             .overlay(
                                 Text(dayFormatter.string(from: date))
-                                    .foregroundColor(calendar.isDate(date, inSameDayAs: selectedDate) ? .white:.black)
+                                    .foregroundColor(calendar.isDate(date, inSameDayAs: selectedDate) ? .textWhite:.textBlack)
                             )
                     }.buttonStyle(PlainButtonStyle())
                 },
@@ -113,7 +113,7 @@ struct ContentContentView: View {
             .padding(EdgeInsets(top: 10.0, leading: 15.0, bottom: 0.0, trailing: 15.0))
             Spacer()
         }
-        .background(Color.white)
+        .background(Color.textWhite)
         .shadow(color: .clear, radius: 0, x: 0, y: 0)
         .clipShape(RoundedRectangle(cornerRadius: 5.0))
         .frame(width: Self.size.width, height: Self.size.height)

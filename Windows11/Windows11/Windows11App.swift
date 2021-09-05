@@ -9,6 +9,7 @@ import SwiftUI
 
 class WindowStatusObject: ObservableObject {
     @Published var status = WindowStatus.desktop
+    
 }
 
 enum WindowStatus: Int, CaseIterable {
@@ -22,6 +23,7 @@ enum WindowStatus: Int, CaseIterable {
 struct Windows11App: App {
     
     @StateObject var windowObject = WindowStatusObject()
+    @StateObject var store = PreferencesStore.shared
     
     var body: some Scene {
         WindowGroup {
@@ -37,6 +39,8 @@ struct Windows11App: App {
                 }
             }
             .environmentObject(windowObject)
+            .preferredColorScheme(.light)
+            .preferredColorScheme(store.colorScheme.colorScheme)
             .onTapGesture {
                 withAnimation {
                     statusChanged()

@@ -11,7 +11,7 @@ struct NotificationsView: View {
     
     private static let width: CGFloat = 350.0
     @State private var offset:CGFloat = width
-    
+
     var body: some View {
         VStack {
             HStack {
@@ -29,7 +29,7 @@ struct NotificationsView: View {
             
         }.frame(width: Self.width)
         //        .border(Color.black.opacity(0.25), width: 1.0)
-        .background(Color.white)
+        .background(Color.textWhite)
         .shadow(color: .clear, radius: 0, x: 0, y: 0) // clear superview shadow
         //        .transition(.asymmetric(insertion: .scale, removal: .opacity))
         .offset(x: offset, y: 0.0)
@@ -46,22 +46,24 @@ struct NotificationsView: View {
     var serverStatusView: some View {
         VStack {
             HStack {
-                Text("Collapse").bold()
+                Text("Collapse")
                 Spacer()
             }
-            HStack {
-                ScrollView {
-                    LazyVGrid(columns: gridItemLayout) {
-                        ForEach((0..<menuItems.count), id: \.self) { index in
-                            QuickMenuCell(item: menuItems[index])
-                                .onTapGesture {
-                                    print(menuItems[index].type)
-                                    menuItems[index].isSelected.toggle()
+            ScrollView {
+                LazyVGrid(columns: gridItemLayout) {
+                    ForEach((0..<menuItems.count), id: \.self) { index in
+                        QuickMenuCell(item: menuItems[index])
+                            .onTapGesture {
+                                print(menuItems[index].type)
+                                menuItems[index].isSelected.toggle()
+                                
+                                if menuItems[index].type == .nightLight {
+                                    PreferencesStore.shared.changeDarkMode()
                                 }
-                        }
+                            }
                     }
-                }.frame(height: 200.0)
-            }
+                }
+            }.frame(height: 200.0)
         }.padding(.init(top: 0.0, leading: 20.0, bottom: 0.0, trailing: 20.0))
     }
     

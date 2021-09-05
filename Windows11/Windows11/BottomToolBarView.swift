@@ -11,7 +11,7 @@ struct BottomToolBarView: View {
     
     @State var isDesktop: Bool
     @Binding var selectedType: StatusBarMenuType?
-    
+
     var body: some View {
         ZStack {
             VStack {
@@ -25,7 +25,11 @@ struct BottomToolBarView: View {
             }
         }
         .frame(height: Const.bottomStatusHeight)
-        .background(isDesktop ? Color.white: Color.clear).opacity(0.85)
+        .background(background).opacity(0.85)
+    }
+    
+    var background: Color {
+        isDesktop ? Color.textWhite: Color.clear
     }
 }
 

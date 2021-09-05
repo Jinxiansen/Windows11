@@ -10,7 +10,6 @@ import SwiftUI
 struct LockScreenView: View {
     
     @EnvironmentObject var windowObject: WindowStatusObject
-    @Environment(\.colorScheme) var colorScheme: ColorScheme
     
     @State private var selectedType: StatusBarMenuType?
 
@@ -42,7 +41,7 @@ struct LockScreenView: View {
     }
     
     private var textColor: Color {
-        colorScheme == .light ? .white:.black
+        Color.textWhite
     }
     
     let formatter = DateFormatter()
