@@ -15,7 +15,7 @@ struct AboutWindowsView: View {
     
     var body: some View {
         if isShowing {
-            contentView.transition(.scale(scale: 0.8)).animation(.easeOut(duration: 0.36))
+            contentView
         } else {
             EmptyView()
         }

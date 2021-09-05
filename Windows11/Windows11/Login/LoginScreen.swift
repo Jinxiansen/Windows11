@@ -10,18 +10,19 @@ import SwiftUI
 struct LoginScreen: View {
     
     @EnvironmentObject var windowObject: WindowStatusObject
-    
     @State var pinCode: String = "jinxiansen"
 
     var body: some View {
-        BackgroundView().blur(radius: 20.0)
-        VStack {
-            HStack {
-                contentView
+        ZStack {
+            BackgroundView().blur(radius: 20.0)
+            VStack {
+                HStack {
+                    contentView
+                    Spacer()
+                }
                 Spacer()
+                BottomToolBarView(isDesktop: false)
             }
-            Spacer()
-            BottomToolBarView(isDesktop: false)
         }
     }
     
@@ -81,7 +82,9 @@ struct LoginScreen: View {
             Spacer()
             Button {
                 print("Arrow")
-                windowObject.status = .desktop
+                withAnimation(.easeInOut(duration: 2)) {
+                    windowObject.status = .desktop
+                }
             } label: {
                 Text("􀰑").bold().font(.largeTitle).foregroundColor(.white.opacity(0.75))
             }.buttonStyle(PlainButtonStyle())

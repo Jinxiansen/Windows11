@@ -38,7 +38,9 @@ struct BottomShortcutView: View {
         HStack {
             ForEach(cases, id: \.self) { type in
                 Button {
-                    desktopObject.bottomType = type
+                    withAnimation {
+                        desktopObject.bottomType = type
+                    }
                 } label: {
                     type.icon.resizable()
                         .frame(maxWidth: 25.0, maxHeight: 25.0)

@@ -10,21 +10,30 @@ import SwiftUI
 struct LockScreen: View {
     
     @EnvironmentObject var windowObject: WindowStatusObject
-    
+    @State private var offset:CGFloat = -75.0
+
     var body: some View {
         ZStack {
-            BackgroundView()
-            VStack {
-                HStack {
-                    lockTime
+            ZStack {
+                BackgroundView()
+                VStack {
+                    HStack {
+                        lockTime
+                        Spacer()
+                    }.offset(x: 0.0, y: offset)
+                    .onAppear {
+                        withAnimation(.easeInOut) {
+                            self.offset = 0.0
+                        }
+                    }
                     Spacer()
+                    BottomToolBarView(isDesktop: false)
                 }
-                Spacer()
-                BottomToolBarView(isDesktop: false)
             }
         }.onTapGesture {
             windowObject.status = .login
         }
+
     }
         
     var lockTime: some View {

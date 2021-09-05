@@ -13,14 +13,17 @@ struct LaunchScreen: View {
 
     var body: some View {
         VStack {
-            Spacer()
-            Image("windows11").resizable().frame(width: 150.0, height: 150.0).padding(20.0)
-            ActivityIndicator()
-                .frame(width: 50.0, height: 50.0)
-                .foregroundColor(.white)
-                .padding(.top, 100.0)
-            Spacer()
-            BottomToolBarView(isDesktop: false)
+            VStack {
+                Spacer()
+                Image("windows11").resizable().frame(width: 150.0, height: 150.0).padding(20.0)
+                ActivityIndicator()
+                    .frame(width: 50.0, height: 50.0)
+                    .foregroundColor(.white)
+                    .padding(.top, 100.0)
+                Spacer()
+                BottomToolBarView(isDesktop: false)
+            }.background(Color.textBlack)
+            .animation(.spring(response: 1, dampingFraction: 1, blendDuration: 1))
         }.onAppear {
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
                 windowObject.status = .lockScreen

@@ -62,7 +62,9 @@ struct StatusBarView: View {
     
     func toggle(type: StatusBarMenuType) {
         if desktopObject.statusType != type {
-            desktopObject.statusType = type
+            withAnimation {
+                desktopObject.statusType = type
+            }
         } else {
             desktopObject.statusType = nil
         }
