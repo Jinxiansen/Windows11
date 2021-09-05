@@ -10,18 +10,17 @@ import SwiftUI
 struct BottomToolBarView: View {
     
     @State var isDesktop: Bool
-    @Binding var selectedType: StatusBarMenuType?
-
+    
     var body: some View {
         ZStack {
             VStack {
                 if isDesktop {
-                    ShortcutMenuView()
+                    BottomShortcutView()
                 }
             }
             HStack {
                 Spacer()
-                StatusBarView(isDesktop: isDesktop, selectedType: $selectedType)
+                StatusBarView(isDesktop: isDesktop)
             }
         }
         .frame(height: Const.bottomStatusHeight)
@@ -35,6 +34,6 @@ struct BottomToolBarView: View {
 
 struct BottomToolBarView_Previews: PreviewProvider {
     static var previews: some View {
-        BottomToolBarView(isDesktop: true, selectedType: .constant(nil))
+        BottomToolBarView(isDesktop: true)
     }
 }

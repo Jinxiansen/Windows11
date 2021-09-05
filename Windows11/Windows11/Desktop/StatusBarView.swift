@@ -15,44 +15,42 @@ enum StatusBarMenuType {
     case wifi
     case more
     case nightLight
+    
 }
 
 struct StatusBarView: View {
     
     @State var isDesktop: Bool
-    @Binding var selectedType: StatusBarMenuType?
+    @EnvironmentObject var desktopObject: DesktopObject
     
-    @State private var showingCalendar = false
-
     var body: some View {
         HStack {
             Spacer()
             HStack {
                 generateMenuButton(iconName: "wifi") {
-                    selectedType = .wifi
+                    toggle(type: .wifi)
                 }
                 generateMenuButton(iconName: "battery") {
-                    selectedType = .battery
+                    toggle(type: .battery)
                 }
                 
                 generateMenuButton(iconName: "moon") {
-                    selectedType = .nightLight
+                    toggle(type: .nightLight)
                     PreferencesStore.shared.changeDarkMode()
                 }
                 
                 if isDesktop {
                     generateMenuButton(iconName: "audio") {
-                        selectedType = .loudspeaker
+                        toggle(type: .loudspeaker)
                     }
                     VStack {
                         Text("1:55 PM").font(.caption2)
                         Text("7/20/2021").font(.caption2)
                     }.onTapGesture {
-                        showingCalendar.toggle()
-                        selectedType = .time
+                        toggle(type: .time)
                     }
                     generateMenuButton(iconName: "reply") {
-                        selectedType = .notification
+                        toggle(type: .notification)
                     }
                 }
                 
@@ -62,7 +60,16 @@ struct StatusBarView: View {
         }.padding(.trailing, 15.0)
     }
     
-    func generateMenuButton(iconName: String, tapClosure: @escaping (() -> ())) -> some View {
+    func toggle(type: StatusBarMenuType) {
+        if desktopObject.statusType != type {
+            desktopObject.statusType = type
+        } else {
+            desktopObject.statusType = nil
+        }
+    }
+    
+    func generateMenuButton(iconName: String,
+                            tapClosure: @escaping (() -> ())) -> some View {
         Button {
             tapClosure()
         } label: {
@@ -81,6 +88,6 @@ struct StatusBarView: View {
 
 struct StatusBarView_Previews: PreviewProvider {
     static var previews: some View {
-        StatusBarView(isDesktop: false, selectedType: .constant(nil))
+        StatusBarView(isDesktop: false)
     }
 }

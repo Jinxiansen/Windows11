@@ -10,7 +10,8 @@ import SwiftUI
 class PreferencesStore: ObservableObject {
     
     static let shared = PreferencesStore()
-    @AppStorage("currentColorScheme") var colorScheme: ColorTheme = .light {
+//    @AppStorage("currentColorScheme")
+    @Published var colorScheme: ColorTheme = .light {
         didSet {
             objectWillChange.send()
         }

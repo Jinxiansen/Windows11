@@ -10,7 +10,6 @@ import SwiftUI
 struct LaunchView: View {
     
     @EnvironmentObject var windowObject: WindowStatusObject
-    @State private var selectedType: StatusBarMenuType?
 
     var body: some View {
         VStack {
@@ -21,7 +20,7 @@ struct LaunchView: View {
                 .foregroundColor(.white)
                 .padding(.top, 100.0)
             Spacer()
-            BottomToolBarView(isDesktop: false, selectedType: $selectedType)
+            BottomToolBarView(isDesktop: false)
         }.onAppear {
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
                 windowObject.status = .lockScreen

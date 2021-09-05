@@ -11,8 +11,6 @@ struct LockScreenView: View {
     
     @EnvironmentObject var windowObject: WindowStatusObject
     
-    @State private var selectedType: StatusBarMenuType?
-
     var body: some View {
         ZStack {
             BackgroundView()
@@ -22,7 +20,7 @@ struct LockScreenView: View {
                     Spacer()
                 }
                 Spacer()
-                BottomToolBarView(isDesktop: false, selectedType: $selectedType)
+                BottomToolBarView(isDesktop: false)
             }
         }.onTapGesture {
             windowObject.status = .login

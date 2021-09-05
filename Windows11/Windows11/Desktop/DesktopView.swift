@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct DesktopView: View {
-    
-    @State private var selectedType: StatusBarMenuType?
+        
     @State private var offset:Float = 0
-    
+    @EnvironmentObject var desktopObject: DesktopObject
+
     var body: some View {
         BackgroundView()
             .onTapGesture {
-                selectedType = nil
+                desktopObject.statusType = nil
                 print("Click background.")
                 
             }.contextMenu {
@@ -23,11 +23,11 @@ struct DesktopView: View {
             }
         VStack {
             HStack {
-                AppMenuView()
+                LeadingShortcutView()
                 Spacer()
             }
             Spacer()
-            BottomToolBarView(isDesktop: true, selectedType: $selectedType)
+            BottomToolBarView(isDesktop: true)
         }
         VStack {
             HStack {
@@ -36,12 +36,12 @@ struct DesktopView: View {
             }
             Spacer()
         }
-        if selectedType == .notification {
+        if desktopObject.statusType == .notification {
             HStack {
                 Spacer()
                 NotificationsView().padding(EdgeInsets(top: 0.1, leading: 0, bottom: Const.bottomStatusHeight + 2, trailing: 0.1))
             }.shadow(color: .black.opacity(0.35), radius: 3, x: -1, y: 0)
-        } else if selectedType == .time {
+        } else if desktopObject.statusType == .time {
             VStack {
                 Spacer()
                 HStack {
@@ -51,7 +51,6 @@ struct DesktopView: View {
                 }
             }.shadow(color: .black.opacity(0.35), radius: 3, x: -1, y: 0)
         }
-        
     }
 }
 

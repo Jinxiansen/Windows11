@@ -11,4 +11,6 @@ extension Color {
     static let main = Color("main")
     static let textWhite = Color("textWhite")
     static let textBlack = Color("textBlack")
+    static let checked = Color("checked")
+    static let unchecked = Color("unchecked")
 }

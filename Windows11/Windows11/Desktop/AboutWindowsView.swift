@@ -34,6 +34,7 @@ struct AboutWindowsView: View {
                 }.buttonStyle(PlainButtonStyle())
 
             }.frame(height: 25.0)
+            .background(Color.textWhite)
             
             descriptionView
                 .padding([.horizontal], 30.0)
@@ -65,7 +66,7 @@ struct AboutWindowsView: View {
             Divider()
             Group {
                 HStack {
-                    Text("Microsoft Windows (use SwiftUI)\nVersion Dev(OS Build 21996.1)\n© Microsoft Corporation. All right reserved.")
+                    Text("Microsoft Windows (in SwiftUI)\nVersion Dev(OS Build 21996.1)\n© Microsoft Corporation. All right reserved.")
                     Spacer()
                 }
                 HStack {

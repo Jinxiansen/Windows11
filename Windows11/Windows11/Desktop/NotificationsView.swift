@@ -41,7 +41,7 @@ struct NotificationsView: View {
     }
     
     private let gridItemLayout = [GridItem(.flexible()), GridItem(.flexible()),GridItem(.flexible()), GridItem(.flexible())]
-    @State private var menuItems = QuickMenuType.allCases.map { QUickMenuItem(type: $0) }
+    @State private var menuItems = QuickMenuType.allCases.map { QuickMenuItem(type: $0) }
     
     var serverStatusView: some View {
         VStack {
@@ -54,8 +54,8 @@ struct NotificationsView: View {
                     ForEach((0..<menuItems.count), id: \.self) { index in
                         QuickMenuCell(item: menuItems[index])
                             .onTapGesture {
-                                print(menuItems[index].type)
                                 menuItems[index].isSelected.toggle()
+                                print(menuItems[index].debugDescription)
                                 
                                 if menuItems[index].type == .nightLight {
                                     PreferencesStore.shared.changeDarkMode()

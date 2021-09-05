@@ -1,5 +1,5 @@
 //
-//  AppMenuView.swift
+//  LeadingShortcutView.swift
 //  Windows11
 //
 //  Created by 晋先森 on 9/2/21.
@@ -7,9 +7,7 @@
 
 import SwiftUI
 
-struct AppMenuView: View {
-    
-    @State private var showingCalendar = false
+struct LeadingShortcutView: View {
     
     let names = ["code","settings","excel","winWord","msoffice","movies","help","oneDrive"]
     
@@ -27,8 +25,8 @@ struct AppMenuView: View {
     }
 }
 
-struct AppMenuView_Previews: PreviewProvider {
+struct LeadingShortcutView_Previews: PreviewProvider {
     static var previews: some View {
-        AppMenuView()
+        LeadingShortcutView()
     }
 }

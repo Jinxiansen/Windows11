@@ -12,7 +12,6 @@ struct UserLoginView: View {
     @EnvironmentObject var windowObject: WindowStatusObject
     
     @State var pinCode: String = "jinxiansen"
-    @State private var selectedType: StatusBarMenuType?
 
     var body: some View {
         BackgroundView().blur(radius: 20.0)
@@ -22,7 +21,7 @@ struct UserLoginView: View {
                 Spacer()
             }
             Spacer()
-            BottomToolBarView(isDesktop: false, selectedType: $selectedType)
+            BottomToolBarView(isDesktop: false)
         }
     }
     

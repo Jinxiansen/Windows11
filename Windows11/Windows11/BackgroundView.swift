@@ -9,14 +9,8 @@ import SwiftUI
 
 struct BackgroundView: View {
     
-    @Environment(\.colorScheme) var colorScheme: ColorScheme
-
     var body: some View {
-        Image(imageName).resizable().aspectRatio(contentMode: .fill)
-    }
-    
-    var imageName: String {
-        colorScheme == .light ? "backgroundWhite":"backgroundBlack"
+        Image("background").resizable().aspectRatio(contentMode: .fill)
     }
 }
 

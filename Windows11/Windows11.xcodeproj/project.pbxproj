@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4132144426DE618C0078BE04 /* Windows11App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132144326DE618C0078BE04 /* Windows11App.swift */; };
-		4132144626DE618C0078BE04 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132144526DE618C0078BE04 /* ContentView.swift */; };
 		4132144826DE618D0078BE04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4132144726DE618D0078BE04 /* Assets.xcassets */; };
 		4132144B26DE618D0078BE04 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4132144A26DE618D0078BE04 /* Preview Assets.xcassets */; };
 		4132145726DE618D0078BE04 /* Windows11Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132145626DE618D0078BE04 /* Windows11Tests.swift */; };
@@ -16,9 +15,9 @@
 		4132147026DE62380078BE04 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132146F26DE62380078BE04 /* BackgroundView.swift */; };
 		4132147226DE68F40078BE04 /* BottomToolBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132147126DE68F40078BE04 /* BottomToolBarView.swift */; };
 		4132147426DE69050078BE04 /* StatusBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132147326DE69050078BE04 /* StatusBarView.swift */; };
-		4132147626DE69340078BE04 /* ShortcutMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132147526DE69340078BE04 /* ShortcutMenuView.swift */; };
+		4132147626DE69340078BE04 /* BottomShortcutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132147526DE69340078BE04 /* BottomShortcutView.swift */; };
 		4132147826DFC3260078BE04 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132147726DFC3260078BE04 /* CalendarView.swift */; };
-		4132147A26E0FE320078BE04 /* AppMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132147926E0FE320078BE04 /* AppMenuView.swift */; };
+		4132147A26E0FE320078BE04 /* LeadingShortcutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132147926E0FE320078BE04 /* LeadingShortcutView.swift */; };
 		4132147C26E10AE70078BE04 /* DesktopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132147B26E10AE70078BE04 /* DesktopView.swift */; };
 		4132147E26E10B250078BE04 /* LockScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132147D26E10B250078BE04 /* LockScreenView.swift */; };
 		4132148026E10E9A0078BE04 /* UserLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132147F26E10E9A0078BE04 /* UserLoginView.swift */; };
@@ -28,9 +27,11 @@
 		413A031826E37DC9009E8406 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A031726E37DC9009E8406 /* LaunchView.swift */; };
 		413A031A26E3AFD6009E8406 /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A031926E3AFD6009E8406 /* Color+.swift */; };
 		413A031C26E48DF4009E8406 /* QuickMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A031B26E48DF4009E8406 /* QuickMenuCell.swift */; };
-		413A031E26E490FE009E8406 /* QUickMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A031D26E490FE009E8406 /* QUickMenuItem.swift */; };
+		413A031E26E490FE009E8406 /* QuickMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A031D26E490FE009E8406 /* QuickMenuItem.swift */; };
 		413A032026E492E4009E8406 /* DoubleClickView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A031F26E492E4009E8406 /* DoubleClickView.swift */; };
 		413A032226E4D77F009E8406 /* PreferencesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A032126E4D77F009E8406 /* PreferencesStore.swift */; };
+		413A032426E4F751009E8406 /* WindowStatusObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A032326E4F751009E8406 /* WindowStatusObject.swift */; };
+		413A032C26E502B6009E8406 /* DesktopObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A032B26E502B6009E8406 /* DesktopObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,7 +54,6 @@
 /* Begin PBXFileReference section */
 		4132144026DE618C0078BE04 /* Windows11.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Windows11.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4132144326DE618C0078BE04 /* Windows11App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Windows11App.swift; sourceTree = "<group>"; };
-		4132144526DE618C0078BE04 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4132144726DE618D0078BE04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4132144A26DE618D0078BE04 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4132144C26DE618D0078BE04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -67,9 +67,9 @@
 		4132146F26DE62380078BE04 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		4132147126DE68F40078BE04 /* BottomToolBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomToolBarView.swift; sourceTree = "<group>"; };
 		4132147326DE69050078BE04 /* StatusBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarView.swift; sourceTree = "<group>"; };
-		4132147526DE69340078BE04 /* ShortcutMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutMenuView.swift; sourceTree = "<group>"; };
+		4132147526DE69340078BE04 /* BottomShortcutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomShortcutView.swift; sourceTree = "<group>"; };
 		4132147726DFC3260078BE04 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
-		4132147926E0FE320078BE04 /* AppMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMenuView.swift; sourceTree = "<group>"; };
+		4132147926E0FE320078BE04 /* LeadingShortcutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeadingShortcutView.swift; sourceTree = "<group>"; };
 		4132147B26E10AE70078BE04 /* DesktopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesktopView.swift; sourceTree = "<group>"; };
 		4132147D26E10B250078BE04 /* LockScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockScreenView.swift; sourceTree = "<group>"; };
 		4132147F26E10E9A0078BE04 /* UserLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginView.swift; sourceTree = "<group>"; };
@@ -79,9 +79,11 @@
 		413A031726E37DC9009E8406 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 		413A031926E3AFD6009E8406 /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
 		413A031B26E48DF4009E8406 /* QuickMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickMenuCell.swift; sourceTree = "<group>"; };
-		413A031D26E490FE009E8406 /* QUickMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QUickMenuItem.swift; sourceTree = "<group>"; };
+		413A031D26E490FE009E8406 /* QuickMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickMenuItem.swift; sourceTree = "<group>"; };
 		413A031F26E492E4009E8406 /* DoubleClickView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleClickView.swift; sourceTree = "<group>"; };
 		413A032126E4D77F009E8406 /* PreferencesStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesStore.swift; sourceTree = "<group>"; };
+		413A032326E4F751009E8406 /* WindowStatusObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowStatusObject.swift; sourceTree = "<group>"; };
+		413A032B26E502B6009E8406 /* DesktopObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesktopObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,25 +135,14 @@
 			isa = PBXGroup;
 			children = (
 				4132144326DE618C0078BE04 /* Windows11App.swift */,
-				4132144526DE618C0078BE04 /* ContentView.swift */,
-				413A031726E37DC9009E8406 /* LaunchView.swift */,
-				4132147D26E10B250078BE04 /* LockScreenView.swift */,
-				4132147F26E10E9A0078BE04 /* UserLoginView.swift */,
-				4132147B26E10AE70078BE04 /* DesktopView.swift */,
-				413A031F26E492E4009E8406 /* DoubleClickView.swift */,
+				413A032726E4F7A5009E8406 /* Launch */,
+				413A032826E4F7AA009E8406 /* LockScreen */,
+				413A032926E4F7B7009E8406 /* Login */,
+				413A032A26E4F7C2009E8406 /* Desktop */,
 				4132146F26DE62380078BE04 /* BackgroundView.swift */,
-				413A02DB26E3187A009E8406 /* NotificationsView.swift */,
-				413A031B26E48DF4009E8406 /* QuickMenuCell.swift */,
-				413A031D26E490FE009E8406 /* QUickMenuItem.swift */,
-				4132148126E28FEE0078BE04 /* AboutWindowsView.swift */,
-				4132147926E0FE320078BE04 /* AppMenuView.swift */,
-				4132147126DE68F40078BE04 /* BottomToolBarView.swift */,
-				4132147526DE69340078BE04 /* ShortcutMenuView.swift */,
-				4132147326DE69050078BE04 /* StatusBarView.swift */,
 				4132147726DFC3260078BE04 /* CalendarView.swift */,
-				413A032126E4D77F009E8406 /* PreferencesStore.swift */,
-				413A031526E37706009E8406 /* Const.swift */,
-				413A031926E3AFD6009E8406 /* Color+.swift */,
+				413A032626E4F778009E8406 /* Objects */,
+				413A032526E4F771009E8406 /* Extensions */,
 				4132144726DE618D0078BE04 /* Assets.xcassets */,
 				4132144C26DE618D0078BE04 /* Info.plist */,
 				4132144D26DE618D0078BE04 /* Windows11.entitlements */,
@@ -184,6 +175,66 @@
 				4132146326DE618D0078BE04 /* Info.plist */,
 			);
 			path = Windows11UITests;
+			sourceTree = "<group>";
+		};
+		413A032526E4F771009E8406 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				413A031526E37706009E8406 /* Const.swift */,
+				413A031926E3AFD6009E8406 /* Color+.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		413A032626E4F778009E8406 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				413A032126E4D77F009E8406 /* PreferencesStore.swift */,
+				413A032326E4F751009E8406 /* WindowStatusObject.swift */,
+				413A032B26E502B6009E8406 /* DesktopObject.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		413A032726E4F7A5009E8406 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				413A031726E37DC9009E8406 /* LaunchView.swift */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		413A032826E4F7AA009E8406 /* LockScreen */ = {
+			isa = PBXGroup;
+			children = (
+				4132147D26E10B250078BE04 /* LockScreenView.swift */,
+			);
+			path = LockScreen;
+			sourceTree = "<group>";
+		};
+		413A032926E4F7B7009E8406 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				4132147F26E10E9A0078BE04 /* UserLoginView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		413A032A26E4F7C2009E8406 /* Desktop */ = {
+			isa = PBXGroup;
+			children = (
+				4132147B26E10AE70078BE04 /* DesktopView.swift */,
+				413A031F26E492E4009E8406 /* DoubleClickView.swift */,
+				413A02DB26E3187A009E8406 /* NotificationsView.swift */,
+				413A031B26E48DF4009E8406 /* QuickMenuCell.swift */,
+				413A031D26E490FE009E8406 /* QuickMenuItem.swift */,
+				4132148126E28FEE0078BE04 /* AboutWindowsView.swift */,
+				4132147926E0FE320078BE04 /* LeadingShortcutView.swift */,
+				4132147126DE68F40078BE04 /* BottomToolBarView.swift */,
+				4132147526DE69340078BE04 /* BottomShortcutView.swift */,
+				4132147326DE69050078BE04 /* StatusBarView.swift */,
+			);
+			path = Desktop;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,21 +367,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				413A032226E4D77F009E8406 /* PreferencesStore.swift in Sources */,
-				4132147626DE69340078BE04 /* ShortcutMenuView.swift in Sources */,
+				4132147626DE69340078BE04 /* BottomShortcutView.swift in Sources */,
 				413A031A26E3AFD6009E8406 /* Color+.swift in Sources */,
 				413A031826E37DC9009E8406 /* LaunchView.swift in Sources */,
 				4132147826DFC3260078BE04 /* CalendarView.swift in Sources */,
-				4132147A26E0FE320078BE04 /* AppMenuView.swift in Sources */,
-				413A031E26E490FE009E8406 /* QUickMenuItem.swift in Sources */,
+				4132147A26E0FE320078BE04 /* LeadingShortcutView.swift in Sources */,
+				413A031E26E490FE009E8406 /* QuickMenuItem.swift in Sources */,
 				4132147026DE62380078BE04 /* BackgroundView.swift in Sources */,
 				4132147C26E10AE70078BE04 /* DesktopView.swift in Sources */,
 				413A031C26E48DF4009E8406 /* QuickMenuCell.swift in Sources */,
+				413A032C26E502B6009E8406 /* DesktopObject.swift in Sources */,
 				4132147426DE69050078BE04 /* StatusBarView.swift in Sources */,
+				413A032426E4F751009E8406 /* WindowStatusObject.swift in Sources */,
 				4132147226DE68F40078BE04 /* BottomToolBarView.swift in Sources */,
 				413A032026E492E4009E8406 /* DoubleClickView.swift in Sources */,
 				4132147E26E10B250078BE04 /* LockScreenView.swift in Sources */,
 				4132148026E10E9A0078BE04 /* UserLoginView.swift in Sources */,
-				4132144626DE618C0078BE04 /* ContentView.swift in Sources */,
 				413A02DC26E3187A009E8406 /* NotificationsView.swift in Sources */,
 				4132148226E28FEE0078BE04 /* AboutWindowsView.swift in Sources */,
 				4132144426DE618C0078BE04 /* Windows11App.swift in Sources */,

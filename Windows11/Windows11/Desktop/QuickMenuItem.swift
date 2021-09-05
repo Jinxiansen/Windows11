@@ -1,5 +1,5 @@
 //
-//  QUickMenuItem.swift
+//  QuickMenuItem.swift
 //  Windows11
 //
 //  Created by 晋先森 on 9/5/21.
@@ -41,7 +41,7 @@ enum QuickMenuType: String, CaseIterable {
     }
 }
 
-class QUickMenuItem: ObservableObject {
+class QuickMenuItem: ObservableObject {
     let type: QuickMenuType
     var isSelected: Bool {
         didSet {
@@ -52,5 +52,12 @@ class QUickMenuItem: ObservableObject {
     init(type: QuickMenuType, isSelected: Bool = false) {
         self.type = type
         self.isSelected = isSelected
+    }
+}
+
+extension QuickMenuItem: CustomDebugStringConvertible {
+    
+    var debugDescription: String {
+        return Mirror(reflecting: self).children.map { "\($0.label!):\($0.value)" }.joined(separator: "\n")
     }
 }
