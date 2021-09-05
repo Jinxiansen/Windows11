@@ -27,6 +27,9 @@
 		413A031626E37706009E8406 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A031526E37706009E8406 /* Const.swift */; };
 		413A031826E37DC9009E8406 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A031726E37DC9009E8406 /* LaunchView.swift */; };
 		413A031A26E3AFD6009E8406 /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A031926E3AFD6009E8406 /* Color+.swift */; };
+		413A031C26E48DF4009E8406 /* QuickMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A031B26E48DF4009E8406 /* QuickMenuCell.swift */; };
+		413A031E26E490FE009E8406 /* QUickMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A031D26E490FE009E8406 /* QUickMenuItem.swift */; };
+		413A032026E492E4009E8406 /* DoubleClickView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A031F26E492E4009E8406 /* DoubleClickView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +77,9 @@
 		413A031526E37706009E8406 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		413A031726E37DC9009E8406 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 		413A031926E3AFD6009E8406 /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
+		413A031B26E48DF4009E8406 /* QuickMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickMenuCell.swift; sourceTree = "<group>"; };
+		413A031D26E490FE009E8406 /* QUickMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QUickMenuItem.swift; sourceTree = "<group>"; };
+		413A031F26E492E4009E8406 /* DoubleClickView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleClickView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,8 +136,11 @@
 				4132147D26E10B250078BE04 /* LockScreenView.swift */,
 				4132147F26E10E9A0078BE04 /* UserLoginView.swift */,
 				4132147B26E10AE70078BE04 /* DesktopView.swift */,
+				413A031F26E492E4009E8406 /* DoubleClickView.swift */,
 				4132146F26DE62380078BE04 /* BackgroundView.swift */,
 				413A02DB26E3187A009E8406 /* NotificationsView.swift */,
+				413A031B26E48DF4009E8406 /* QuickMenuCell.swift */,
+				413A031D26E490FE009E8406 /* QUickMenuItem.swift */,
 				4132148126E28FEE0078BE04 /* AboutWindowsView.swift */,
 				4132147926E0FE320078BE04 /* AppMenuView.swift */,
 				4132147126DE68F40078BE04 /* BottomToolBarView.swift */,
@@ -308,10 +317,13 @@
 				413A031826E37DC9009E8406 /* LaunchView.swift in Sources */,
 				4132147826DFC3260078BE04 /* CalendarView.swift in Sources */,
 				4132147A26E0FE320078BE04 /* AppMenuView.swift in Sources */,
+				413A031E26E490FE009E8406 /* QUickMenuItem.swift in Sources */,
 				4132147026DE62380078BE04 /* BackgroundView.swift in Sources */,
 				4132147C26E10AE70078BE04 /* DesktopView.swift in Sources */,
+				413A031C26E48DF4009E8406 /* QuickMenuCell.swift in Sources */,
 				4132147426DE69050078BE04 /* StatusBarView.swift in Sources */,
 				4132147226DE68F40078BE04 /* BottomToolBarView.swift in Sources */,
+				413A032026E492E4009E8406 /* DoubleClickView.swift in Sources */,
 				4132147E26E10B250078BE04 /* LockScreenView.swift in Sources */,
 				4132148026E10E9A0078BE04 /* UserLoginView.swift in Sources */,
 				4132144626DE618C0078BE04 /* ContentView.swift in Sources */,

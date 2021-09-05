@@ -68,8 +68,10 @@ struct AboutWindowsView: View {
                     Text("Microsoft Windows (use SwiftUI)\nVersion Dev(OS Build 21996.1)\n© Microsoft Corporation. All right reserved.")
                     Spacer()
                 }
-                
-                Text("The Windows 11 Pro operating system and its user interface are protected by trademark and other pending or existing intellectual property rights in the United States and other countries/regions.").padding(.top, 5.0)
+                HStack {
+                    Text("The Windows 11 Pro operating system and its user interface are protected by trademark and other pending or existing intellectual property rights in the United States and other countries/regions.").padding(.top, 5.0)
+                    Spacer()
+                }
             }
             .fixedSize(horizontal: false, vertical: true)
             

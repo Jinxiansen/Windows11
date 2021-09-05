@@ -7,40 +7,6 @@
 
 import SwiftUI
 
-enum QuickMenuType: String, CaseIterable {
-    case location = "Location"
-    case batterySaver = "Battery saver"
-    case nightLight = "Night light"
-    case bluetooth = "Bluetooth"
-    case airplaneMode = "Airplane mode"
-    case nearbySharing = "Nearby sharing"
-    case allSettings = "All settings"
-    case network = "Network"
-    case connect = "Connect"
-    case project = "Project"
-    case vpn = "VPN"
-    case focusAssist = "Focus assist"
-    
-    var icon: Image {
-        let name: String
-        switch self {
-        case .location: name = "location"
-        case .batterySaver: name = "battery"
-        case .nightLight: name = "nightlight"
-        case .bluetooth: name = "bluetooth"
-        case .airplaneMode: name = "airplane"
-        case .nearbySharing: name = "nearshare"
-        case .allSettings: name = "settings"
-        case .network: name = "network"
-        case .connect: name = "connect"
-        case .project: name = "project"
-        case .vpn: name = "shield"
-        case .focusAssist: name = "moon"
-        }
-        return Image(name)
-    }
-}
-
 struct NotificationsView: View {
     
     private static let width: CGFloat = 350.0
@@ -50,7 +16,7 @@ struct NotificationsView: View {
         VStack {
             HStack {
                 Spacer()
-                Text("Manage Notifications").bold().padding([.top,.trailing], 10.0)
+                Text("Manage notifications").padding([.top,.trailing], 10.0)
             }
             Spacer()
             HStack {
@@ -72,11 +38,10 @@ struct NotificationsView: View {
                 self.offset = 0.0
             }
         }
-        
     }
     
     private let gridItemLayout = [GridItem(.flexible()), GridItem(.flexible()),GridItem(.flexible()), GridItem(.flexible())]
-    private let menuItems = QuickMenuType.allCases
+    @State private var menuItems = QuickMenuType.allCases.map { QUickMenuItem(type: $0) }
     
     var serverStatusView: some View {
         VStack {
@@ -88,36 +53,16 @@ struct NotificationsView: View {
                 ScrollView {
                     LazyVGrid(columns: gridItemLayout) {
                         ForEach((0..<menuItems.count), id: \.self) { index in
-                            girdItem(type: menuItems[index])
+                            QuickMenuCell(item: menuItems[index])
                                 .onTapGesture {
-                                    print(menuItems[index].rawValue)
+                                    print(menuItems[index].type)
+                                    menuItems[index].isSelected.toggle()
                                 }
                         }
                     }
                 }.frame(height: 200.0)
             }
         }.padding(.init(top: 0.0, leading: 20.0, bottom: 0.0, trailing: 20.0))
-    }
-    
-    func girdItem(type: QuickMenuType) -> some View {
-        VStack {
-            VStack {
-                HStack {
-                    type.icon
-                        .resizable()
-                        .frame(width: 12, height: 12)
-                    Spacer()
-                }.padding([.top,.leading], 5.0)
-                
-                HStack {
-                    Text(type.rawValue).font(.caption).lineLimit(nil).frame(height: 30.0)
-                    Spacer()
-                }.padding([.top,.leading], 5.0)
-            }.border(Color.gray.opacity(0.5), width: 0.5)
-        }.background(Color.white)
-        .cornerRadius(2.0)
-        //        .border(Color.black, width: 0.5)
-        .shadow(color: .black.opacity(0.35), radius: 1)
     }
     
 }
