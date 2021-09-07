@@ -25,7 +25,14 @@ struct LockScreen: View {
                         withAnimation(.easeInOut) {
                             self.offset = 0.0
                         }
-                    }
+                    }.animation(
+                        .interpolatingSpring(
+                          mass: 1,
+                          stiffness: 100,
+                          damping: 10,
+                          initialVelocity: 0
+                        )
+                      )
                     Spacer()
                     BottomToolBarView(isDesktop: false)
                 }
