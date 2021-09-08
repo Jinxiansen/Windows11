@@ -1,5 +1,5 @@
 //
-//  StatusBarView.swift
+//  BottomStatusBar.swift
 //  Windows11
 //
 //  Created by 晋先森 on 8/31/21.
@@ -18,7 +18,7 @@ enum StatusBarMenuType {
     
 }
 
-struct StatusBarView: View {
+struct BottomStatusBar: View {
     
     @State var isDesktop: Bool
     @EnvironmentObject var desktopObject: DesktopObject
@@ -88,8 +88,8 @@ struct StatusBarView: View {
     }
 }
 
-struct StatusBarView_Previews: PreviewProvider {
+struct BottomStatusBar_Previews: PreviewProvider {
     static var previews: some View {
-        StatusBarView(isDesktop: false)
+        BottomStatusBar(isDesktop: false)
     }
 }

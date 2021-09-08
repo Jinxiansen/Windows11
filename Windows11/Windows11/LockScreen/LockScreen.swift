@@ -34,7 +34,7 @@ struct LockScreen: View {
                         )
                       )
                     Spacer()
-                    BottomToolBarView(isDesktop: false)
+                    BottomToolBar(isDesktop: false)
                 }
             }
         }.onTapGesture {

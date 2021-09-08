@@ -11,8 +11,23 @@ struct NotificationsView: View {
     
     private static let width: CGFloat = 350.0
     @State private var offset:CGFloat = width
-
+    private let gridItemLayout = [GridItem(.flexible()), GridItem(.flexible()),GridItem(.flexible()), GridItem(.flexible())]
+    @State private var menuItems = QuickMenuType.allCases.map { QuickMenuItem(type: $0) }
+    
     var body: some View {
+        HStack {
+            Spacer()
+            contentView.padding(EdgeInsets(top: 0.1, leading: 0, bottom: Const.bottomStatusHeight + 2, trailing: 0.1))
+        }.shadow(color: .black.opacity(0.35), radius: 3, x: -1, y: 0)
+        .offset(x: offset, y: 0.0)
+        .onAppear {
+            withAnimation(.easeInOut) {
+                self.offset = 0.0
+            }
+        }
+    }
+
+    var contentView: some View {
         VStack {
             HStack {
                 Spacer()
@@ -28,20 +43,11 @@ struct NotificationsView: View {
             }
             
         }.frame(width: Self.width)
-        //        .border(Color.black.opacity(0.25), width: 1.0)
+        //.border(Color.black.opacity(0.25), width: 1.0)
         .background(Color.textWhite)
         .shadow(color: .clear, radius: 0, x: 0, y: 0) // clear superview shadow
-        //        .transition(.asymmetric(insertion: .scale, removal: .opacity))
-        .offset(x: offset, y: 0.0)
-        .onAppear {
-            withAnimation(.easeInOut) {
-                self.offset = 0.0
-            }
-        }
+        //.transition(.asymmetric(insertion: .scale, removal: .opacity))
     }
-    
-    private let gridItemLayout = [GridItem(.flexible()), GridItem(.flexible()),GridItem(.flexible()), GridItem(.flexible())]
-    @State private var menuItems = QuickMenuType.allCases.map { QuickMenuItem(type: $0) }
     
     var serverStatusView: some View {
         VStack {
@@ -55,8 +61,7 @@ struct NotificationsView: View {
                         QuickMenuCell(item: menuItems[index])
                             .onTapGesture {
                                 menuItems[index].isSelected.toggle()
-                                print(menuItems[index].debugDescription)
-                                
+                                print(menuItems[index].debugDescription) 
                                 if menuItems[index].type == .nightLight {
                                     PreferencesStore.shared.changeDarkMode()
                                 }

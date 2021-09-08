@@ -15,7 +15,13 @@ struct AboutWindowsView: View {
     
     var body: some View {
         if isShowing {
-            contentView
+            VStack {
+                HStack {
+                    contentView.padding(EdgeInsets(top: 50.0, leading: 120.0, bottom: 0, trailing: 0))
+                    Spacer()
+                }
+                Spacer()
+            }
         } else {
             EmptyView()
         }

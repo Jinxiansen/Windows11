@@ -1,5 +1,5 @@
 //
-//  BottomToolBarView.swift
+//  BottomToolBar.swift
 //  Windows11
 //
 //  Created by 晋先森 on 8/31/21.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct BottomToolBarView: View {
+struct BottomToolBar: View {
     
     @State var isDesktop: Bool
     
@@ -15,12 +15,12 @@ struct BottomToolBarView: View {
         ZStack {
             VStack {
                 if isDesktop {
-                    BottomShortcutView()
+                    BottomShortcutBar()
                 }
             }
             HStack {
                 Spacer()
-                StatusBarView(isDesktop: isDesktop)
+                BottomStatusBar(isDesktop: isDesktop)
             }
         }
         .frame(height: Const.bottomStatusHeight)
@@ -32,8 +32,8 @@ struct BottomToolBarView: View {
     }
 }
 
-struct BottomToolBarView_Previews: PreviewProvider {
+struct BottomToolBar_Previews: PreviewProvider {
     static var previews: some View {
-        BottomToolBarView(isDesktop: true)
+        BottomToolBar(isDesktop: true)
     }
 }

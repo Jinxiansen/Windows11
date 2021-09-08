@@ -9,6 +9,6 @@ import SwiftUI
 
 class DesktopObject: ObservableObject {
     @Published var statusType: StatusBarMenuType?
-    @Published var bottomType: BottomShortcutType?
+    @Published var shortcutType: BottomShortcutType?
 }
 

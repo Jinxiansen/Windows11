@@ -21,7 +21,7 @@ struct LaunchScreen: View {
                     .foregroundColor(.white)
                     .padding(.top, 100.0)
                 Spacer()
-                BottomToolBarView(isDesktop: false)
+                BottomToolBar(isDesktop: false)
             }.background(Color.textBlack)
             .animation(.spring(response: 1, dampingFraction: 1, blendDuration: 1))
         }.onAppear {

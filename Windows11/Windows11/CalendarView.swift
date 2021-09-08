@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentContentView: View {
+struct CalendarView: View {
     private let calendar: Calendar
     private let monthFormatter: DateFormatter
     private let dayFormatter: DateFormatter
@@ -19,7 +19,7 @@ struct ContentContentView: View {
     
     static let size = CGSize(width: 360, height: 360)
     @State private var offset:CGFloat = Self.size.width
-
+    
     init(calendar: Calendar) {
         self.calendar = calendar
         self.monthFormatter = DateFormatter(dateFormat: "MMMM", calendar: calendar)
@@ -30,7 +30,17 @@ struct ContentContentView: View {
     
     var body: some View {
         VStack {
-            CalendarView(
+            Spacer()
+            HStack {
+                Spacer()
+                contentView.padding(EdgeInsets(top: 0, leading: 0, bottom: 60.0, trailing: 10.0))
+            }
+        }.shadow(color: .black.opacity(0.35), radius: 3, x: -1, y: 0)
+    }
+    
+    var contentView: some View {
+        VStack {
+            CalendarContentView(
                 calendar: calendar,
                 date: $selectedDate,
                 content: { date in
@@ -128,7 +138,7 @@ struct ContentContentView: View {
 
 // MARK: - Component
 
-public struct CalendarView<Day: View, Header: View, Title: View, Trailing: View>: View {
+private struct CalendarContentView<Day: View, Header: View, Title: View, Trailing: View>: View {
     // Injected dependencies
     private var calendar: Calendar
     @Binding private var date: Date
@@ -176,14 +186,14 @@ public struct CalendarView<Day: View, Header: View, Title: View, Trailing: View>
 }
 
 // MARK: - Conformances
-extension CalendarView: Equatable {
-    public static func == (lhs: CalendarView<Day, Header, Title, Trailing>, rhs: CalendarView<Day, Header, Title, Trailing>) -> Bool {
+extension CalendarContentView: Equatable {
+    public static func == (lhs: CalendarContentView<Day, Header, Title, Trailing>, rhs: CalendarContentView<Day, Header, Title, Trailing>) -> Bool {
         lhs.calendar == rhs.calendar && lhs.date == rhs.date
     }
 }
 
 // MARK: - Helpers
-private extension CalendarView {
+private extension CalendarContentView {
     func makeDays() -> [Date] {
         guard let monthInterval = calendar.dateInterval(of: .month, for: date),
               let monthFirstWeek = calendar.dateInterval(of: .weekOfMonth, for: monthInterval.start),
@@ -249,11 +259,11 @@ extension DateFormatter {
 // MARK: - Previews
 
 #if DEBUG
-struct CalendarView_Previews: PreviewProvider {
+struct CalendarContentView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            ContentContentView(calendar: Calendar(identifier: .chinese))
-            ContentContentView(calendar: Calendar(identifier: .republicOfChina))
+            CalendarView(calendar: Calendar(identifier: .chinese))
+            CalendarView(calendar: Calendar(identifier: .republicOfChina))
         }
     }
 }

@@ -1,5 +1,5 @@
 //
-//  BottomShortcutView.swift
+//  BottomShortcutBar.swift
 //  Windows11
 //
 //  Created by 晋先森 on 8/31/21.
@@ -8,7 +8,7 @@
 import SwiftUI
 
 enum BottomShortcutType: CaseIterable {
-    case launchPad
+    case launchpad
     case search
     case news
     case setting
@@ -19,7 +19,7 @@ enum BottomShortcutType: CaseIterable {
     
     var icon: Image {
         switch self {
-        case .launchPad: return Image("home")
+        case .launchpad: return Image("home")
         case .search: return Image("search3")
         case .news: return Image("news")
         case .setting: return Image("settings")
@@ -29,7 +29,7 @@ enum BottomShortcutType: CaseIterable {
     }
 }
 
-struct BottomShortcutView: View {
+struct BottomShortcutBar: View {
     
     private let cases = BottomShortcutType.allCases
     @EnvironmentObject var desktopObject: DesktopObject
@@ -39,7 +39,7 @@ struct BottomShortcutView: View {
             ForEach(cases, id: \.self) { type in
                 Button {
                     withAnimation {
-                        desktopObject.bottomType = type
+                        desktopObject.shortcutType = type
                     }
                 } label: {
                     type.icon.resizable()
@@ -64,8 +64,8 @@ struct BottomShortcutView: View {
     }
 }
 
-struct BottomShortcutView_Previews: PreviewProvider {
+struct BottomShortcutBar_Previews: PreviewProvider {
     static var previews: some View {
-        BottomShortcutView()
+        BottomShortcutBar()
     }
 }

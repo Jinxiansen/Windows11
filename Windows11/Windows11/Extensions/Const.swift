@@ -15,4 +15,5 @@ enum Const {
     static let licenseURL = Const.repoURL + "/blob/main/LICENSE"
     
     static let bottomStatusHeight: CGFloat = 50.0
+
 }

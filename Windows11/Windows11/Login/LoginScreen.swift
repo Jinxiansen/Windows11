@@ -21,7 +21,7 @@ struct LoginScreen: View {
                     Spacer()
                 }
                 Spacer()
-                BottomToolBarView(isDesktop: false)
+                BottomToolBar(isDesktop: false)
             }
         }
     }

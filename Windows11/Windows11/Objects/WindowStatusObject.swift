@@ -8,8 +8,11 @@
 import SwiftUI
 
 class WindowStatusObject: ObservableObject {
-    @Published var status = WindowStatus.launch
+    @Published var status: WindowStatus
 
+    init(status: WindowStatus) {
+        self.status = status
+    }
 }
 
 enum WindowStatus: Int, CaseIterable {
