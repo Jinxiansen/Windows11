@@ -39,7 +39,11 @@ struct BottomShortcutBar: View {
             ForEach(cases, id: \.self) { type in
                 Button {
                     withAnimation {
-                        desktopObject.shortcutType = type
+                        if desktopObject.shortcutType != type {
+                            desktopObject.shortcutType = type
+                        } else {
+                            desktopObject.shortcutType = nil
+                        }
                     }
                 } label: {
                     type.icon.resizable()
@@ -48,19 +52,6 @@ struct BottomShortcutBar: View {
                 }.buttonStyle(PlainButtonStyle())
             }
         }
-    }
-    
-    func menuItemClick(type: BottomShortcutType) {
-        
-        switch type {
-        case .search:
-            print("Search...")
-//        case .setting:
-//            showingCalendar.toggle()
-        default:
-            print("Type: \(type)")
-        }
-        
     }
 }
 

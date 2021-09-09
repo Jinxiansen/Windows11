@@ -57,7 +57,7 @@ struct CalendarView: View {
                             .accessibilityHidden(true)
                             .overlay(
                                 Text(dayFormatter.string(from: date))
-                                    .foregroundColor(calendar.isDate(date, inSameDayAs: selectedDate) ? .textWhite:.textBlack)
+                                    .foregroundColor(calendar.isDate(date, inSameDayAs: selectedDate) ? .lightTitle:Color.darkTitle)
                             )
                     }.buttonStyle(PlainButtonStyle())
                 },
@@ -123,7 +123,7 @@ struct CalendarView: View {
             .padding(EdgeInsets(top: 10.0, leading: 15.0, bottom: 0.0, trailing: 15.0))
             Spacer()
         }
-        .background(Color.textWhite)
+        .background(Color.lightTitle)
         .shadow(color: .clear, radius: 0, x: 0, y: 0)
         .clipShape(RoundedRectangle(cornerRadius: 5.0))
         .frame(width: Self.size.width, height: Self.size.height)

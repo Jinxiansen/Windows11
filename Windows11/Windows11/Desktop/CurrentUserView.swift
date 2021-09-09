@@ -8,28 +8,41 @@
 import SwiftUI
 
 struct CurrentUserView: View {
+    
+    @EnvironmentObject var windowObject: WindowStatusObject
+    @EnvironmentObject var desktopObject: DesktopObject
+    @Environment(\.openURL) var openURL
+    
+    let maxHeight: CGFloat = 60.0
+    
     var body: some View {
-        HStack() {
-            Button {
-                print("avatar.")
-            } label: {
-                HStack {
-                    Image("jinxiansen").resizable().frame(width: 35.0, height: 35.0).clipShape(Circle()).padding(.leading, 60.0)
-                    Text("Jinxiansen").font(.headline).foregroundColor(Color.white)
-                }
-            }.buttonStyle(PlainButtonStyle())
+        VStack {
             Spacer()
-            Button {
-               print("Shutdown.")
-            } label: {
-                Image("power")
-                    .resizable().renderingMode(.template)
-                    .foregroundColor(Color.white)
-                    .frame(width: 20.0, height: 20.0)
-                    .padding(.trailing, 60.0)
-            }.buttonStyle(PlainButtonStyle())
-
+            HStack() {
+                Button {
+                    print("avatar.")
+                    openURL(URL(string: Const.repoURL)!)
+                } label: {
+                    HStack {
+                        Image("jinxiansen").resizable().frame(width: 35.0, height: 35.0).clipShape(Circle()).padding(.leading, 60.0)
+                        Text("Jinxiansen").font(.headline).foregroundColor(Color.darkTitle)
+                    }.frame(height: maxHeight)
+                }.buttonStyle(PlainButtonStyle())
+                Spacer()
+                Button {
+                   print("Shutdown.")
+                    desktopObject.resetAllStates()
+                    windowObject.status = .launch
+                } label: {
+                    Image("power")
+                        .resizable().renderingMode(.template)
+                        .foregroundColor(Color.darkTitle)
+                        .frame(width: 20.0, height: 20.0)
+                        .padding(.trailing, 60.0)
+                }.buttonStyle(PlainButtonStyle())
+            }.background(Color.launchpad)
         }
+        .frame(height: maxHeight)
     }
 }
 

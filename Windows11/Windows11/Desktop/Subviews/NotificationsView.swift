@@ -44,7 +44,7 @@ struct NotificationsView: View {
             
         }.frame(width: Self.width)
         //.border(Color.black.opacity(0.25), width: 1.0)
-        .background(Color.textWhite)
+        .background(Color.lightTitle)
         .shadow(color: .clear, radius: 0, x: 0, y: 0) // clear superview shadow
         //.transition(.asymmetric(insertion: .scale, removal: .opacity))
     }
@@ -55,7 +55,7 @@ struct NotificationsView: View {
                 Text("Collapse")
                 Spacer()
             }
-            ScrollView {
+            ScrollView(showsIndicators: false) {
                 LazyVGrid(columns: gridItemLayout) {
                     ForEach((0..<menuItems.count), id: \.self) { index in
                         QuickMenuCell(item: menuItems[index])

@@ -84,7 +84,7 @@ struct BottomStatusBar: View {
     }
     
     var iconColor: Color {
-        Color.textBlack
+        Color.darkTitle
     }
 }
 

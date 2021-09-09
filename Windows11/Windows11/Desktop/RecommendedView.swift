@@ -9,7 +9,7 @@ import SwiftUI
 
 struct RecommendedView: View {
     
-    private let gridItemLayout = [GridItem(.flexible()),GridItem(.flexible()),GridItem(.flexible()), GridItem(.flexible()),GridItem(.flexible()), GridItem(.flexible())]
+    private let gridItemLayout = [GridItem(.flexible()),GridItem(.flexible())]
     @State private var menuItems = PinnedType.allCases
     
     var body: some View {
@@ -21,20 +21,20 @@ struct RecommendedView: View {
                     print("more.")
                 } label: {
                     HStack {
-                        Text("More").foregroundColor(Color.textBlack)
-                        Image(systemName: "chevron.right").foregroundColor(Color.textBlack)
+                        Text("More").foregroundColor(Color.darkTitle)
+                        Image(systemName: "chevron.right").foregroundColor(Color.darkTitle)
                     }
                 }
-            }.padding([.leading,.trailing], 15.0)
-            ScrollView {
+            }.padding([.leading,.trailing], 0.0)
+            ScrollView(showsIndicators: false) {
                 LazyVGrid(columns: gridItemLayout) {
                     ForEach((0..<menuItems.count), id: \.self) { index in
-                        PinnedCell(type: menuItems[index]) { type in
+                        RecommendedCell(type: menuItems[index]) { type in
                             print("Type: \(type)")
                         }
                     }
                 }
-            }.frame(height: 170.0)
+            }.frame(height: 120.0)
         }.padding(.init(top: 10, leading: 30, bottom: 0, trailing: 30))
     }
 }

@@ -19,8 +19,8 @@ struct PinnedCell: View {
             } label: {
                 VStack {
                     Image(type.imageName).resizable().frame(width: 25.0, height: 25.0)
-                        .shadow(color: .black.opacity(0.25), radius: 2, x: 0, y: 0)
-                    Text(type.appName).foregroundColor(Color.textBlack)
+                        .shadow(color: .black.opacity(0.25), radius: 1, x: 0, y: 0)
+                    Text(type.appName).foregroundColor(Color.darkTitle)
                 }
             }.buttonStyle(PlainButtonStyle())
         }//.background(Color.green)

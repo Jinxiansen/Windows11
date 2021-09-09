@@ -9,8 +9,15 @@ import SwiftUI
 
 extension Color {
     static let main = Color("main")
-    static let textWhite = Color("textWhite")
-    static let textBlack = Color("textBlack")
+    static let lightTitle = Color("lightTitle")
+    static let darkTitle = Color("darkTitle")
+    static let darkSubTitle = Color("darkSubTitle")
+    
+    
     static let checked = Color("checked")
     static let unchecked = Color("unchecked")
+    
+    static let darkBlue = Color("darkBlue")
+    static let launchpad = Color("launchpad")
+    
 }

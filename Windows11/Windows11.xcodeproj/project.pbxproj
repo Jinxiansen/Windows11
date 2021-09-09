@@ -40,6 +40,7 @@
 		413A033A26E7AAE5009E8406 /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A033926E7AAE5009E8406 /* View+.swift */; };
 		413A033C26E9011A009E8406 /* PinnedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A033B26E9011A009E8406 /* PinnedCell.swift */; };
 		413A033E26E90326009E8406 /* PinnedType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A033D26E90326009E8406 /* PinnedType.swift */; };
+		413A034026EA4A71009E8406 /* RecommendedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A033F26EA4A71009E8406 /* RecommendedCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +101,7 @@
 		413A033926E7AAE5009E8406 /* View+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
 		413A033B26E9011A009E8406 /* PinnedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinnedCell.swift; sourceTree = "<group>"; };
 		413A033D26E90326009E8406 /* PinnedType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinnedType.swift; sourceTree = "<group>"; };
+		413A033F26EA4A71009E8406 /* RecommendedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,6 +249,7 @@
 				413A033D26E90326009E8406 /* PinnedType.swift */,
 				413A033B26E9011A009E8406 /* PinnedCell.swift */,
 				413A033426E79EC6009E8406 /* RecommendedView.swift */,
+				413A033F26EA4A71009E8406 /* RecommendedCell.swift */,
 				413A033626E79EDF009E8406 /* CurrentUserView.swift */,
 				413A032D26E50949009E8406 /* Subviews */,
 			);
@@ -407,6 +410,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				413A033526E79EC6009E8406 /* RecommendedView.swift in Sources */,
+				413A034026EA4A71009E8406 /* RecommendedCell.swift in Sources */,
 				413A033726E79EDF009E8406 /* CurrentUserView.swift in Sources */,
 				413A032226E4D77F009E8406 /* PreferencesStore.swift in Sources */,
 				4132147626DE69340078BE04 /* BottomShortcutBar.swift in Sources */,

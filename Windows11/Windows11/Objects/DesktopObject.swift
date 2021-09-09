@@ -12,3 +12,10 @@ class DesktopObject: ObservableObject {
     @Published var shortcutType: BottomShortcutType?
 }
 
+extension DesktopObject {
+    
+    func resetAllStates() {
+         shortcutType = nil
+         statusType = nil
+    }
+}

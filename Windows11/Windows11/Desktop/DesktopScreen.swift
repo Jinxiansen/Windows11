@@ -23,6 +23,10 @@ struct DesktopScreen: View {
                 }.contextMenu {
                     DoubleClickView()
                 }
+            AboutWindowsView()
+            renderStatusViewIfNeed()
+            renderShortcutViewIfNeed()
+            
             VStack {
                 HStack {
                     LeadingShortcutView()
@@ -31,9 +35,6 @@ struct DesktopScreen: View {
                 Spacer()
                 BottomToolBar(isDesktop: true)
             }
-            AboutWindowsView()
-            renderStatusViewIfNeed()
-            renderShortcutViewIfNeed()
         }
     }
     

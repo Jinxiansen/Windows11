@@ -28,7 +28,7 @@ struct BottomToolBar: View {
     }
     
     var background: Color {
-        isDesktop ? Color.textWhite: Color.clear
+        isDesktop ? Color.lightTitle: Color.clear
     }
 }
 

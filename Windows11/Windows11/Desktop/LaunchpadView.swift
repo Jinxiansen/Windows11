@@ -15,24 +15,27 @@ enum LaunchpadConst {
 
 struct LaunchpadView: View {
     
-    @State private var offset: CGFloat = -75.0
+    @State private var offset: CGFloat = LaunchpadConst.maxWidth/2
     
     var body: some View {
         VStack {
+            Spacer()
             VStack {
-                SearchBar()
-                PinnedView()
-                RecommendedView()
-            }.padding(.top, 30.0)
-            CurrentUserView().frame(height: 60.0).background(Color.main)
-        }.background(Color.textWhite)
+                VStack {
+                    SearchBar()
+                    PinnedView()
+                    RecommendedView()
+                }.padding(.top, 30.0)
+                CurrentUserView()
+            }.background(Color.launchpad)
+            .clipShape(RoundedRectangle(cornerRadius: 5.0))
+            .shadow(color: .clear, radius: 0, x: 0, y: 0)
+        }
         .frame(width: LaunchpadConst.maxWidth)
         .offset(x: 0, y: offset)
-        .shadow(color: .clear, radius: 0, x: 0, y: 0)
-        .clipShape(RoundedRectangle(cornerRadius: 5.0))
         .onAppear {
-            withAnimation(.easeInOut) {
-                self.offset = 0
+            withAnimation(.spring(response: 0.5, dampingFraction: 1, blendDuration: 1)) {
+                self.offset = -(Const.bottomStatusHeight + 15.0)
             }
         }
     }

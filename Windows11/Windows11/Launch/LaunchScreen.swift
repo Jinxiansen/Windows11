@@ -22,13 +22,13 @@ struct LaunchScreen: View {
                     .padding(.top, 100.0)
                 Spacer()
                 BottomToolBar(isDesktop: false)
-            }.background(Color.textBlack)
+            }.background(Color.darkTitle)
             .animation(.spring(response: 1, dampingFraction: 1, blendDuration: 1))
         }.onAppear {
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
                 windowObject.status = .lockScreen
             }
-        }.background(Color.textBlack)
+        }.background(Color.darkTitle)
     }
     
 }

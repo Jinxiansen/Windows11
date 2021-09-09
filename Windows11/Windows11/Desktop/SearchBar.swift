@@ -14,17 +14,18 @@ struct SearchBar: View {
     var body: some View {
         VStack {
             VStack {
-                SecureField("PIN", text: $searchText) {
+                SecureField(" 🔎 Type here to search", text: $searchText) {
                     print("Commit.")
                 }
                 .textFieldStyle(PlainTextFieldStyle())
-                .padding([.horizontal], 5.0)
-                .foregroundColor(Color.white)
-                .focusable()
+                .padding([.top,.leading,.trailing], 5.0)
+//                .foregroundColor(Color.white)
+//                .focusable()
                 .frame(height: 30.0)
                 
-                Divider().background(Color.primary)
-            }.background(Color.purple)
+                Divider().background(Color.darkBlue).frame(height: 2.0)
+            }.background(Color.lightTitle)
+            .border(Color.darkTitle, width: 1.0)
         }.padding([.leading,.trailing], 30.0)
     }
 }

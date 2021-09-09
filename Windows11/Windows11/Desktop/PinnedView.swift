@@ -21,13 +21,13 @@ struct PinnedView: View {
                     print("all apps.")
                 } label: {
                     HStack {
-                        Text("All apps").foregroundColor(Color.textBlack)
-                        Image(systemName: "chevron.right").foregroundColor(Color.textBlack)
+                        Text("All apps").foregroundColor(Color.darkTitle)
+                        Image(systemName: "chevron.right").foregroundColor(Color.darkTitle)
                     }
                 }.padding(.trailing, 30.0)
             }
             HStack(alignment: VerticalAlignment.center) {
-                ScrollView {
+                ScrollView(showsIndicators: false) {
                     LazyVGrid(columns: gridItemLayout) {
                         ForEach((0..<menuItems.count), id: \.self) { index in
                             PinnedCell(type: menuItems[index]) { type in
@@ -36,7 +36,7 @@ struct PinnedView: View {
                         }
                     }
                 }.frame(width: LaunchpadConst.maxWidth - LaunchpadConst.margin * 2,height: 170.0)//.background(Color.green)
-                PageIndicator().frame(width: 10.0)
+                PageIndicator().frame(width: 10.0).padding(.trailing, 10.0)
             }//.background(Color.pink)
         }.padding(.init(top: 20, leading: 30, bottom: 0, trailing: 0))
     }
