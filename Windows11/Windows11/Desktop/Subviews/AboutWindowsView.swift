@@ -84,7 +84,7 @@ struct AboutWindowsView: View {
             
             HStack {
                 Text("This product is licensed with").fixedSize(horizontal: false, vertical: true)
-                Link("MIT License.", destination: URL(string: Const.licenseURL)!)
+                Link("MIT License.", destination: URL(string: Const.licenseURL)!).onHoverBackground()
 //                Link(Const.email, destination: URL(string: Const.contactMe)!)
                 Spacer()
             }.padding(.top, 20.0)
