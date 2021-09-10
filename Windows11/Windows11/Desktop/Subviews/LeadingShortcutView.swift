@@ -19,9 +19,9 @@ struct LeadingShortcutView: View {
                 } label: {
                     Image(name).resizable().frame(maxWidth: 35.0, maxHeight: 35.0).padding(10.0)
                 }.buttonStyle(PlainButtonStyle())
+                .onHoverBackground()
             }
         }.padding([.top,.leading,.bottom], 15.0)
-        
     }
 }
 

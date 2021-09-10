@@ -35,9 +35,10 @@ struct PinnedView: View {
                             }
                         }
                     }
-                }.frame(width: LaunchpadConst.maxWidth - LaunchpadConst.margin * 2,height: 170.0)//.background(Color.green)
+                }.frame(width: LaunchpadConst.maxWidth - LaunchpadConst.margin * 2,
+                        height: 180.0)
                 PageIndicator().frame(width: 10.0).padding(.trailing, 10.0)
-            }//.background(Color.pink)
+            }
         }.padding(.init(top: 20, leading: 30, bottom: 0, trailing: 0))
     }
 }

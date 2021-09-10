@@ -41,6 +41,7 @@
 		413A033C26E9011A009E8406 /* PinnedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A033B26E9011A009E8406 /* PinnedCell.swift */; };
 		413A033E26E90326009E8406 /* PinnedType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A033D26E90326009E8406 /* PinnedType.swift */; };
 		413A034026EA4A71009E8406 /* RecommendedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A033F26EA4A71009E8406 /* RecommendedCell.swift */; };
+		413A034226EB96C4009E8406 /* RecommendedType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A034126EB96C4009E8406 /* RecommendedType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +103,7 @@
 		413A033B26E9011A009E8406 /* PinnedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinnedCell.swift; sourceTree = "<group>"; };
 		413A033D26E90326009E8406 /* PinnedType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinnedType.swift; sourceTree = "<group>"; };
 		413A033F26EA4A71009E8406 /* RecommendedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedCell.swift; sourceTree = "<group>"; };
+		413A034126EB96C4009E8406 /* RecommendedType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -250,6 +252,7 @@
 				413A033B26E9011A009E8406 /* PinnedCell.swift */,
 				413A033426E79EC6009E8406 /* RecommendedView.swift */,
 				413A033F26EA4A71009E8406 /* RecommendedCell.swift */,
+				413A034126EB96C4009E8406 /* RecommendedType.swift */,
 				413A033626E79EDF009E8406 /* CurrentUserView.swift */,
 				413A032D26E50949009E8406 /* Subviews */,
 			);
@@ -426,6 +429,7 @@
 				413A031C26E48DF4009E8406 /* QuickMenuCell.swift in Sources */,
 				413A032C26E502B6009E8406 /* DesktopObject.swift in Sources */,
 				413A033326E79EBD009E8406 /* PinnedView.swift in Sources */,
+				413A034226EB96C4009E8406 /* RecommendedType.swift in Sources */,
 				4132147426DE69050078BE04 /* BottomStatusBar.swift in Sources */,
 				413A032426E4F751009E8406 /* WindowStatusObject.swift in Sources */,
 				4132147226DE68F40078BE04 /* BottomToolBar.swift in Sources */,

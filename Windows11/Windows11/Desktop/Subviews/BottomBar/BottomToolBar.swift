@@ -24,11 +24,11 @@ struct BottomToolBar: View {
             }
         }
         .frame(height: Const.bottomStatusHeight)
-        .background(background).opacity(0.85)
+        .background(background).opacity(0.95)
     }
     
     var background: Color {
-        isDesktop ? Color.lightTitle: Color.clear
+        isDesktop ? Color.launchpad: Color.clear
     }
 }
 

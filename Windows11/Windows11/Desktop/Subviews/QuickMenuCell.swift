@@ -30,6 +30,7 @@ struct QuickMenuCell: View {
         }
         .background(item.isSelected ? Color.checked:Color.unchecked)
         .overlay(RoundedRectangle(cornerRadius: 5).stroke(Color.darkTitle.opacity(0.2)))
+        .onHoverBackground()
     }
 }
 

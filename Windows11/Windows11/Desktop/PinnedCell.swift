@@ -24,6 +24,8 @@ struct PinnedCell: View {
                 }
             }.buttonStyle(PlainButtonStyle())
         }//.background(Color.green)
+        .padding(3.0)
+        .onHoverBackground()
     }
 }
 

@@ -19,5 +19,5 @@ extension Color {
     
     static let darkBlue = Color("darkBlue")
     static let launchpad = Color("launchpad")
-    
+    static let hover = Color("Hover")
 }

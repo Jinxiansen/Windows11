@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct RecommendedCell: View {
-    let type: PinnedType
-    var tapClosure: ((PinnedType) -> ())?
+    let type: RecommendedType
+    var tapClosure: ((RecommendedType) -> ())?
     
     var body: some View {
         HStack {
@@ -17,20 +17,22 @@ struct RecommendedCell: View {
                 Image(type.imageName).resizable().frame(width: 35.0, height: 35.0)
                     .shadow(color: .black.opacity(0.25), radius: 1, x: 0, y: 0)
                 VStack(alignment: .leading, spacing: 3.0) {
-                    Text(type.appName).foregroundColor(Color.darkTitle)
-                    Text(type.appName).foregroundColor(Color.darkSubTitle).font(.caption)
+                    Text(type.description.title).foregroundColor(Color.darkTitle)
+                    Text(type.description.subTitle).foregroundColor(Color.darkSubTitle).font(.caption).lineLimit(1)
                 }
                 Spacer()
             }
             Spacer()
-        }//.background(Color.green)
+        }
         .frame(width: (LaunchpadConst.maxWidth - 30*3)/2)
+        .padding(3.0)
+        .onHoverBackground()
     }
 }
 
 struct RecommendedCell_Previews: PreviewProvider {
     static var previews: some View {
-        RecommendedCell(type: .alarm) { type in
+        RecommendedCell(type: .code) { type in
             
         }
     }

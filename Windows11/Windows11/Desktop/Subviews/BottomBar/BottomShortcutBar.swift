@@ -12,8 +12,8 @@ enum BottomShortcutType: CaseIterable {
     case search
     case news
     case setting
-//    case folder
-//    case explorer
+    // case folder
+    // case explorer
     case store
     case trash
     
@@ -33,7 +33,7 @@ struct BottomShortcutBar: View {
     
     private let cases = BottomShortcutType.allCases
     @EnvironmentObject var desktopObject: DesktopObject
-
+    
     var body: some View {
         HStack {
             ForEach(cases, id: \.self) { type in
@@ -50,6 +50,7 @@ struct BottomShortcutBar: View {
                         .frame(maxWidth: 25.0, maxHeight: 25.0)
                         .padding(5.0)
                 }.buttonStyle(PlainButtonStyle())
+                .onHoverBackground()
             }
         }
     }

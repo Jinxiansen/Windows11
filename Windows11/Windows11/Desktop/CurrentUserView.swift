@@ -24,8 +24,19 @@ struct CurrentUserView: View {
                     openURL(URL(string: Const.repoURL)!)
                 } label: {
                     HStack {
-                        Image("jinxiansen").resizable().frame(width: 35.0, height: 35.0).clipShape(Circle()).padding(.leading, 60.0)
-                        Text("Jinxiansen").font(.headline).foregroundColor(Color.darkTitle)
+                        HStack {
+                            HStack {
+                                Image("jinxiansen")
+                                    .resizable()
+                                    .frame(width: 35.0, height: 35.0)
+//                                    .border(Color.darkTitle, width: 2.0)
+                                    .clipShape(RoundedRectangle(cornerRadius: 17.0))
+                                Text("Jinxiansen")
+                                    .font(.headline)
+                                    .foregroundColor(Color.darkTitle)
+                            }.padding(3.0)
+                            .onHoverBackground()
+                        }.padding(.leading, 60.0)
                     }.frame(height: maxHeight)
                 }.buttonStyle(PlainButtonStyle())
                 Spacer()
@@ -34,13 +45,16 @@ struct CurrentUserView: View {
                     desktopObject.resetAllStates()
                     windowObject.status = .launch
                 } label: {
-                    Image("power")
-                        .resizable().renderingMode(.template)
-                        .foregroundColor(Color.darkTitle)
-                        .frame(width: 20.0, height: 20.0)
-                        .padding(.trailing, 60.0)
+                    HStack {
+                        Image("power")
+                            .resizable().renderingMode(.template)
+                            .foregroundColor(Color.darkTitle)
+                            .frame(width: 20.0, height: 20.0)
+                            .padding(5.0)
+                            .onHoverBackground()
+                    }.padding(.trailing, 60.0)
                 }.buttonStyle(PlainButtonStyle())
-            }.background(Color.launchpad)
+            }.background(Color.launchpad.opacity(0.95))
         }
         .frame(height: maxHeight)
     }

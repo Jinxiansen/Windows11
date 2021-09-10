@@ -27,7 +27,7 @@ struct LaunchpadView: View {
                     RecommendedView()
                 }.padding(.top, 30.0)
                 CurrentUserView()
-            }.background(Color.launchpad)
+            }.background(Color.launchpad.opacity(0.95))
             .clipShape(RoundedRectangle(cornerRadius: 5.0))
             .shadow(color: .clear, radius: 0, x: 0, y: 0)
         }

@@ -10,7 +10,7 @@ import SwiftUI
 struct RecommendedView: View {
     
     private let gridItemLayout = [GridItem(.flexible()),GridItem(.flexible())]
-    @State private var menuItems = PinnedType.allCases
+    @State private var menuItems = RecommendedType.allCases
     
     var body: some View {
         VStack {
@@ -34,7 +34,7 @@ struct RecommendedView: View {
                         }
                     }
                 }
-            }.frame(height: 120.0)
+            }.frame(height: 130.0)
         }.padding(.init(top: 10, leading: 30, bottom: 0, trailing: 30))
     }
 }

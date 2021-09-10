@@ -12,3 +12,21 @@ extension View {
         AnyView(self)
     }
 }
+
+struct OnHoverBackground: ViewModifier {
+    @State var isHovered = false
+    func body(content: Content) -> some View {
+        content
+            .background(isHovered ? Color.hover : Color.clear)
+        .clipShape(RoundedRectangle(cornerRadius: 2, style: .continuous))
+        .onHover { isHovered in
+            self.isHovered = isHovered
+        }
+    }
+}
+
+extension View {
+    func onHoverBackground() -> some View {
+        self.modifier(OnHoverBackground())
+    }
+}

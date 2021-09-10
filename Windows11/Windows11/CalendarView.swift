@@ -60,6 +60,7 @@ struct CalendarView: View {
                                     .foregroundColor(calendar.isDate(date, inSameDayAs: selectedDate) ? .lightTitle:Color.darkTitle)
                             )
                     }.buttonStyle(PlainButtonStyle())
+                    .onHoverBackground()
                 },
                 trailing: { date in
                     Text(dayFormatter.string(from: date))
@@ -89,7 +90,7 @@ struct CalendarView: View {
                             .labelStyle(IconOnlyLabelStyle())
                             .padding(.horizontal)
                             .frame(maxHeight: .infinity)
-                        }
+                        }.onHoverBackground()
                         
                         Text(fullFormatter.string(from: selectedDate))
                             .font(.headline)
@@ -114,7 +115,7 @@ struct CalendarView: View {
                             .labelStyle(IconOnlyLabelStyle())
                             .padding(.horizontal)
                             .frame(maxHeight: .infinity)
-                        }
+                        }.onHoverBackground()
                     }
                     .padding(.bottom, 6)
                 }

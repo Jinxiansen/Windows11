@@ -26,7 +26,7 @@ struct BottomStatusBar: View {
     var body: some View {
         HStack {
             Spacer()
-            HStack {
+            HStack(alignment: VerticalAlignment.center, spacing: 0.0) {
                 generateMenuButton(iconName: "wifi") {
                     toggle(type: .wifi)
                 }
@@ -44,11 +44,13 @@ struct BottomStatusBar: View {
                         toggle(type: .loudspeaker)
                     }
                     VStack {
-                        Text("1:55 PM").font(.caption2)
-                        Text("7/20/2021").font(.caption2)
-                    }.onTapGesture {
+                        Text(timeText).font(.caption2)
+                        Text(fullText).font(.caption2)
+                    }.padding(2.0)
+                    .onTapGesture {
                         toggle(type: .time)
-                    }
+                    }.onHoverBackground()
+                    
                     generateMenuButton(iconName: "reply") {
                         toggle(type: .notification)
                     }
@@ -72,19 +74,29 @@ struct BottomStatusBar: View {
     
     func generateMenuButton(iconName: String,
                             tapClosure: @escaping (() -> ())) -> some View {
-        Button {
-            tapClosure()
-        } label: {
-            Image(iconName)
-                .renderingMode(.template)
-                .resizable()
-                .frame(width: 16.0, height: 16.0)
-                .foregroundColor(iconColor)
-        }.buttonStyle(PlainButtonStyle())
+        HStack {
+            Button {
+                tapClosure()
+            } label: {
+                Image(iconName)
+                    .renderingMode(.template)
+                    .resizable()
+                    .frame(width: 16.0, height: 16.0)
+                    .foregroundColor(Color.darkTitle)
+            }.buttonStyle(PlainButtonStyle())
+            .padding(EdgeInsets(top: 4, leading: 4, bottom: 4, trailing: 4))
+        }
+        .onHoverBackground()
     }
     
-    var iconColor: Color {
-        Color.darkTitle
+    let formatter = DateFormatter()
+    var timeText: String {
+        formatter.dateFormat = "hh:mm a"
+        return formatter.string(from: Date())
+    }
+    var fullText: String {
+        formatter.dateFormat = "d/M/yyyy"
+        return formatter.string(from: Date())
     }
 }
 
