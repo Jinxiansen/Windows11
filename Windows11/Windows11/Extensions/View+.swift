@@ -30,3 +30,46 @@ extension View {
         self.modifier(OnHoverBackground())
     }
 }
+
+extension View {
+    @inlinable
+    public func hidden(_ isHidden: Bool) -> some View {
+        Group {
+            if isHidden {
+                hidden()
+            } else {
+                self
+            }
+        }
+    }
+}
+
+//extension View {
+//  @inlinable public func mask<Mask: View>(
+//    alignment: Alignment = .center,
+//    @ViewBuilder _ mask: () -> Mask
+//  ) -> some View {
+//    self.mask(alignment: alignment, mask())
+//  }
+//}
+
+
+extension View {
+    
+    public func masking<T: View>(_ view: T) -> some View {
+        hidden().background(view.mask(self))
+    }
+  @inlinable public func overlay<V: View>(
+    alignment: Alignment = .center,
+    @ViewBuilder content: () -> V
+  ) -> some View {
+    self.overlay(content(), alignment: alignment)
+  }
+
+  @inlinable public func background<V: View>(
+    alignment: Alignment = .center,
+    @ViewBuilder content: () -> V
+  ) -> some View {
+    self.background(content(), alignment: alignment)
+  }
+}

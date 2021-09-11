@@ -42,6 +42,7 @@
 		413A033E26E90326009E8406 /* PinnedType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A033D26E90326009E8406 /* PinnedType.swift */; };
 		413A034026EA4A71009E8406 /* RecommendedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A033F26EA4A71009E8406 /* RecommendedCell.swift */; };
 		413A034226EB96C4009E8406 /* RecommendedType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A034126EB96C4009E8406 /* RecommendedType.swift */; };
+		413A034426EC5CE4009E8406 /* AboutApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A034326EC5CE4009E8406 /* AboutApp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +105,7 @@
 		413A033D26E90326009E8406 /* PinnedType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinnedType.swift; sourceTree = "<group>"; };
 		413A033F26EA4A71009E8406 /* RecommendedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedCell.swift; sourceTree = "<group>"; };
 		413A034126EB96C4009E8406 /* RecommendedType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedType.swift; sourceTree = "<group>"; };
+		413A034326EC5CE4009E8406 /* AboutApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -267,6 +269,7 @@
 				413A031B26E48DF4009E8406 /* QuickMenuCell.swift */,
 				413A031D26E490FE009E8406 /* QuickMenuItem.swift */,
 				4132148126E28FEE0078BE04 /* AboutWindowsView.swift */,
+				413A034326EC5CE4009E8406 /* AboutApp.swift */,
 				4132147926E0FE320078BE04 /* LeadingShortcutView.swift */,
 				413A033826E7A0AB009E8406 /* BottomBar */,
 			);
@@ -417,6 +420,7 @@
 				413A033726E79EDF009E8406 /* CurrentUserView.swift in Sources */,
 				413A032226E4D77F009E8406 /* PreferencesStore.swift in Sources */,
 				4132147626DE69340078BE04 /* BottomShortcutBar.swift in Sources */,
+				413A034426EC5CE4009E8406 /* AboutApp.swift in Sources */,
 				413A033A26E7AAE5009E8406 /* View+.swift in Sources */,
 				413A031A26E3AFD6009E8406 /* Color+.swift in Sources */,
 				413A031826E37DC9009E8406 /* LaunchScreen.swift in Sources */,

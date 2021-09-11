@@ -34,7 +34,7 @@ struct RecommendedView: View {
                         }
                     }
                 }
-            }.frame(height: 130.0)
+            }.frame(height: 150.0)
         }.padding(.init(top: 10, leading: 30, bottom: 0, trailing: 30))
     }
 }

@@ -38,7 +38,7 @@ struct AboutWindowsView: View {
                 } label: {
                     Image(systemName: "xmark").resizable().renderingMode(.template).foregroundColor(Color.gray).frame(width: 15.0, height: 15.0).padding([.top,.trailing], 10.0)
                 }.buttonStyle(PlainButtonStyle())
-
+                
             }.frame(height: 25.0)
             .background(Color.lightTitle)
             
@@ -85,7 +85,7 @@ struct AboutWindowsView: View {
             HStack {
                 Text("This product is licensed with").fixedSize(horizontal: false, vertical: true)
                 Link("MIT License.", destination: URL(string: Const.licenseURL)!).onHoverBackground()
-//                Link(Const.email, destination: URL(string: Const.contactMe)!)
+                //                Link(Const.email, destination: URL(string: Const.contactMe)!)
                 Spacer()
             }.padding(.top, 20.0)
             

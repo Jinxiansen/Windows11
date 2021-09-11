@@ -23,8 +23,11 @@ struct Windows11App: App {
             .environmentObject(windowObject)
             .environmentObject(desktopObject)
             .preferredColorScheme(store.colorScheme.colorScheme)
-            
             .frame(minWidth: 1280.0, idealWidth: 2560, maxWidth: 3840, minHeight: 800.0, idealHeight: 1600.0, maxHeight: 2400.0, alignment: .center)
+        }.commands {
+            CommandGroup(replacing: CommandGroupPlacement.appInfo) {
+                AboutApp()
+            }
         }
     }
     
