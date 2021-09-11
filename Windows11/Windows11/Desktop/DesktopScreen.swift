@@ -50,6 +50,7 @@ struct DesktopScreen: View {
     func renderShortcutViewIfNeed() -> AnyView {
         switch desktopObject.shortcutType {
         case .launchpad: return LaunchpadView().toAny()
+        case .settings: return SettingsView().toAny()
         default:
             return EmptyView().toAny()
         }

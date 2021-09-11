@@ -17,8 +17,8 @@ struct RecommendedCell: View {
                 Image(type.imageName).resizable().frame(width: 35.0, height: 35.0)
                     .shadow(color: .black.opacity(0.25), radius: 1, x: 0, y: 0)
                 VStack(alignment: .leading, spacing: 3.0) {
-                    Text(type.description.title).foregroundColor(Color.darkTitle)
-                    Text(type.description.subTitle).foregroundColor(Color.darkSubTitle).font(.caption).lineLimit(1)
+                    Text(type.info.title).foregroundColor(Color.darkTitle)
+                    Text(type.info.subTitle).foregroundColor(Color.darkSubTitle).font(.caption).lineLimit(1)
                 }
                 Spacer()
             }

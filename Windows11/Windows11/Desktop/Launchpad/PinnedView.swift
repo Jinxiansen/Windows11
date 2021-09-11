@@ -9,6 +9,8 @@ import SwiftUI
 
 struct PinnedView: View {
     
+    @EnvironmentObject var desktopObject: DesktopObject
+    
     private let gridItemLayout = [GridItem(.flexible()),GridItem(.flexible()),GridItem(.flexible()), GridItem(.flexible()),GridItem(.flexible()), GridItem(.flexible())]
     @State private var menuItems = PinnedType.allCases
     
@@ -30,8 +32,8 @@ struct PinnedView: View {
                 ScrollView(showsIndicators: false) {
                     LazyVGrid(columns: gridItemLayout) {
                         ForEach((0..<menuItems.count), id: \.self) { index in
-                            PinnedCell(type: menuItems[index]) { type in
-                                print("Type: \(type)")
+                            PinnedCell(type: menuItems[index]) {
+                                pinnedTypeClick(type: $0)
                             }
                         }
                     }
@@ -40,6 +42,16 @@ struct PinnedView: View {
                 PageIndicator().frame(width: 10.0).padding(.trailing, 10.0)
             }
         }.padding(.init(top: 20, leading: 30, bottom: 0, trailing: 0))
+    }
+    
+    func pinnedTypeClick(type: PinnedType) {
+        print("Pinned Type: \(type)")
+        switch type {
+        case .settings:
+            desktopObject.shortcutType = .settings
+        default:
+            break
+        }
     }
 }
 

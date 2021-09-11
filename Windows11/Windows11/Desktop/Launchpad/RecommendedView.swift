@@ -29,13 +29,21 @@ struct RecommendedView: View {
             ScrollView(showsIndicators: false) {
                 LazyVGrid(columns: gridItemLayout) {
                     ForEach((0..<menuItems.count), id: \.self) { index in
-                        RecommendedCell(type: menuItems[index]) { type in
-                            print("Type: \(type)")
+                        RecommendedCell(type: menuItems[index]) {
+                            recommendedTypeClick(type: $0)
                         }
                     }
                 }
             }.frame(height: 150.0)
         }.padding(.init(top: 10, leading: 30, bottom: 0, trailing: 30))
+    }
+    
+    func recommendedTypeClick(type: RecommendedType) {
+        print("Recommended Type: \(type)")
+//        switch type {
+//        default:
+//            break
+//        }
     }
 }
 

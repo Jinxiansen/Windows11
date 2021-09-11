@@ -11,7 +11,7 @@ enum BottomShortcutType: CaseIterable {
     case launchpad
     case search
     case news
-    case setting
+    case settings
     // case folder
     // case explorer
     case store
@@ -22,7 +22,7 @@ enum BottomShortcutType: CaseIterable {
         case .launchpad: return Image("home")
         case .search: return Image("search3")
         case .news: return Image("news")
-        case .setting: return Image("settings")
+        case .settings: return Image("settings")
         case .store: return Image("store")
         case .trash: return Image("bin0")
         }

@@ -19,7 +19,7 @@ enum RecommendedType: String, CaseIterable {
 
 extension RecommendedType {
     
-    var description: (title: String, subTitle: String) {
+    var info: (title: String, subTitle: String) {
         switch self {
         case .xbox: return ("Xbox Official Site", "Xbox is a video gaming brand created and owned by Microsoft.")
         case .weather: return ("MSN Weather","The best way to plan your day")

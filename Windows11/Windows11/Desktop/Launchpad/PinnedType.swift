@@ -11,6 +11,7 @@ enum PinnedType: String, CaseIterable {
     case code
     case edge
     case todo
+    case settings
     case excel
     case winWord
     case twitter

@@ -17,6 +17,7 @@ struct SearchBar: View {
                 SecureField(" 🔎 Type here to search", text: $searchText) {
                     print("Commit.")
                 }
+                
                 .textFieldStyle(PlainTextFieldStyle())
                 .padding([.top,.leading,.trailing], 5.0)
 //                .foregroundColor(Color.white)

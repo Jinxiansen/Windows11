@@ -43,6 +43,10 @@
 		413A034026EA4A71009E8406 /* RecommendedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A033F26EA4A71009E8406 /* RecommendedCell.swift */; };
 		413A034226EB96C4009E8406 /* RecommendedType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A034126EB96C4009E8406 /* RecommendedType.swift */; };
 		413A034426EC5CE4009E8406 /* AboutApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A034326EC5CE4009E8406 /* AboutApp.swift */; };
+		413A034726EC6AF0009E8406 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A034626EC6AF0009E8406 /* SettingsView.swift */; };
+		413A034926ECD5C5009E8406 /* SettingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A034826ECD5C5009E8406 /* SettingType.swift */; };
+		413A034B26ECEB9D009E8406 /* SystemMenuType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A034A26ECEB9D009E8406 /* SystemMenuType.swift */; };
+		413A034D26ECFFAF009E8406 /* SystemStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A034C26ECFFAF009E8406 /* SystemStatusView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +110,10 @@
 		413A033F26EA4A71009E8406 /* RecommendedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedCell.swift; sourceTree = "<group>"; };
 		413A034126EB96C4009E8406 /* RecommendedType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedType.swift; sourceTree = "<group>"; };
 		413A034326EC5CE4009E8406 /* AboutApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutApp.swift; sourceTree = "<group>"; };
+		413A034626EC6AF0009E8406 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		413A034826ECD5C5009E8406 /* SettingType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingType.swift; sourceTree = "<group>"; };
+		413A034A26ECEB9D009E8406 /* SystemMenuType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemMenuType.swift; sourceTree = "<group>"; };
+		413A034C26ECFFAF009E8406 /* SystemStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemStatusView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,15 +255,11 @@
 			isa = PBXGroup;
 			children = (
 				4132147B26E10AE70078BE04 /* DesktopScreen.swift */,
-				413A032E26E79E66009E8406 /* LaunchpadView.swift */,
-				413A033026E79E8B009E8406 /* SearchBar.swift */,
-				413A033226E79EBD009E8406 /* PinnedView.swift */,
-				413A033D26E90326009E8406 /* PinnedType.swift */,
-				413A033B26E9011A009E8406 /* PinnedCell.swift */,
-				413A033426E79EC6009E8406 /* RecommendedView.swift */,
-				413A033F26EA4A71009E8406 /* RecommendedCell.swift */,
-				413A034126EB96C4009E8406 /* RecommendedType.swift */,
-				413A033626E79EDF009E8406 /* CurrentUserView.swift */,
+				413A034626EC6AF0009E8406 /* SettingsView.swift */,
+				413A034C26ECFFAF009E8406 /* SystemStatusView.swift */,
+				413A034826ECD5C5009E8406 /* SettingType.swift */,
+				413A034A26ECEB9D009E8406 /* SystemMenuType.swift */,
+				413A034526EC6AD4009E8406 /* Launchpad */,
 				413A032D26E50949009E8406 /* Subviews */,
 			);
 			path = Desktop;
@@ -284,6 +288,22 @@
 				4132147526DE69340078BE04 /* BottomShortcutBar.swift */,
 			);
 			path = BottomBar;
+			sourceTree = "<group>";
+		};
+		413A034526EC6AD4009E8406 /* Launchpad */ = {
+			isa = PBXGroup;
+			children = (
+				413A032E26E79E66009E8406 /* LaunchpadView.swift */,
+				413A033026E79E8B009E8406 /* SearchBar.swift */,
+				413A033226E79EBD009E8406 /* PinnedView.swift */,
+				413A033D26E90326009E8406 /* PinnedType.swift */,
+				413A033B26E9011A009E8406 /* PinnedCell.swift */,
+				413A033426E79EC6009E8406 /* RecommendedView.swift */,
+				413A033F26EA4A71009E8406 /* RecommendedCell.swift */,
+				413A034126EB96C4009E8406 /* RecommendedType.swift */,
+				413A033626E79EDF009E8406 /* CurrentUserView.swift */,
+			);
+			path = Launchpad;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -417,6 +437,7 @@
 			files = (
 				413A033526E79EC6009E8406 /* RecommendedView.swift in Sources */,
 				413A034026EA4A71009E8406 /* RecommendedCell.swift in Sources */,
+				413A034926ECD5C5009E8406 /* SettingType.swift in Sources */,
 				413A033726E79EDF009E8406 /* CurrentUserView.swift in Sources */,
 				413A032226E4D77F009E8406 /* PreferencesStore.swift in Sources */,
 				4132147626DE69340078BE04 /* BottomShortcutBar.swift in Sources */,
@@ -428,6 +449,7 @@
 				4132147A26E0FE320078BE04 /* LeadingShortcutView.swift in Sources */,
 				413A031E26E490FE009E8406 /* QuickMenuItem.swift in Sources */,
 				413A032F26E79E66009E8406 /* LaunchpadView.swift in Sources */,
+				413A034B26ECEB9D009E8406 /* SystemMenuType.swift in Sources */,
 				4132147026DE62380078BE04 /* BackgroundView.swift in Sources */,
 				4132147C26E10AE70078BE04 /* DesktopScreen.swift in Sources */,
 				413A031C26E48DF4009E8406 /* QuickMenuCell.swift in Sources */,
@@ -436,11 +458,13 @@
 				413A034226EB96C4009E8406 /* RecommendedType.swift in Sources */,
 				4132147426DE69050078BE04 /* BottomStatusBar.swift in Sources */,
 				413A032426E4F751009E8406 /* WindowStatusObject.swift in Sources */,
+				413A034726EC6AF0009E8406 /* SettingsView.swift in Sources */,
 				4132147226DE68F40078BE04 /* BottomToolBar.swift in Sources */,
 				413A032026E492E4009E8406 /* DoubleClickView.swift in Sources */,
 				413A033126E79E8B009E8406 /* SearchBar.swift in Sources */,
 				413A033C26E9011A009E8406 /* PinnedCell.swift in Sources */,
 				4132147E26E10B250078BE04 /* LockScreen.swift in Sources */,
+				413A034D26ECFFAF009E8406 /* SystemStatusView.swift in Sources */,
 				4132148026E10E9A0078BE04 /* LoginScreen.swift in Sources */,
 				413A02DC26E3187A009E8406 /* NotificationsView.swift in Sources */,
 				413A033E26E90326009E8406 /* PinnedType.swift in Sources */,

@@ -84,7 +84,7 @@ struct BottomStatusBar: View {
                     .frame(width: 16.0, height: 16.0)
                     .foregroundColor(Color.darkTitle)
             }.buttonStyle(PlainButtonStyle())
-            .padding(EdgeInsets(top: 4, leading: 4, bottom: 4, trailing: 4))
+            .padding(3.0)
         }
         .onHoverBackground()
     }
