@@ -15,30 +15,30 @@ struct SettingsView: View {
     
     @EnvironmentObject private var desktopObject: DesktopObject
     
-    @State private var offset: CGFloat = SettingsConst.maxWidth/2
+    @State var scale: CGFloat = 0.75
     @State private var leadingTypes = SettingType.allCases
     @State private var systemTypes = SystemMenuType.allCases
     
     var body: some View {
-        HStack(alignment: VerticalAlignment.bottom, spacing: 0) {
+        HStack(alignment: .bottom, spacing: 0) {
             contentView
-        }.background(Color.red)
-        .frame(width: SettingsConst.maxWidth)
-        .offset(x: 0, y: offset)
-        .onAppear {
-            withAnimation(.spring(response: 0.5, dampingFraction: 1, blendDuration: 1)) {
-                self.offset = -(Const.bottomStatusHeight + 15.0)
-            }
+                .scaleEffect(scale)
+                .onAppear {
+                    withAnimation(Animation.easeInOut(duration: 0.15)) {
+                        scale = 1.0
+                    }
+                }
         }
+        .frame(width: SettingsConst.maxWidth)
     }
     
     private var contentView: some View {
         VStack {
             topBarView
             Divider()
-            HStack() {
+            HStack(alignment: .top, spacing: 10) {
                 VStack(alignment: .leading, spacing: 0) {
-                    loginUser.padding(10.0)
+                    loginUser.padding(15.0)
                     ForEach(leadingTypes, id: \.self) { type in
                         HStack {
                             Image(type.imageName).resizable().frame(width: 18, height: 18).padding(.leading, 5.0)
@@ -48,7 +48,7 @@ struct SettingsView: View {
                         .frame(width: SettingsConst.maxWidth/3,height: 40.0)
                         .onHoverBackground()
                     }
-                    .padding(.leading, 10.0)
+                    .padding(.leading, 15.0)
                 }
                 detailView
             }
@@ -82,6 +82,9 @@ struct SettingsView: View {
                 }
                 generateButton(iconName: "xmark") {
                     print("--xmark---")
+                    if desktopObject.shortcutType == .settings {
+                        desktopObject.shortcutType = nil
+                    }
                 }
                 
             }.padding(.init(top: 10.0, leading: 10.0, bottom: 5.0, trailing: 10.0))
