@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct Windows11App: App {
     
-    @StateObject var windowObject = WindowStatusObject(status: .login)
+    @StateObject var windowObject = WindowStatusObject(status: .launch)
     @StateObject var store = PreferencesStore.shared
     
     @StateObject var desktopObject = DesktopObject()

@@ -32,15 +32,14 @@ struct TopBarView: View {
                 
                 generateButton(iconName: "minimize") {
                     print("--minimize--")
+                    desktopObject.shortcutType = nil
                 }
                 generateButton(iconName: "maximize") {
                     print("--maximize---")
                 }
                 generateButton(iconName: "close") {
                     print("--close---")
-                    if desktopObject.shortcutType == .settings {
-                        desktopObject.shortcutType = nil
-                    }
+                    desktopObject.shortcutType = nil
                 }
                 
             }.padding(.init(top: 10.0, leading: 10.0, bottom: 5.0, trailing: 10.0))

@@ -26,8 +26,8 @@
 		413A031626E37706009E8406 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A031526E37706009E8406 /* Const.swift */; };
 		413A031826E37DC9009E8406 /* LaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A031726E37DC9009E8406 /* LaunchScreen.swift */; };
 		413A031A26E3AFD6009E8406 /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A031926E3AFD6009E8406 /* Color+.swift */; };
-		413A031C26E48DF4009E8406 /* QuickMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A031B26E48DF4009E8406 /* QuickMenuCell.swift */; };
-		413A031E26E490FE009E8406 /* QuickMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A031D26E490FE009E8406 /* QuickMenuItem.swift */; };
+		413A031C26E48DF4009E8406 /* NotificationMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A031B26E48DF4009E8406 /* NotificationMenuCell.swift */; };
+		413A031E26E490FE009E8406 /* NotificationMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A031D26E490FE009E8406 /* NotificationMenuItem.swift */; };
 		413A032026E492E4009E8406 /* DoubleClickView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A031F26E492E4009E8406 /* DoubleClickView.swift */; };
 		413A032226E4D77F009E8406 /* PreferencesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A032126E4D77F009E8406 /* PreferencesStore.swift */; };
 		413A032426E4F751009E8406 /* WindowStatusObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A032326E4F751009E8406 /* WindowStatusObject.swift */; };
@@ -49,6 +49,9 @@
 		413A034D26ECFFAF009E8406 /* SystemStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A034C26ECFFAF009E8406 /* SystemStatusView.swift */; };
 		413A034F26EDB950009E8406 /* LoginUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A034E26EDB950009E8406 /* LoginUserView.swift */; };
 		413A035126EDB98F009E8406 /* TopBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A035026EDB98F009E8406 /* TopBarView.swift */; };
+		413A035326EDDE94009E8406 /* SystemListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A035226EDDE94009E8406 /* SystemListView.swift */; };
+		413A035526EDDF2C009E8406 /* SystemDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A035426EDDF2C009E8406 /* SystemDetailView.swift */; };
+		413A035726EDE070009E8406 /* NotificationMenuType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A035626EDE070009E8406 /* NotificationMenuType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,8 +98,8 @@
 		413A031526E37706009E8406 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		413A031726E37DC9009E8406 /* LaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreen.swift; sourceTree = "<group>"; };
 		413A031926E3AFD6009E8406 /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
-		413A031B26E48DF4009E8406 /* QuickMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickMenuCell.swift; sourceTree = "<group>"; };
-		413A031D26E490FE009E8406 /* QuickMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickMenuItem.swift; sourceTree = "<group>"; };
+		413A031B26E48DF4009E8406 /* NotificationMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationMenuCell.swift; sourceTree = "<group>"; };
+		413A031D26E490FE009E8406 /* NotificationMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationMenuItem.swift; sourceTree = "<group>"; };
 		413A031F26E492E4009E8406 /* DoubleClickView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleClickView.swift; sourceTree = "<group>"; };
 		413A032126E4D77F009E8406 /* PreferencesStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesStore.swift; sourceTree = "<group>"; };
 		413A032326E4F751009E8406 /* WindowStatusObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowStatusObject.swift; sourceTree = "<group>"; };
@@ -118,6 +121,9 @@
 		413A034C26ECFFAF009E8406 /* SystemStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemStatusView.swift; sourceTree = "<group>"; };
 		413A034E26EDB950009E8406 /* LoginUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserView.swift; sourceTree = "<group>"; };
 		413A035026EDB98F009E8406 /* TopBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBarView.swift; sourceTree = "<group>"; };
+		413A035226EDDE94009E8406 /* SystemListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemListView.swift; sourceTree = "<group>"; };
+		413A035426EDDF2C009E8406 /* SystemDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemDetailView.swift; sourceTree = "<group>"; };
+		413A035626EDE070009E8406 /* NotificationMenuType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationMenuType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +180,7 @@
 				413A032926E4F7B7009E8406 /* Login */,
 				413A032A26E4F7C2009E8406 /* Desktop */,
 				4132146F26DE62380078BE04 /* BackgroundView.swift */,
+				413A034326EC5CE4009E8406 /* AboutApp.swift */,
 				4132147726DFC3260078BE04 /* CalendarView.swift */,
 				413A032626E4F778009E8406 /* Objects */,
 				413A032526E4F771009E8406 /* Extensions */,
@@ -259,12 +266,8 @@
 			isa = PBXGroup;
 			children = (
 				4132147B26E10AE70078BE04 /* DesktopScreen.swift */,
-				413A034626EC6AF0009E8406 /* SettingsView.swift */,
-				413A034E26EDB950009E8406 /* LoginUserView.swift */,
-				413A035026EDB98F009E8406 /* TopBarView.swift */,
-				413A034C26ECFFAF009E8406 /* SystemStatusView.swift */,
-				413A034826ECD5C5009E8406 /* SettingType.swift */,
-				413A034A26ECEB9D009E8406 /* SystemMenuType.swift */,
+				413A035926EDE0B2009E8406 /* SystemView */,
+				413A035826EDE093009E8406 /* NotificationsView */,
 				413A034526EC6AD4009E8406 /* Launchpad */,
 				413A032D26E50949009E8406 /* Subviews */,
 			);
@@ -275,11 +278,7 @@
 			isa = PBXGroup;
 			children = (
 				413A031F26E492E4009E8406 /* DoubleClickView.swift */,
-				413A02DB26E3187A009E8406 /* NotificationsView.swift */,
-				413A031B26E48DF4009E8406 /* QuickMenuCell.swift */,
-				413A031D26E490FE009E8406 /* QuickMenuItem.swift */,
 				4132148126E28FEE0078BE04 /* AboutWindowsView.swift */,
-				413A034326EC5CE4009E8406 /* AboutApp.swift */,
 				4132147926E0FE320078BE04 /* LeadingShortcutView.swift */,
 				413A033826E7A0AB009E8406 /* BottomBar */,
 			);
@@ -310,6 +309,32 @@
 				413A033626E79EDF009E8406 /* CurrentUserView.swift */,
 			);
 			path = Launchpad;
+			sourceTree = "<group>";
+		};
+		413A035826EDE093009E8406 /* NotificationsView */ = {
+			isa = PBXGroup;
+			children = (
+				413A02DB26E3187A009E8406 /* NotificationsView.swift */,
+				413A031B26E48DF4009E8406 /* NotificationMenuCell.swift */,
+				413A031D26E490FE009E8406 /* NotificationMenuItem.swift */,
+				413A035626EDE070009E8406 /* NotificationMenuType.swift */,
+			);
+			path = NotificationsView;
+			sourceTree = "<group>";
+		};
+		413A035926EDE0B2009E8406 /* SystemView */ = {
+			isa = PBXGroup;
+			children = (
+				413A034626EC6AF0009E8406 /* SettingsView.swift */,
+				413A035226EDDE94009E8406 /* SystemListView.swift */,
+				413A035426EDDF2C009E8406 /* SystemDetailView.swift */,
+				413A034E26EDB950009E8406 /* LoginUserView.swift */,
+				413A035026EDB98F009E8406 /* TopBarView.swift */,
+				413A034C26ECFFAF009E8406 /* SystemStatusView.swift */,
+				413A034826ECD5C5009E8406 /* SettingType.swift */,
+				413A034A26ECEB9D009E8406 /* SystemMenuType.swift */,
+			);
+			path = SystemView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -451,15 +476,17 @@
 				413A033A26E7AAE5009E8406 /* View+.swift in Sources */,
 				413A031A26E3AFD6009E8406 /* Color+.swift in Sources */,
 				413A031826E37DC9009E8406 /* LaunchScreen.swift in Sources */,
+				413A035326EDDE94009E8406 /* SystemListView.swift in Sources */,
 				4132147826DFC3260078BE04 /* CalendarView.swift in Sources */,
 				4132147A26E0FE320078BE04 /* LeadingShortcutView.swift in Sources */,
-				413A031E26E490FE009E8406 /* QuickMenuItem.swift in Sources */,
+				413A031E26E490FE009E8406 /* NotificationMenuItem.swift in Sources */,
 				413A032F26E79E66009E8406 /* LaunchpadView.swift in Sources */,
 				413A034B26ECEB9D009E8406 /* SystemMenuType.swift in Sources */,
 				413A034F26EDB950009E8406 /* LoginUserView.swift in Sources */,
 				4132147026DE62380078BE04 /* BackgroundView.swift in Sources */,
 				4132147C26E10AE70078BE04 /* DesktopScreen.swift in Sources */,
-				413A031C26E48DF4009E8406 /* QuickMenuCell.swift in Sources */,
+				413A031C26E48DF4009E8406 /* NotificationMenuCell.swift in Sources */,
+				413A035526EDDF2C009E8406 /* SystemDetailView.swift in Sources */,
 				413A032C26E502B6009E8406 /* DesktopObject.swift in Sources */,
 				413A033326E79EBD009E8406 /* PinnedView.swift in Sources */,
 				413A034226EB96C4009E8406 /* RecommendedType.swift in Sources */,
@@ -473,6 +500,7 @@
 				4132147E26E10B250078BE04 /* LockScreen.swift in Sources */,
 				413A034D26ECFFAF009E8406 /* SystemStatusView.swift in Sources */,
 				4132148026E10E9A0078BE04 /* LoginScreen.swift in Sources */,
+				413A035726EDE070009E8406 /* NotificationMenuType.swift in Sources */,
 				413A02DC26E3187A009E8406 /* NotificationsView.swift in Sources */,
 				413A033E26E90326009E8406 /* PinnedType.swift in Sources */,
 				413A035126EDB98F009E8406 /* TopBarView.swift in Sources */,

@@ -12,7 +12,7 @@ struct NotificationsView: View {
     private static let width: CGFloat = 350.0
     @State private var offset:CGFloat = width
     private let gridItemLayout = [GridItem(.flexible()), GridItem(.flexible()),GridItem(.flexible()), GridItem(.flexible())]
-    @State private var menuItems = QuickMenuType.allCases.map { QuickMenuItem(type: $0) }
+    @State private var menuItems = NotificationMenuType.allCases.map { NotificationMenuItem(type: $0) }
     
     var body: some View {
         HStack {
@@ -58,7 +58,7 @@ struct NotificationsView: View {
             ScrollView(showsIndicators: false) {
                 LazyVGrid(columns: gridItemLayout) {
                     ForEach((0..<menuItems.count), id: \.self) { index in
-                        QuickMenuCell(item: menuItems[index])
+                        NotificationMenuCell(item: menuItems[index])
                             .onTapGesture {
                                 menuItems[index].isSelected.toggle()
                                 print(menuItems[index].debugDescription) 

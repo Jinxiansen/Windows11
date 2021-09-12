@@ -1,13 +1,13 @@
 //
-//  QuickMenuItem.swift
+//  NotificationMenuType.swift
 //  Windows11
 //
-//  Created by 晋先森 on 9/5/21.
+//  Created by 晋先森 on 9/12/21.
 //
 
 import SwiftUI
 
-enum QuickMenuType: String, CaseIterable {
+enum NotificationMenuType: String, CaseIterable {
     case location = "Location"
     case batterySaver = "Battery saver"
     case nightLight = "Night light"
@@ -38,26 +38,5 @@ enum QuickMenuType: String, CaseIterable {
         case .focusAssist: name = "moon"
         }
         return Image(name)
-    }
-}
-
-class QuickMenuItem: ObservableObject {
-    let type: QuickMenuType
-    var isSelected: Bool {
-        didSet {
-            objectWillChange.send()
-        }
-    }
-    
-    init(type: QuickMenuType, isSelected: Bool = false) {
-        self.type = type
-        self.isSelected = isSelected
-    }
-}
-
-extension QuickMenuItem: CustomDebugStringConvertible {
-    
-    var debugDescription: String {
-        return Mirror(reflecting: self).children.map { "\($0.label!):\($0.value)" }.joined(separator: "\n")
     }
 }

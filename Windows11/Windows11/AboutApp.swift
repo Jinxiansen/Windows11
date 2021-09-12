@@ -13,15 +13,17 @@ struct AboutApp: View {
             Self.open()
         }
     }
-    
+}
+
+extension AboutApp {
     static func open() {
         NSApplication.shared.orderFrontStandardAboutPanel(
             options:
                 [
                     NSApplication.AboutPanelOptionKey.credits: NSAttributedString(
-                        string: Const.email,
+                        string: "This app is only provided for learning, demonstration and communication of SwiftUI, and does not contain any commercial purpose. If you have any questions, you can contact me by email: " + Const.email,
                         attributes: [
-                            NSAttributedString.Key.font: NSFont.boldSystemFont(
+                            NSAttributedString.Key.font: NSFont.systemFont(
                                 ofSize: NSFont.smallSystemFontSize)
                         ]
                     )

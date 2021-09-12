@@ -9,8 +9,8 @@ import SwiftUI
 
 struct LoginScreen: View {
     
-    @EnvironmentObject var windowObject: WindowStatusObject
-    @State var pinCode: String = "jinxiansen"
+    @EnvironmentObject private var windowObject: WindowStatusObject
+    @State private var pinCode: String = "jinxiansen"
 
     var body: some View {
         ZStack {

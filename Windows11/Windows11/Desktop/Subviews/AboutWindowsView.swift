@@ -68,10 +68,10 @@ struct AboutWindowsView: View {
             Divider()
             VStack(alignment: HorizontalAlignment.leading, spacing: 5.0) {
                 Text("Microsoft Windows (SwiftUI)\nVersion Dev(OS Build 21996.1)\n© Microsoft Corporation. All right reserved.").font(.callout)
-                Text("The Windows 11 Pro operating system and its user interface are protected by trademark and other pending or existing intellectual property rights in the United States and other countries/regions.").font(.callout)
+                Text("This application is only provided for learning, demonstration and communication of SwiftUI, and does not contain any commercial purpose.\nIf you have any questions, you can contact me by email: \(Const.email)").font(.callout)
                 
                 HStack {
-                    Text("This product is licensed with")
+                    Text("This product is licensed with:")
                     Link("MIT License.", destination: URL(string: Const.licenseURL)!).onHoverBackground()
                     Spacer()
                 }.padding(.top, 10.0)

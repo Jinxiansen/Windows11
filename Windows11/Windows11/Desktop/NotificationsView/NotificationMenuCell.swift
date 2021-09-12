@@ -1,5 +1,5 @@
 //
-//  QuickMenuCell.swift
+//  NotificationMenuCell.swift
 //  Windows11
 //
 //  Created by 晋先森 on 9/5/21.
@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct QuickMenuCell: View {
-    @ObservedObject var item: QuickMenuItem
+struct NotificationMenuCell: View {
+    @ObservedObject var item: NotificationMenuItem
 
     var body: some View {
         VStack {
@@ -34,8 +34,8 @@ struct QuickMenuCell: View {
     }
 }
 
-struct QuickMenuCell_Previews: PreviewProvider {
+struct NotificationMenuCell_Previews: PreviewProvider {
     static var previews: some View {
-        QuickMenuCell(item: .init(type: .airplaneMode))
+        NotificationMenuCell(item: .init(type: .airplaneMode))
     }
 }
