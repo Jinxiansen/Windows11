@@ -1,5 +1,5 @@
 //
-//  DoubleClickView.swift
+//  RightClickView.swift
 //  Windows11
 //
 //  Created by 晋先森 on 9/5/21.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct DoubleClickView: View {
+struct RightClickView: View {
     var body: some View {
         VStack {
             Menu("View") {
@@ -129,8 +129,8 @@ struct DoubleClickView: View {
     }
 }
 
-struct DoubleClickView_Previews: PreviewProvider {
+struct RightClickView_Previews: PreviewProvider {
     static var previews: some View {
-        DoubleClickView()
+        RightClickView()
     }
 }

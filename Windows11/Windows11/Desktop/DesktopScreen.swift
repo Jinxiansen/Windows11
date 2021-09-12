@@ -19,7 +19,7 @@ struct DesktopScreen: View {
                     print("Click background.")
                     
                 }.contextMenu {
-                    DoubleClickView()
+                    RightClickView()
                 }
             VStack {
                 HStack {

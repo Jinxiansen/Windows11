@@ -24,7 +24,7 @@ struct LaunchScreen: View {
             }.background(Color.black)
             .animation(.spring(response: 1, dampingFraction: 1, blendDuration: 1))
         }.onAppear {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 8.5) {
                 windowObject.status = .lockScreen
             }
         }.background(Color.black)

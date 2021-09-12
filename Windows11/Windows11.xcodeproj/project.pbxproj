@@ -28,7 +28,7 @@
 		413A031A26E3AFD6009E8406 /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A031926E3AFD6009E8406 /* Color+.swift */; };
 		413A031C26E48DF4009E8406 /* NotificationMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A031B26E48DF4009E8406 /* NotificationMenuCell.swift */; };
 		413A031E26E490FE009E8406 /* NotificationMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A031D26E490FE009E8406 /* NotificationMenuItem.swift */; };
-		413A032026E492E4009E8406 /* DoubleClickView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A031F26E492E4009E8406 /* DoubleClickView.swift */; };
+		413A032026E492E4009E8406 /* RightClickView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A031F26E492E4009E8406 /* RightClickView.swift */; };
 		413A032226E4D77F009E8406 /* PreferencesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A032126E4D77F009E8406 /* PreferencesStore.swift */; };
 		413A032426E4F751009E8406 /* WindowStatusObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A032326E4F751009E8406 /* WindowStatusObject.swift */; };
 		413A032C26E502B6009E8406 /* DesktopObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A032B26E502B6009E8406 /* DesktopObject.swift */; };
@@ -100,7 +100,7 @@
 		413A031926E3AFD6009E8406 /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
 		413A031B26E48DF4009E8406 /* NotificationMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationMenuCell.swift; sourceTree = "<group>"; };
 		413A031D26E490FE009E8406 /* NotificationMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationMenuItem.swift; sourceTree = "<group>"; };
-		413A031F26E492E4009E8406 /* DoubleClickView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleClickView.swift; sourceTree = "<group>"; };
+		413A031F26E492E4009E8406 /* RightClickView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightClickView.swift; sourceTree = "<group>"; };
 		413A032126E4D77F009E8406 /* PreferencesStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesStore.swift; sourceTree = "<group>"; };
 		413A032326E4F751009E8406 /* WindowStatusObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowStatusObject.swift; sourceTree = "<group>"; };
 		413A032B26E502B6009E8406 /* DesktopObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesktopObject.swift; sourceTree = "<group>"; };
@@ -277,7 +277,7 @@
 		413A032D26E50949009E8406 /* Subviews */ = {
 			isa = PBXGroup;
 			children = (
-				413A031F26E492E4009E8406 /* DoubleClickView.swift */,
+				413A031F26E492E4009E8406 /* RightClickView.swift */,
 				4132148126E28FEE0078BE04 /* AboutWindowsView.swift */,
 				4132147926E0FE320078BE04 /* LeadingShortcutView.swift */,
 				413A033826E7A0AB009E8406 /* BottomBar */,
@@ -494,7 +494,7 @@
 				413A032426E4F751009E8406 /* WindowStatusObject.swift in Sources */,
 				413A034726EC6AF0009E8406 /* SettingsView.swift in Sources */,
 				4132147226DE68F40078BE04 /* BottomToolBar.swift in Sources */,
-				413A032026E492E4009E8406 /* DoubleClickView.swift in Sources */,
+				413A032026E492E4009E8406 /* RightClickView.swift in Sources */,
 				413A033126E79E8B009E8406 /* SearchBar.swift in Sources */,
 				413A033C26E9011A009E8406 /* PinnedCell.swift in Sources */,
 				4132147E26E10B250078BE04 /* LockScreen.swift in Sources */,
