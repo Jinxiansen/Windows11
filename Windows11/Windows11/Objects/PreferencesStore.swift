@@ -8,7 +8,6 @@
 import SwiftUI
 
 class PreferencesStore: ObservableObject {
-    
     static let shared = PreferencesStore()
 //    @AppStorage("currentColorScheme")
     @Published var colorScheme: ColorTheme = .light {
@@ -18,19 +17,17 @@ class PreferencesStore: ObservableObject {
     }
 
     static var colorScheme = shared.colorScheme
-    
+
     func changeDarkMode() {
         print("Color: \(colorScheme)")
-        colorScheme = colorScheme == .light ? .dark:.light
+        colorScheme = colorScheme == .light ? .dark : .light
     }
-    
 }
-
 
 enum ColorTheme: Int {
     case light
     case dark
-    
+
     var colorScheme: ColorScheme {
         switch self {
         case .light:

@@ -13,21 +13,21 @@ struct CalendarView: View {
     private let dayFormatter: DateFormatter
     private let weekDayFormatter: DateFormatter
     private let fullFormatter: DateFormatter
-    
+
     @State private var selectedDate = Self.now
     private static var now = Date() // Cache now
-    
+
     static let size = CGSize(width: 360, height: 360)
-    @State private var offset:CGFloat = Self.size.width
-    
+    @State private var offset: CGFloat = Self.size.width
+
     init(calendar: Calendar) {
         self.calendar = calendar
-        self.monthFormatter = DateFormatter(dateFormat: "MMMM", calendar: calendar)
-        self.dayFormatter = DateFormatter(dateFormat: "d", calendar: calendar)
-        self.weekDayFormatter = DateFormatter(dateFormat: "EEE", calendar: calendar)
-        self.fullFormatter = DateFormatter(dateFormat: "MMMM dd, yyyy", calendar: calendar)
+        monthFormatter = DateFormatter(dateFormat: "MMMM", calendar: calendar)
+        dayFormatter = DateFormatter(dateFormat: "d", calendar: calendar)
+        weekDayFormatter = DateFormatter(dateFormat: "EEE", calendar: calendar)
+        fullFormatter = DateFormatter(dateFormat: "MMMM dd, yyyy", calendar: calendar)
     }
-    
+
     var body: some View {
         VStack {
             Spacer()
@@ -37,7 +37,7 @@ struct CalendarView: View {
             }
         }.shadow(color: .black.opacity(0.35), radius: 3, x: -1, y: 0)
     }
-    
+
     var contentView: some View {
         VStack {
             CalendarContentView(
@@ -57,10 +57,10 @@ struct CalendarView: View {
                             .accessibilityHidden(true)
                             .overlay(
                                 Text(dayFormatter.string(from: date))
-                                    .foregroundColor(calendar.isDate(date, inSameDayAs: selectedDate) ? .lightTitle:Color.darkTitle)
+                                    .foregroundColor(calendar.isDate(date, inSameDayAs: selectedDate) ? .lightTitle : Color.darkTitle)
                             )
                     }.buttonStyle(PlainButtonStyle())
-                    .onHoverBackground()
+                        .onHoverBackground()
                 },
                 trailing: { date in
                     Text(dayFormatter.string(from: date))
@@ -69,7 +69,7 @@ struct CalendarView: View {
                 header: { date in
                     Text(weekDayFormatter.string(from: date))
                 },
-                title: { date in
+                title: { _ in
                     HStack {
                         Button {
                             withAnimation {
@@ -91,11 +91,11 @@ struct CalendarView: View {
                             .padding(.horizontal)
                             .frame(maxHeight: .infinity)
                         }.onHoverBackground()
-                        
+
                         Text(fullFormatter.string(from: selectedDate))
                             .font(.headline)
                             .padding()
-                        
+
                         Button {
                             withAnimation {
                                 guard let newDate = calendar.date(
@@ -147,10 +147,10 @@ private struct CalendarContentView<Day: View, Header: View, Title: View, Trailin
     private let trailing: (Date) -> Trailing
     private let header: (Date) -> Header
     private let title: (Date) -> Title
-    
+
     // Constants
     private let daysInWeek = 7
-    
+
     public init(
         calendar: Calendar,
         date: Binding<Date>,
@@ -160,17 +160,17 @@ private struct CalendarContentView<Day: View, Header: View, Title: View, Trailin
         @ViewBuilder title: @escaping (Date) -> Title
     ) {
         self.calendar = calendar
-        self._date = date
+        _date = date
         self.content = content
         self.trailing = trailing
         self.header = header
         self.title = title
     }
-    
+
     public var body: some View {
         let month = date.startOfMonth(using: calendar)
         let days = makeDays()
-        
+
         return LazyVGrid(columns: Array(repeating: GridItem(), count: daysInWeek)) {
             Section(header: title(month)) {
                 ForEach(days.prefix(daysInWeek), id: \.self, content: header)
@@ -187,6 +187,7 @@ private struct CalendarContentView<Day: View, Header: View, Title: View, Trailin
 }
 
 // MARK: - Conformances
+
 extension CalendarContentView: Equatable {
     public static func == (lhs: CalendarContentView<Day, Header, Title, Trailing>, rhs: CalendarContentView<Day, Header, Title, Trailing>) -> Bool {
         lhs.calendar == rhs.calendar && lhs.date == rhs.date
@@ -194,6 +195,7 @@ extension CalendarContentView: Equatable {
 }
 
 // MARK: - Helpers
+
 private extension CalendarContentView {
     func makeDays() -> [Date] {
         guard let monthInterval = calendar.dateInterval(of: .month, for: date),
@@ -202,7 +204,7 @@ private extension CalendarContentView {
         else {
             return []
         }
-        
+
         let dateInterval = DateInterval(start: monthFirstWeek.start, end: monthLastWeek.end)
         return calendar.generateDays(for: dateInterval)
     }
@@ -214,25 +216,25 @@ private extension Calendar {
         matching components: DateComponents
     ) -> [Date] {
         var dates = [dateInterval.start]
-        
+
         enumerateDates(
             startingAfter: dateInterval.start,
             matching: components,
             matchingPolicy: .nextTime
         ) { date, _, stop in
             guard let date = date else { return }
-            
+
             guard date < dateInterval.end else {
                 stop = true
                 return
             }
-            
+
             dates.append(date)
         }
-        
+
         return dates
     }
-    
+
     func generateDays(for dateInterval: DateInterval) -> [Date] {
         generateDates(
             for: dateInterval,
@@ -260,12 +262,12 @@ extension DateFormatter {
 // MARK: - Previews
 
 #if DEBUG
-struct CalendarContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        Group {
-            CalendarView(calendar: Calendar(identifier: .chinese))
-            CalendarView(calendar: Calendar(identifier: .republicOfChina))
+    struct CalendarContentView_Previews: PreviewProvider {
+        static var previews: some View {
+            Group {
+                CalendarView(calendar: Calendar(identifier: .chinese))
+                CalendarView(calendar: Calendar(identifier: .republicOfChina))
+            }
         }
     }
-}
 #endif

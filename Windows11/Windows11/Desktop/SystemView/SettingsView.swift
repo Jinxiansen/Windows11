@@ -12,9 +12,8 @@ enum SettingsConst {
 }
 
 struct SettingsView: View {
-
     @State private var scale: CGFloat = 0.85
-    
+
     var body: some View {
         HStack(alignment: .bottom, spacing: 0) {
             contentView
@@ -30,7 +29,7 @@ struct SettingsView: View {
         .frame(width: SettingsConst.maxWidth)
         .supportDragDrop()
     }
-    
+
     private var contentView: some View {
         VStack {
             TopBarView()
@@ -41,7 +40,6 @@ struct SettingsView: View {
             }
         }.background(Color.launchpad)
     }
-    
 }
 
 struct SettingsView_Previews: PreviewProvider {

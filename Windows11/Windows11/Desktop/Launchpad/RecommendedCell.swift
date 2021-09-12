@@ -9,8 +9,8 @@ import SwiftUI
 
 struct RecommendedCell: View {
     let type: RecommendedType
-    var tapClosure: ((RecommendedType) -> ())?
-    
+    var tapClosure: ((RecommendedType) -> Void)?
+
     var body: some View {
         HStack {
             HStack {
@@ -24,7 +24,7 @@ struct RecommendedCell: View {
             }
             Spacer()
         }
-        .frame(width: (LaunchpadConst.maxWidth - 30*3)/2)
+        .frame(width: (LaunchpadConst.maxWidth - 30 * 3) / 2)
         .padding(3.0)
         .onHoverBackground()
     }
@@ -32,8 +32,7 @@ struct RecommendedCell: View {
 
 struct RecommendedCell_Previews: PreviewProvider {
     static var previews: some View {
-        RecommendedCell(type: .code) { type in
-            
+        RecommendedCell(type: .code) { _ in
         }
     }
 }

@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct BackgroundView: View {
-    
     var body: some View {
         Image("background").resizable().aspectRatio(contentMode: .fill)
     }

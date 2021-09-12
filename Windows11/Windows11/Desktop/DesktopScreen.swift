@@ -8,9 +8,8 @@
 import SwiftUI
 
 struct DesktopScreen: View {
-    
     @State private var scale: CGFloat = 1.05
-    @EnvironmentObject var desktopObject: DesktopObject
+    @EnvironmentObject private var desktopObject: DesktopObject
     
     var body: some View {
         ZStack {
@@ -23,7 +22,7 @@ struct DesktopScreen: View {
                     DoubleClickView()
                 }
             VStack {
-                HStack() {
+                HStack {
                     LeadingShortcutView()
                     Spacer()
                 }
@@ -63,7 +62,6 @@ struct DesktopScreen: View {
             return EmptyView().toAny()
         }
     }
-    
 }
 
 struct DesktopScreen_Previews: PreviewProvider {

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SystemDetailView: View {
     @State private var systemTypes = SystemMenuType.allCases
-    
+
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
             Text(SettingType.system.title).bold().font(.system(size: 40)).padding(.leading, 20.0)

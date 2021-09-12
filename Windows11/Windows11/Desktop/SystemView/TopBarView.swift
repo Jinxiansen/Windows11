@@ -15,7 +15,7 @@ struct TopBarView: View {
             HStack {
                 Button {
                     print("Back.")
-//                    desktopObject.shortcutType = .launchpad
+                    // desktopObject.shortcutType = .launchpad
                     desktopObject.resetAllStates()
                 } label: {
                     Image(systemName: "arrow.backward")
@@ -47,7 +47,7 @@ struct TopBarView: View {
     }
     
     private func generateButton(iconName: String,
-                                tapClosure: @escaping (() -> ())) -> some View {
+                                tapClosure: @escaping (() -> Void)) -> some View {
         HStack {
             Button {
                 tapClosure()

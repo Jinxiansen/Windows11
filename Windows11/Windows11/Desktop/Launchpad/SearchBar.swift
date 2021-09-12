@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct SearchBar: View {
-    
     @State private var searchText: String = ""
 
     var body: some View {
@@ -17,17 +16,16 @@ struct SearchBar: View {
                 SecureField(" 🔎 Type here to search", text: $searchText) {
                     print("Commit.")
                 }
-                
                 .textFieldStyle(PlainTextFieldStyle())
-                .padding([.top,.leading,.trailing], 5.0)
+                .padding([.top, .leading, .trailing], 5.0)
 //                .foregroundColor(Color.white)
 //                .focusable()
                 .frame(height: 30.0)
-                
+
                 Divider().background(Color.darkBlue).frame(height: 2.0)
             }.background(Color.lightTitle)
             .border(Color.darkTitle, width: 1.0)
-        }.padding([.leading,.trailing], 30.0)
+        }.padding([.leading, .trailing], 30.0)
     }
 }
 

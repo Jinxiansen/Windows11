@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct LoginUserView: View {
-    
     var body: some View {
         HStack {
             Image("jinxiansen")
@@ -30,7 +29,6 @@ struct LoginUserView: View {
             }
         }
     }
-
 }
 
 struct LoginUserView_Previews: PreviewProvider {

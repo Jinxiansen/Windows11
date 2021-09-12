@@ -5,11 +5,10 @@
 //  Created by 晋先森 on 8/31/21.
 //
 
-import XCTest
 @testable import Windows11
+import XCTest
 
 class Windows11Tests: XCTestCase {
-
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
@@ -25,9 +24,8 @@ class Windows11Tests: XCTestCase {
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
-        self.measure {
+        measure {
             // Put the code you want to measure the time of here.
         }
     }
-
 }

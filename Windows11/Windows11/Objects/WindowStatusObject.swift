@@ -21,4 +21,3 @@ enum WindowStatus: Int, CaseIterable {
     case login
     case desktop
 }
-

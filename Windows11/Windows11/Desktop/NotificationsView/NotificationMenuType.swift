@@ -20,7 +20,7 @@ enum NotificationMenuType: String, CaseIterable {
     case project = "Project"
     case vpn = "VPN"
     case focusAssist = "Focus assist"
-    
+
     var icon: Image {
         let name: String
         switch self {

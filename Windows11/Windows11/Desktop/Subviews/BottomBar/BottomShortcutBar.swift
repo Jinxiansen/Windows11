@@ -32,9 +32,8 @@ enum BottomShortcutType: CaseIterable {
 }
 
 struct BottomShortcutBar: View {
-    
     private let cases = BottomShortcutType.allCases
-    @EnvironmentObject var desktopObject: DesktopObject
+    @EnvironmentObject private var desktopObject: DesktopObject
     
     var body: some View {
         HStack {

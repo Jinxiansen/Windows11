@@ -8,10 +8,9 @@
 import SwiftUI
 
 struct RecommendedView: View {
-    
-    private let gridItemLayout = [GridItem(.flexible()),GridItem(.flexible())]
+    private let gridItemLayout = [GridItem(.flexible()), GridItem(.flexible())]
     @State private var menuItems = RecommendedType.allCases
-    
+
     var body: some View {
         VStack {
             HStack {
@@ -25,10 +24,10 @@ struct RecommendedView: View {
                         Image(systemName: "chevron.right").foregroundColor(Color.darkTitle)
                     }
                 }
-            }.padding([.leading,.trailing], 0.0)
+            }.padding([.leading, .trailing], 0.0)
             ScrollView(showsIndicators: false) {
                 LazyVGrid(columns: gridItemLayout) {
-                    ForEach((0..<menuItems.count), id: \.self) { index in
+                    ForEach(0 ..< menuItems.count, id: \.self) { index in
                         RecommendedCell(type: menuItems[index]) {
                             recommendedTypeClick(type: $0)
                         }
@@ -37,7 +36,7 @@ struct RecommendedView: View {
             }.frame(height: 150.0)
         }.padding(.init(top: 10, leading: 30, bottom: 0, trailing: 30))
     }
-    
+
     func recommendedTypeClick(type: RecommendedType) {
         print("Recommended Type: \(type)")
 //        switch type {

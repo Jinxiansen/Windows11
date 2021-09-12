@@ -12,11 +12,10 @@ extension Color {
     static let lightTitle = Color("lightTitle")
     static let darkTitle = Color("darkTitle")
     static let darkSubTitle = Color("darkSubTitle")
-    
-    
+
     static let checked = Color("checked")
     static let unchecked = Color("unchecked")
-    
+
     static let darkBlue = Color("darkBlue")
     static let launchpad = Color("launchpad")
     static let hover = Color("Hover")

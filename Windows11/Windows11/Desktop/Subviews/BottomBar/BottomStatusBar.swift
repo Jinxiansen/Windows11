@@ -16,13 +16,11 @@ enum StatusBarMenuType {
     case more
     case nightLight
     case eng
-    
 }
 
 struct BottomStatusBar: View {
-    
     @State var isDesktop: Bool
-    @EnvironmentObject var desktopObject: DesktopObject
+    @EnvironmentObject private var desktopObject: DesktopObject
     
     var body: some View {
         HStack {
@@ -76,7 +74,8 @@ struct BottomStatusBar: View {
     }
     
     func generateMenuButton(iconName: String,
-                            tapClosure: @escaping (() -> ())) -> some View {
+                            tapClosure: @escaping (() -> Void)) -> some View
+    {
         HStack {
             Button {
                 tapClosure()
@@ -97,6 +96,7 @@ struct BottomStatusBar: View {
         formatter.dateFormat = "hh:mm a"
         return formatter.string(from: Date())
     }
+    
     var fullText: String {
         formatter.dateFormat = "d/M/yyyy"
         return formatter.string(from: Date())

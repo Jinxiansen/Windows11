@@ -8,17 +8,16 @@
 import SwiftUI
 
 struct CurrentUserView: View {
-    
-    @EnvironmentObject var windowObject: WindowStatusObject
-    @EnvironmentObject var desktopObject: DesktopObject
+    @EnvironmentObject private var windowObject: WindowStatusObject
+    @EnvironmentObject private var desktopObject: DesktopObject
     @Environment(\.openURL) var openURL
-    
+
     let maxHeight: CGFloat = 60.0
-    
+
     var body: some View {
         VStack {
             Spacer()
-            HStack() {
+            HStack {
                 Button {
                     print("avatar.")
                     openURL(URL(string: Const.repoURL)!)
@@ -42,7 +41,7 @@ struct CurrentUserView: View {
                 }.buttonStyle(PlainButtonStyle())
                 Spacer()
                 Button {
-                   print("Shutdown.")
+                    print("Shutdown.")
                     desktopObject.resetAllStates()
                     windowObject.status = .launch
                 } label: {

@@ -13,9 +13,8 @@ class DesktopObject: ObservableObject {
 }
 
 extension DesktopObject {
-    
     func resetAllStates() {
-         shortcutType = nil
-         statusType = nil
+        shortcutType = nil
+        statusType = nil
     }
 }

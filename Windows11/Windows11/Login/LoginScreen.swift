@@ -8,10 +8,9 @@
 import SwiftUI
 
 struct LoginScreen: View {
-    
     @EnvironmentObject private var windowObject: WindowStatusObject
     @State private var pinCode: String = Const.userName
-
+    
     var body: some View {
         ZStack {
             BackgroundView().blur(radius: 20.0)
@@ -41,12 +40,12 @@ struct LoginScreen: View {
                     Text("I forgot my password").font(.title3).foregroundColor(.white.opacity(0.8))
                 }.padding(.top, 10.0)
                 .buttonStyle(PlainButtonStyle())
-
+                
                 Text("Sign-In options")
                     .font(.title3)
                     .foregroundColor(.white.opacity(0.8))
                     .padding(.top, 10.0)
-            
+                
                 HStack {
                     Button {
                         print("pinlock")
@@ -88,7 +87,7 @@ struct LoginScreen: View {
             .padding(.trailing, 10.0)
         }.frame(width: 240.0, height: 40.0, alignment: .center)
         .background(Color(red: 0.1, green: 0.1, blue: 0.3))
-//        .cornerRadius(2)
+        // .cornerRadius(2)
         .overlay(RoundedRectangle(cornerRadius: 2).stroke(Color.white.opacity(0.3)))
     }
     

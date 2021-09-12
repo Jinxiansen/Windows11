@@ -22,18 +22,17 @@ enum SettingType: String, CaseIterable {
 }
 
 extension SettingType {
-    
     var title: String {
         switch self {
         case .bluetooth: return "Bluetooth & devices"
         case .network: return "Network & internet"
-        case  .time: return "Time & language"
+        case .time: return "Time & language"
         case .privacy: return "Privacy & security"
         case .update: return "Windows Update"
         default: return rawValue.capitalized
         }
     }
-    
+
     var imageName: String {
         switch self {
         case .system: return "system"

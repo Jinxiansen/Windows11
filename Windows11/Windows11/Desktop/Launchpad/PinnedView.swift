@@ -8,10 +8,9 @@
 import SwiftUI
 
 struct PinnedView: View {
+    @EnvironmentObject private var desktopObject: DesktopObject
     
-    @EnvironmentObject var desktopObject: DesktopObject
-    
-    private let gridItemLayout = [GridItem(.flexible()),GridItem(.flexible()),GridItem(.flexible()), GridItem(.flexible()),GridItem(.flexible()), GridItem(.flexible())]
+    private let gridItemLayout = [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]
     @State private var menuItems = PinnedType.allCases
     
     var body: some View {
@@ -31,7 +30,7 @@ struct PinnedView: View {
             HStack(alignment: VerticalAlignment.center) {
                 ScrollView(showsIndicators: false) {
                     LazyVGrid(columns: gridItemLayout) {
-                        ForEach((0..<menuItems.count), id: \.self) { index in
+                        ForEach(0 ..< menuItems.count, id: \.self) { index in
                             PinnedCell(type: menuItems[index]) {
                                 desktopObject.statusType = nil
                                 pinnedTypeClick(type: $0)
@@ -55,7 +54,6 @@ struct PinnedView: View {
         }
     }
 }
-
 
 struct PageIndicator: View {
     @State private var currentPage = 0
@@ -82,11 +80,11 @@ struct PageIndicator: View {
     }
     
     func currentSize(index: Int) -> CGFloat {
-        currentPage == index ? dotSize:dotSize/2
+        currentPage == index ? dotSize : dotSize / 2
     }
     
     func currentRadius(index: Int) -> CGFloat {
-        currentPage == index ? dotSize/2:dotSize/4
+        currentPage == index ? dotSize / 2 : dotSize / 4
     }
 }
 

@@ -8,10 +8,9 @@
 import SwiftUI
 
 struct LockScreen: View {
+    @EnvironmentObject private var windowObject: WindowStatusObject
+    @State private var offset: CGFloat = -75.0
     
-    @EnvironmentObject var windowObject: WindowStatusObject
-    @State private var offset:CGFloat = -75.0
-
     var body: some View {
         ZStack {
             ZStack {
@@ -27,12 +26,12 @@ struct LockScreen: View {
                         }
                     }.animation(
                         .interpolatingSpring(
-                          mass: 1,
-                          stiffness: 100,
-                          damping: 10,
-                          initialVelocity: 0
+                            mass: 1,
+                            stiffness: 100,
+                            damping: 10,
+                            initialVelocity: 0
                         )
-                      )
+                    )
                     Spacer()
                     BottomToolBar(isDesktop: false)
                 }
@@ -40,9 +39,8 @@ struct LockScreen: View {
         }.onTapGesture {
             windowObject.status = .login
         }
-
     }
-        
+    
     var lockTime: some View {
         HStack {
             Spacer()
@@ -59,12 +57,11 @@ struct LockScreen: View {
         formatter.dateFormat = "eeee d, MMMM"
         return formatter.string(from: Date())
     }
+    
     var timeText: String {
         formatter.dateFormat = "HH:mm a"
         return formatter.string(from: Date())
     }
-    
-    
 }
 
 struct LockScreen_Previews: PreviewProvider {

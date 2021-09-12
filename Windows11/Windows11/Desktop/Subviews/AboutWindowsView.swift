@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct AboutWindowsView: View {
-    
     @State private var isShowing = true
     
     var body: some View {
@@ -25,12 +24,12 @@ struct AboutWindowsView: View {
         VStack {
             HStack {
                 Text("About Windows")
-                    .padding([.top,.leading], 10.0)
+                    .padding([.top, .leading], 10.0)
                 Spacer()
                 Button {
                     isShowing.toggle()
                 } label: {
-                    Image(systemName: "xmark").resizable().renderingMode(.template).foregroundColor(Color.gray).frame(width: 15.0, height: 15.0).padding([.top,.trailing], 10.0)
+                    Image(systemName: "xmark").resizable().renderingMode(.template).foregroundColor(Color.gray).frame(width: 15.0, height: 15.0).padding([.top, .trailing], 10.0)
                 }.buttonStyle(PlainButtonStyle())
                 
             }.frame(height: 25.0)
@@ -82,7 +81,6 @@ struct AboutWindowsView: View {
             }.padding([.bottom], 20.0)
             .contentShape(Rectangle())
         }
-        
     }
 }
 

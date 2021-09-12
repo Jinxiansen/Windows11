@@ -9,10 +9,9 @@ import SwiftUI
 
 @main
 struct Windows11App: App {
-    
     @StateObject var windowObject = WindowStatusObject(status: .launch)
     @StateObject var store = PreferencesStore.shared
-    
+
     @StateObject var desktopObject = DesktopObject()
 
     var body: some Scene {
@@ -30,7 +29,7 @@ struct Windows11App: App {
             }
         }
     }
-    
+
     var contentView: AnyView {
         switch windowObject.status {
         case .launch: return AnyView(LaunchScreen())

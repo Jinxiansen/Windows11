@@ -8,9 +8,8 @@
 import SwiftUI
 
 struct LaunchScreen: View {
+    @EnvironmentObject private var windowObject: WindowStatusObject
     
-    @EnvironmentObject var windowObject: WindowStatusObject
-
     var body: some View {
         VStack {
             VStack {
@@ -30,22 +29,20 @@ struct LaunchScreen: View {
             }
         }.background(Color.black)
     }
-    
 }
 
 struct ActivityIndicator: View {
-    
     @State private var isAnimating: Bool = false
     
     var body: some View {
         GeometryReader { (geometry: GeometryProxy) in
-            ForEach(0..<5) { index in
+            ForEach(0 ..< 5) { index in
                 Group {
                     circleView(geometry: geometry, index: index)
                 }.frame(width: geometry.size.width, height: geometry.size.height)
                 .rotationEffect(!self.isAnimating ? .degrees(0) : .degrees(360))
                 .animation(Animation
-                            .timingCurve(0.5, 0.15 + Double(index)/5, 0.25, 1, duration: 1.5)
+                            .timingCurve(0.5, 0.15 + Double(index) / 5, 0.25, 1, duration: 1.5)
                             .repeatForever(autoreverses: false))
             }
         }
@@ -56,11 +53,11 @@ struct ActivityIndicator: View {
     }
     
     func circleView(geometry: GeometryProxy, index: Int) -> some View {
-        let value: CGFloat = !self.isAnimating ? 1 - CGFloat(index)/5 : 0.2 + CGFloat(index)/5
+        let value: CGFloat = !isAnimating ? 1 - CGFloat(index) / 5 : 0.2 + CGFloat(index) / 5
         return Circle()
-            .frame(width: geometry.size.width/5, height: geometry.size.height/5)
+            .frame(width: geometry.size.width / 5, height: geometry.size.height / 5)
             .scaleEffect(value)
-            .offset(y: geometry.size.width/10 - geometry.size.height/2)
+            .offset(y: geometry.size.width / 10 - geometry.size.height / 2)
     }
 }
 

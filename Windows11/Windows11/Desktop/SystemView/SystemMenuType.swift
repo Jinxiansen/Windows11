@@ -19,7 +19,6 @@ enum SystemMenuType: String, CaseIterable {
 }
 
 extension SystemMenuType {
-    
     var info: (title: String, subTitle: String) {
         switch self {
         case .display: return ("Display", "Monitors, brightness, night light, display profile")
@@ -28,11 +27,11 @@ extension SystemMenuType {
         case .focusAssist: return ("Focus assist", "Notifications, automatic rules")
         case .power: return ("Power", "Sleep, battery usage, battery saver")
         case .storage: return ("Storage", "Storage space, drives, configuration rules")
-        case .multitasking: return ("Multitasking","Snap windows, desktops, task switching")
+        case .multitasking: return ("Multitasking", "Snap windows, desktops, task switching")
         case .troubleshoot: return ("Troubleshoot", "Recommended troubleshooters, preferences, history.")
         }
     }
-    
+
     var imageName: String {
         switch self {
         case .display: return "connect"

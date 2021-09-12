@@ -8,9 +8,8 @@
 import SwiftUI
 
 struct PinnedCell: View {
-    
     let type: PinnedType
-    var tapClosure: ((PinnedType) -> ())?
+    var tapClosure: ((PinnedType) -> Void)?
     
     var body: some View {
         VStack {
@@ -23,7 +22,7 @@ struct PinnedCell: View {
                     Text(type.appName).foregroundColor(Color.darkTitle)
                 }
             }.buttonStyle(PlainButtonStyle())
-        }//.background(Color.green)
+        } // .background(Color.green)
         .padding(3.0)
         .onHoverBackground()
     }

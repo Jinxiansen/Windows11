@@ -34,11 +34,9 @@ enum PinnedType: String, CaseIterable {
     case narrator
     case news
     case teams
-    
 }
 
 extension PinnedType {
-    
     var appName: String {
         switch self {
         case .code: return "VS Code"
@@ -46,7 +44,7 @@ extension PinnedType {
         default: return rawValue.capitalized
         }
     }
-    
+
     var imageName: String {
         switch self {
         case .winWord, .oneDrive: return rawValue

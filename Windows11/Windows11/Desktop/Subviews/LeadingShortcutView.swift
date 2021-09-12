@@ -8,9 +8,8 @@
 import SwiftUI
 
 struct LeadingShortcutView: View {
-  
-    @EnvironmentObject var desktopObject: DesktopObject
-    @State private var types: [PinnedType] = [.todo,.news,.settings,.mail,.oneDrive,.github,.twitter,.excel,.movies]
+    @EnvironmentObject private var desktopObject: DesktopObject
+    @State private var types: [PinnedType] = [.todo, .news, .settings, .mail, .oneDrive, .github, .twitter, .excel, .movies]
     
     var body: some View {
         VStack {
@@ -30,7 +29,7 @@ struct LeadingShortcutView: View {
                 }.buttonStyle(PlainButtonStyle())
                 .onHoverBackground()
             }
-        }.padding([.top,.leading,.bottom], 15.0)
+        }.padding([.top, .leading, .bottom], 15.0)
     }
     
     func shortcutClick(type: PinnedType) {
@@ -40,7 +39,6 @@ struct LeadingShortcutView: View {
             desktopObject.shortcutType = .settings
         }
     }
-    
 }
 
 struct LeadingShortcutView_Previews: PreviewProvider {

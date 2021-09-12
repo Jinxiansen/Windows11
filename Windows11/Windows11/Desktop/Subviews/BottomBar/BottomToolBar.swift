@@ -8,9 +8,8 @@
 import SwiftUI
 
 struct BottomToolBar: View {
-    
     @State var isDesktop: Bool
-    
+
     var body: some View {
         ZStack {
             VStack {
@@ -24,9 +23,9 @@ struct BottomToolBar: View {
         .frame(height: Const.bottomStatusHeight)
         .background(background).opacity(0.95)
     }
-    
+
     var background: Color {
-        isDesktop ? Color.launchpad: Color.clear
+        isDesktop ? Color.launchpad : Color.clear
     }
 }
 

@@ -29,7 +29,7 @@ struct SystemStatusView: View {
             }.padding(.top, 10.0)
             
             VStack(alignment: .leading, spacing: 0) {
-                HStack() {
+                HStack {
                     systemStatusView(imageName: "store2", title: "Microsoft 365", subTitle: "View benefits")
                     systemStatusView(imageName: "oneDrive", title: "OneDrive", subTitle: "Manage")
                 }

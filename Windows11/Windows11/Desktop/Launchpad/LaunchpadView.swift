@@ -10,13 +10,11 @@ import SwiftUI
 enum LaunchpadConst {
     static let maxWidth: CGFloat = 550.0
     static let margin: CGFloat = 30.0
-    
 }
 
 struct LaunchpadView: View {
-    
-    @State private var offset: CGFloat = LaunchpadConst.maxWidth/2
-    
+    @State private var offset: CGFloat = LaunchpadConst.maxWidth / 2
+
     var body: some View {
         VStack {
             Spacer()
