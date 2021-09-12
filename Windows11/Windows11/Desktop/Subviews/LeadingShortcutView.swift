@@ -10,7 +10,7 @@ import SwiftUI
 struct LeadingShortcutView: View {
   
     @EnvironmentObject var desktopObject: DesktopObject
-    @State private var types: [PinnedType] = [.todo,.settings,.news,.mail,.oneDrive,.github,.twitter,.excel,.movies]
+    @State private var types: [PinnedType] = [.todo,.news,.settings,.mail,.oneDrive,.github,.twitter,.excel,.movies]
     
     var body: some View {
         VStack {
@@ -34,16 +34,11 @@ struct LeadingShortcutView: View {
     }
     
     func shortcutClick(type: PinnedType) {
-        print("Recommended Type: \(type)")
+        print("shortcutClick Type: \(type)")
         
         if type == .settings {
             desktopObject.shortcutType = .settings
         }
-        
-//        switch type {
-//        default:
-//            break
-//        }
     }
     
 }

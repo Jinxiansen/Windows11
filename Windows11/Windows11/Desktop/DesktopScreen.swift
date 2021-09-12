@@ -16,8 +16,7 @@ struct DesktopScreen: View {
         ZStack {
             BackgroundView()
                 .onTapGesture {
-                    desktopObject.statusType = nil
-                    desktopObject.shortcutType = nil
+                    desktopObject.resetAllStates()
                     print("Click background.")
                     
                 }.contextMenu {

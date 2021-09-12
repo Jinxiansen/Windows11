@@ -59,10 +59,10 @@ struct BottomStatusBar: View {
                     toggle(type: .notification)
                 }.isShow(isDesktop)
                 
-                Divider()
+                Divider().padding(.horizontal, 5.0)
             }
             
-        }.padding(.trailing, 15.0)
+        }.padding(.trailing, 10.0)
     }
     
     func toggle(type: StatusBarMenuType) {
