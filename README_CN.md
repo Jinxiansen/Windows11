@@ -11,9 +11,9 @@
 
 由于我未能拥有 Windows 11 电脑，所以所有界面的样式和交互，都是参考网络上的资源进行设计的，如果有错误和疏漏之处，请不吝指正！
 
-如果对 `SwiftUI` 有浓厚的兴趣，可加入 SwiftUI 线上 QQ 交流群：**18552966** ，共同探讨。
+如果你对 `SwiftUI` 感到陌生，希望我另外一个项目：SwiftUI 使用指南 [[Jinxiansen/SwiftUI](https://github.com/Jinxiansen/SwiftUI) ![stars](https://img.shields.io/github/stars/Jinxiansen/SwiftUI?style=social)] 可以帮助你。
 
-如果你对 SwiftUI 感到陌生，希望我另外1个 SwiftUI 使用指南的项目 [[Jinxiansen/SwiftUI](https://github.com/Jinxiansen/SwiftUI) ![stars](https://img.shields.io/github/stars/Jinxiansen/SwiftUI?style=social)] 可以帮助你。
+如果你对 `SwiftUI` 有浓厚的兴趣，可加入 SwiftUI 线上 QQ 交流群：**18552966** ，共同学习交流。
 
 [English Version📔](README.md)
 

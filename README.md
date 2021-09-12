@@ -11,9 +11,10 @@ This is an open source project of the [Windows 11](https://www.microsoft.com/en-
 
 Since I did not have a Windows 11 computer, all interface styles and interactions were designed with reference to resources on the Internet. If there are errors or omissions, please feel free to correct me!
 
-If you have a strong interest in SwiftUI, you can join the SwiftUI QQ Group: **18552966** to discuss communication.
 
-If you are new to SwiftUI, maybe my other SwiftUI framework usage guide [[Jinxiansen/SwiftUI](https://github.com/Jinxiansen/SwiftUI) ![stars](https://img.shields.io/github/stars/Jinxiansen/SwiftUI?style=social)] project can help you.
+If you are new to `SwiftUI`, maybe my other SwiftUI framework usage guide [[Jinxiansen/SwiftUI](https://github.com/Jinxiansen/SwiftUI) ![stars](https://img.shields.io/github/stars/Jinxiansen/SwiftUI?style=social)] project can help you.
+
+If you have a strong interest in `SwiftUI`, you can join the SwiftUI QQ Group: **18552966** to discuss communication.
 
 > English is not my native language; please excuse typing errors.
 
