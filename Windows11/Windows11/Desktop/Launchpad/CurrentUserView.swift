@@ -32,7 +32,7 @@ struct CurrentUserView: View {
                                     .clipShape(Circle())
                                     .shadow(radius: 1.0)
                                     .overlay(Circle().stroke(Color.black.opacity(0.1), lineWidth: 0.5))
-                                Text("Jinxiansen")
+                                Text(Const.userName)
                                     .font(.headline)
                                     .foregroundColor(Color.darkTitle)
                             }.padding(EdgeInsets(top: 3, leading: 5, bottom: 3, trailing: 5))

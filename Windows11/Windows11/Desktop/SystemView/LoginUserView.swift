@@ -18,7 +18,7 @@ struct LoginUserView: View {
                 .shadow(radius: 2.0)
                 .overlay(Circle().stroke(Color.black.opacity(0.3), lineWidth: 1.0))
             VStack(alignment: .leading, spacing: 0) {
-                Text("Jinxiansen")
+                Text(Const.userName)
                     .bold()
                     .font(.title3)
                     .padding([.horizontal], 3.0)

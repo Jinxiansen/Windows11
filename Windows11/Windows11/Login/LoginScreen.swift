@@ -10,7 +10,7 @@ import SwiftUI
 struct LoginScreen: View {
     
     @EnvironmentObject private var windowObject: WindowStatusObject
-    @State private var pinCode: String = "jinxiansen"
+    @State private var pinCode: String = Const.userName
 
     var body: some View {
         ZStack {
@@ -32,7 +32,7 @@ struct LoginScreen: View {
             VStack {
                 Spacer()
                 avatarView
-                Text("Jinxiansen").foregroundColor(.white).bold().font(.title)
+                Text(Const.userName).foregroundColor(.white).bold().font(.title)
                 pinCodeView.padding(.top, 15.0)
                 
                 Button {
