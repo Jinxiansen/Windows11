@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct DesktopScreen: View {
-        
+    
     @State private var offset:Float = 0
     @EnvironmentObject var desktopObject: DesktopObject
-
+    
     var body: some View {
         ZStack {
             BackgroundView()
@@ -23,15 +23,19 @@ struct DesktopScreen: View {
                 }.contextMenu {
                     DoubleClickView()
                 }
+            VStack {
+                HStack() {
+                    LeadingShortcutView()
+                    Spacer()
+                }
+                Spacer()
+            }
+            
             AboutWindowsView()
             renderStatusViewIfNeed()
             renderShortcutViewIfNeed()
             
             VStack {
-                HStack {
-                    LeadingShortcutView()
-                    Spacer()
-                }
                 Spacer()
                 BottomToolBar(isDesktop: true)
             }

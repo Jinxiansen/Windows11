@@ -12,10 +12,8 @@ enum SettingsConst {
 }
 
 struct SettingsView: View {
-    
-    @EnvironmentObject private var desktopObject: DesktopObject
-    
-    @State var scale: CGFloat = 0.85
+        
+    @State private var scale: CGFloat = 0.85
     @State private var leadingTypes = SettingType.allCases
     @State private var systemTypes = SystemMenuType.allCases
     
@@ -36,11 +34,11 @@ struct SettingsView: View {
     
     private var contentView: some View {
         VStack {
-            topBarView
+            TopBarView()
             Divider()
             HStack(alignment: .top, spacing: 10) {
                 VStack(alignment: .leading, spacing: 0) {
-                    loginUser.padding(15.0)
+                    LoginUserView().padding(15.0)
                     ForEach(leadingTypes, id: \.self) { type in
                         HStack {
                             Image(type.imageName).resizable().frame(width: 18, height: 18).padding(.leading, 5.0)
@@ -55,80 +53,6 @@ struct SettingsView: View {
                 detailView
             }
         }.background(Color.launchpad)
-    }
-    
-    private var topBarView: some View {
-        HStack {
-            HStack {
-                Button {
-                    print("Back.")
-                    desktopObject.shortcutType = .launchpad
-                } label: {
-                    Image(systemName: "arrow.backward")
-                        .resizable()
-                        .foregroundColor(Color.gray)
-                        .frame(width: 15, height: 15)
-                        .padding(3.0)
-                        .onHoverBackground()
-                }.buttonStyle(PlainButtonStyle())
-                .padding(.leading, 15.0)
-                
-                Text("Settings").padding(.leading, 10.0)
-                Spacer()
-         
-                generateButton(iconName: "minimize") {
-                    print("--minimize--")
-                }
-                generateButton(iconName: "maximize") {
-                    print("--maximize---")
-                }
-                generateButton(iconName: "close") {
-                    print("--close---")
-                    if desktopObject.shortcutType == .settings {
-                        desktopObject.shortcutType = nil
-                    }
-                }
-                
-            }.padding(.init(top: 10.0, leading: 10.0, bottom: 5.0, trailing: 10.0))
-        }
-    }
-    
-    private func generateButton(iconName: String,
-                            tapClosure: @escaping (() -> ())) -> some View {
-        HStack {
-            Button {
-                tapClosure()
-            } label: {
-                Image(iconName).resizable()
-                    .renderingMode(.template)
-                    .foregroundColor(Color.darkSubTitle)
-                    .frame(width: 14, height: 14)
-            }.buttonStyle(PlainButtonStyle())
-            .padding(3.0)
-        }
-        .onHoverBackground()
-    }
-    
-    private var loginUser: some View {
-        HStack {
-            Image("jinxiansen")
-                .resizable()
-                .frame(width: 60, height: 60.0)
-                .clipShape(Circle())
-                .shadow(radius: 2.0)
-                .overlay(Circle().stroke(Color.black.opacity(0.3), lineWidth: 1.0))
-            VStack(alignment: .leading, spacing: 0) {
-                Text("Jinxiansen")
-                    .bold()
-                    .font(.title3)
-                    .padding([.horizontal], 3.0)
-                    .foregroundColor(Color.darkTitle)
-                Link(Const.email, destination: URL(string: Const.contactMe)!)
-                    .foregroundColor(Color.darkTitle)
-                    .padding([.horizontal], 3.0)
-                    .onHoverBackground()
-            }
-        }
     }
     
     var detailView: some View {

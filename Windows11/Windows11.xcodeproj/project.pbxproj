@@ -47,6 +47,8 @@
 		413A034926ECD5C5009E8406 /* SettingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A034826ECD5C5009E8406 /* SettingType.swift */; };
 		413A034B26ECEB9D009E8406 /* SystemMenuType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A034A26ECEB9D009E8406 /* SystemMenuType.swift */; };
 		413A034D26ECFFAF009E8406 /* SystemStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A034C26ECFFAF009E8406 /* SystemStatusView.swift */; };
+		413A034F26EDB950009E8406 /* LoginUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A034E26EDB950009E8406 /* LoginUserView.swift */; };
+		413A035126EDB98F009E8406 /* TopBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A035026EDB98F009E8406 /* TopBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +116,8 @@
 		413A034826ECD5C5009E8406 /* SettingType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingType.swift; sourceTree = "<group>"; };
 		413A034A26ECEB9D009E8406 /* SystemMenuType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemMenuType.swift; sourceTree = "<group>"; };
 		413A034C26ECFFAF009E8406 /* SystemStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemStatusView.swift; sourceTree = "<group>"; };
+		413A034E26EDB950009E8406 /* LoginUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserView.swift; sourceTree = "<group>"; };
+		413A035026EDB98F009E8406 /* TopBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,6 +260,8 @@
 			children = (
 				4132147B26E10AE70078BE04 /* DesktopScreen.swift */,
 				413A034626EC6AF0009E8406 /* SettingsView.swift */,
+				413A034E26EDB950009E8406 /* LoginUserView.swift */,
+				413A035026EDB98F009E8406 /* TopBarView.swift */,
 				413A034C26ECFFAF009E8406 /* SystemStatusView.swift */,
 				413A034826ECD5C5009E8406 /* SettingType.swift */,
 				413A034A26ECEB9D009E8406 /* SystemMenuType.swift */,
@@ -450,6 +456,7 @@
 				413A031E26E490FE009E8406 /* QuickMenuItem.swift in Sources */,
 				413A032F26E79E66009E8406 /* LaunchpadView.swift in Sources */,
 				413A034B26ECEB9D009E8406 /* SystemMenuType.swift in Sources */,
+				413A034F26EDB950009E8406 /* LoginUserView.swift in Sources */,
 				4132147026DE62380078BE04 /* BackgroundView.swift in Sources */,
 				4132147C26E10AE70078BE04 /* DesktopScreen.swift in Sources */,
 				413A031C26E48DF4009E8406 /* QuickMenuCell.swift in Sources */,
@@ -468,6 +475,7 @@
 				4132148026E10E9A0078BE04 /* LoginScreen.swift in Sources */,
 				413A02DC26E3187A009E8406 /* NotificationsView.swift in Sources */,
 				413A033E26E90326009E8406 /* PinnedType.swift in Sources */,
+				413A035126EDB98F009E8406 /* TopBarView.swift in Sources */,
 				4132148226E28FEE0078BE04 /* AboutWindowsView.swift in Sources */,
 				4132144426DE618C0078BE04 /* Windows11App.swift in Sources */,
 				413A031626E37706009E8406 /* Const.swift in Sources */,
