@@ -15,6 +15,7 @@ enum BottomShortcutType: CaseIterable {
     // case folder
     // case explorer
     case store
+    case terminal
     case trash
     
     var icon: Image {
@@ -24,6 +25,7 @@ enum BottomShortcutType: CaseIterable {
         case .news: return Image("news")
         case .settings: return Image("settings")
         case .store: return Image("store")
+        case .terminal: return Image("terminal")
         case .trash: return Image("bin0")
         }
     }
@@ -39,6 +41,7 @@ struct BottomShortcutBar: View {
             ForEach(cases, id: \.self) { type in
                 Button {
                     withAnimation {
+                        desktopObject.statusType = nil
                         if desktopObject.shortcutType != type {
                             desktopObject.shortcutType = type
                         } else {

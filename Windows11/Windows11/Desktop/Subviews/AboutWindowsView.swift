@@ -14,17 +14,13 @@ struct AboutWindowsView: View {
     @State private var isShowing = true
     
     var body: some View {
-        if isShowing {
-            VStack {
-                HStack {
-                    contentView.padding(EdgeInsets(top: 50.0, leading: 120.0, bottom: 0, trailing: 0))
-                    Spacer()
-                }
+        VStack {
+            HStack {
+                contentView.padding(EdgeInsets(top: 50.0, leading: 120.0, bottom: 0, trailing: 0))
                 Spacer()
             }
-        } else {
-            EmptyView()
-        }
+            Spacer()
+        }.isShow(isShowing)
     }
     
     private var contentView: some View {
@@ -40,7 +36,7 @@ struct AboutWindowsView: View {
                 }.buttonStyle(PlainButtonStyle())
                 
             }.frame(height: 25.0)
-            .background(Color.lightTitle)
+            .background(Color.lightTitle.opacity(0.8))
             
             descriptionView
                 .padding([.horizontal], 30.0)
@@ -70,24 +66,16 @@ struct AboutWindowsView: View {
                 Text("Windows 11").font(.system(size: 45.0)).bold().foregroundColor(.main)
             }.padding(.top, 10.0)
             Divider()
-            Group {
+            VStack(alignment: HorizontalAlignment.leading, spacing: 5.0) {
+                Text("Microsoft Windows (SwiftUI)\nVersion Dev(OS Build 21996.1)\n© Microsoft Corporation. All right reserved.").font(.callout)
+                Text("The Windows 11 Pro operating system and its user interface are protected by trademark and other pending or existing intellectual property rights in the United States and other countries/regions.").font(.callout)
+                
                 HStack {
-                    Text("Microsoft Windows (in SwiftUI)\nVersion Dev(OS Build 21996.1)\n© Microsoft Corporation. All right reserved.")
+                    Text("This product is licensed with")
+                    Link("MIT License.", destination: URL(string: Const.licenseURL)!).onHoverBackground()
                     Spacer()
-                }
-                HStack {
-                    Text("The Windows 11 Pro operating system and its user interface are protected by trademark and other pending or existing intellectual property rights in the United States and other countries/regions.").padding(.top, 5.0)
-                    Spacer()
-                }
+                }.padding(.top, 10.0)
             }
-            .fixedSize(horizontal: false, vertical: true)
-            
-            HStack {
-                Text("This product is licensed with").fixedSize(horizontal: false, vertical: true)
-                Link("MIT License.", destination: URL(string: Const.licenseURL)!).onHoverBackground()
-                //                Link(Const.email, destination: URL(string: Const.contactMe)!)
-                Spacer()
-            }.padding(.top, 20.0)
             
             HStack {
                 Spacer()

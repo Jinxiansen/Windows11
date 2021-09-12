@@ -14,9 +14,7 @@ struct BottomToolBar: View {
     var body: some View {
         ZStack {
             VStack {
-                if isDesktop {
-                    BottomShortcutBar()
-                }
+                BottomShortcutBar().isShow(isDesktop)
             }
             HStack {
                 Spacer()

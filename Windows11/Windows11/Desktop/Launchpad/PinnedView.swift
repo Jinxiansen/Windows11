@@ -33,6 +33,7 @@ struct PinnedView: View {
                     LazyVGrid(columns: gridItemLayout) {
                         ForEach((0..<menuItems.count), id: \.self) { index in
                             PinnedCell(type: menuItems[index]) {
+                                desktopObject.statusType = nil
                                 pinnedTypeClick(type: $0)
                             }
                         }

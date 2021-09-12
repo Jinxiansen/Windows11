@@ -14,6 +14,8 @@ enum SystemMenuType: String, CaseIterable {
     case focusAssist
     case power
     case storage
+    case multitasking
+    case troubleshoot
 }
 
 extension SystemMenuType {
@@ -26,6 +28,8 @@ extension SystemMenuType {
         case .focusAssist: return ("Focus assist", "Notifications, automatic rules")
         case .power: return ("Power", "Sleep, battery usage, battery saver")
         case .storage: return ("Storage", "Storage space, drives, configuration rules")
+        case .multitasking: return ("Multitasking","Snap windows, desktops, task switching")
+        case .troubleshoot: return ("Troubleshoot", "Recommended troubleshooters, preferences, history.")
         }
     }
     
@@ -37,6 +41,8 @@ extension SystemMenuType {
         case .focusAssist: return "moon"
         case .power: return "power"
         case .storage: return "minimize"
+        case .multitasking: return "project"
+        case .troubleshoot: return "trouble"
         }
     }
 }

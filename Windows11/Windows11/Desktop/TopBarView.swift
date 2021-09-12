@@ -15,7 +15,8 @@ struct TopBarView: View {
             HStack {
                 Button {
                     print("Back.")
-                    desktopObject.shortcutType = .launchpad
+//                    desktopObject.shortcutType = .launchpad
+                    desktopObject.resetAllStates()
                 } label: {
                     Image(systemName: "arrow.backward")
                         .resizable()

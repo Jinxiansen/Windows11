@@ -38,30 +38,27 @@ struct LoginScreen: View {
                 Button {
                     print("Forgot password.")
                 } label: {
-                    Text("I forgot my password").font(.title3).foregroundColor(.gray)
+                    Text("I forgot my password").font(.title3).foregroundColor(.white.opacity(0.8))
                 }.padding(.top, 10.0)
                 .buttonStyle(PlainButtonStyle())
 
-                Button {
-                    print("Sign-In options")
-                } label: {
-                    Text("Sign-In options").font(.title3).foregroundColor(.gray)
-                }.padding(.top, 15.0)
-                .buttonStyle(PlainButtonStyle())
-                
+                Text("Sign-In options")
+                    .font(.title3)
+                    .foregroundColor(.white.opacity(0.8))
+                    .padding(.top, 10.0)
+            
                 HStack {
                     Button {
-                        print("keyboard")
+                        print("pinlock")
                     } label: {
-                        Image("keyboard").resizable().frame(width: 40.0, height: 40.0)
+                        Image("pinlock").resizable().frame(width: 40.0, height: 40.0)
                     }.buttonStyle(PlainButtonStyle())
                     
                     Button {
-                        print("Key")
+                        print("passkey")
                     } label: {
-                        Image("keyboard").resizable().frame(width: 40.0, height: 40.0)
+                        Image("passkey").resizable().frame(width: 40.0, height: 40.0)
                     }.buttonStyle(PlainButtonStyle())
-
                 }
                 
                 Spacer()

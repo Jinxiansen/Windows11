@@ -33,26 +33,29 @@ extension View {
 
 extension View {
     @inlinable
-    public func hidden(_ isHidden: Bool) -> some View {
+    public func isHidden(_ isHidden: Bool) -> some View {
         Group {
             if isHidden {
-                hidden()
+                EmptyView()
+                // hidden()
             } else {
                 self
             }
         }
     }
+    
+    @inlinable
+    public func isShow(_ isShow: Bool) -> some View {
+        Group {
+            if isShow {
+                self
+            } else {
+                EmptyView()
+                // hidden() // will be placeholder position.
+            }
+        }
+    }
 }
-
-//extension View {
-//  @inlinable public func mask<Mask: View>(
-//    alignment: Alignment = .center,
-//    @ViewBuilder _ mask: () -> Mask
-//  ) -> some View {
-//    self.mask(alignment: alignment, mask())
-//  }
-//}
-
 
 extension View {
     

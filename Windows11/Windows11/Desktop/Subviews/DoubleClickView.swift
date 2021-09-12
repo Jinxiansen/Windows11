@@ -121,6 +121,7 @@ struct DoubleClickView: View {
                 }
                 Button {
                     print("About.")
+                    AboutApp.open()
                 } label: {
                     Text("About")
                 }

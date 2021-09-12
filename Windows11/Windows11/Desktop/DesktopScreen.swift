@@ -9,7 +9,7 @@ import SwiftUI
 
 struct DesktopScreen: View {
     
-    @State private var offset:Float = 0
+    @State private var scale: CGFloat = 1.05
     @EnvironmentObject var desktopObject: DesktopObject
     
     var body: some View {
@@ -32,12 +32,17 @@ struct DesktopScreen: View {
             }
             
             AboutWindowsView()
-            renderStatusViewIfNeed()
             renderShortcutViewIfNeed()
+            renderStatusViewIfNeed()
             
             VStack {
                 Spacer()
                 BottomToolBar(isDesktop: true)
+            }
+        }.scaleEffect(scale)
+        .onAppear {
+            withAnimation(Animation.easeIn(duration: 0.2)) {
+                scale = 1.0
             }
         }
     }

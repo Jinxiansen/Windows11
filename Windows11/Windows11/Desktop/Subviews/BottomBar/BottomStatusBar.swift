@@ -15,6 +15,7 @@ enum StatusBarMenuType {
     case wifi
     case more
     case nightLight
+    case eng
     
 }
 
@@ -27,34 +28,36 @@ struct BottomStatusBar: View {
         HStack {
             Spacer()
             HStack(alignment: VerticalAlignment.center, spacing: 0.0) {
+                generateMenuButton(iconName: "eng") {
+                    toggle(type: .eng)
+                }
                 generateMenuButton(iconName: "wifi") {
                     toggle(type: .wifi)
                 }
                 generateMenuButton(iconName: "battery") {
                     toggle(type: .battery)
                 }
+                generateMenuButton(iconName: "audio") {
+                    toggle(type: .loudspeaker)
+                }.isShow(isDesktop)
                 
                 generateMenuButton(iconName: "moon") {
                     toggle(type: .nightLight)
                     PreferencesStore.shared.changeDarkMode()
                 }
                 
-                if isDesktop {
-                    generateMenuButton(iconName: "audio") {
-                        toggle(type: .loudspeaker)
-                    }
-                    VStack {
-                        Text(timeText).font(.caption2)
-                        Text(fullText).font(.caption2)
-                    }.padding(2.0)
-                    .onTapGesture {
-                        toggle(type: .time)
-                    }.onHoverBackground()
-                    
-                    generateMenuButton(iconName: "reply") {
-                        toggle(type: .notification)
-                    }
-                }
+                VStack {
+                    Text(timeText).font(.caption2)
+                    Text(fullText).font(.caption2)
+                }.padding(2.0)
+                .isShow(isDesktop)
+                .onTapGesture {
+                    toggle(type: .time)
+                }.onHoverBackground()
+                
+                generateMenuButton(iconName: "reply") {
+                    toggle(type: .notification)
+                }.isShow(isDesktop)
                 
                 Divider()
             }

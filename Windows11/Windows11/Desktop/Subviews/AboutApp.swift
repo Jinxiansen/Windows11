@@ -10,19 +10,23 @@ import SwiftUI
 struct AboutApp: View {
     var body: some View {
         Button("About Windows 11") {
-            NSApplication.shared.orderFrontStandardAboutPanel(
-                options:
-                    [
-                        NSApplication.AboutPanelOptionKey.credits: NSAttributedString(
-                            string: Const.email,
-                            attributes: [
-                                NSAttributedString.Key.font: NSFont.boldSystemFont(
-                                    ofSize: NSFont.smallSystemFontSize)
-                            ]
-                        )
-                    ]
-            )
+            Self.open()
         }
+    }
+    
+    static func open() {
+        NSApplication.shared.orderFrontStandardAboutPanel(
+            options:
+                [
+                    NSApplication.AboutPanelOptionKey.credits: NSAttributedString(
+                        string: Const.email,
+                        attributes: [
+                            NSAttributedString.Key.font: NSFont.boldSystemFont(
+                                ofSize: NSFont.smallSystemFontSize)
+                        ]
+                    )
+                ]
+        )
     }
 }
 
