@@ -78,3 +78,29 @@ extension View {
         self.modifier(OnHoverBackground())
     }
 }
+
+
+struct SupportDragDrop: ViewModifier {
+    @GestureState private var dragOffset = CGSize.zero
+    @State private var position = CGSize.zero
+    
+    func body(content: Content) -> some View {
+        content.offset(x: position.width + dragOffset.width, y: position.height + dragOffset.height)
+        .gesture(
+            DragGesture()
+                .updating($dragOffset, body: { (value, state, transaction) in
+                    state = value.translation
+                })
+                .onEnded({ (value) in
+                    self.position.height += value.translation.height
+                    self.position.width += value.translation.width
+                })
+        )
+    }
+}
+
+extension View {
+    func supportDragDrop() -> some View {
+        self.modifier(SupportDragDrop())
+    }
+}

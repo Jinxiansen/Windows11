@@ -9,8 +9,6 @@ import SwiftUI
 
 struct AboutWindowsView: View {
     
-    @GestureState private var dragOffset = CGSize.zero
-    @State private var position = CGSize.zero
     @State private var isShowing = true
     
     var body: some View {
@@ -46,17 +44,7 @@ struct AboutWindowsView: View {
         .background(Color.lightTitle)
         .clipShape(RoundedRectangle(cornerRadius: 3.0))
         .shadow(color: .black.opacity(0.55), radius: 3, x: 0, y: 2)
-        .offset(x: position.width + dragOffset.width, y: position.height + dragOffset.height)
-        .gesture(
-            DragGesture()
-                .updating($dragOffset, body: { (value, state, transaction) in
-                    state = value.translation
-                })
-                .onEnded({ (value) in
-                    self.position.height += value.translation.height
-                    self.position.width += value.translation.width
-                })
-        )
+        .supportDragDrop()
     }
     
     private var descriptionView: some View {

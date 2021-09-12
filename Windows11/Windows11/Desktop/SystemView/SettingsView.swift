@@ -12,7 +12,7 @@ enum SettingsConst {
 }
 
 struct SettingsView: View {
-        
+
     @State private var scale: CGFloat = 0.85
     
     var body: some View {
@@ -28,6 +28,7 @@ struct SettingsView: View {
         .clipShape(RoundedRectangle(cornerRadius: 5.0))
         .shadow(color: Color.black.opacity(0.15), radius: 5, x: 2, y: 0)
         .frame(width: SettingsConst.maxWidth)
+        .supportDragDrop()
     }
     
     private var contentView: some View {
