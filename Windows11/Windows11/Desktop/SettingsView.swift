@@ -15,7 +15,7 @@ struct SettingsView: View {
     
     @EnvironmentObject private var desktopObject: DesktopObject
     
-    @State var scale: CGFloat = 0.75
+    @State var scale: CGFloat = 0.85
     @State private var leadingTypes = SettingType.allCases
     @State private var systemTypes = SystemMenuType.allCases
     
@@ -24,11 +24,13 @@ struct SettingsView: View {
             contentView
                 .scaleEffect(scale)
                 .onAppear {
-                    withAnimation(Animation.easeInOut(duration: 0.15)) {
+                    withAnimation(Animation.easeIn(duration: 0.15)) {
                         scale = 1.0
                     }
                 }
         }
+        .clipShape(RoundedRectangle(cornerRadius: 5.0))
+        .shadow(color: Color.black.opacity(0.15), radius: 5, x: 2, y: 0)
         .frame(width: SettingsConst.maxWidth)
     }
     
@@ -74,14 +76,14 @@ struct SettingsView: View {
                 Text("Settings").padding(.leading, 10.0)
                 Spacer()
          
-                generateButton(iconName: "minus") {
-                    print("--minus--")
+                generateButton(iconName: "minimize") {
+                    print("--minimize--")
                 }
-                generateButton(iconName: "square") {
-                    print("--square---")
+                generateButton(iconName: "maximize") {
+                    print("--maximize---")
                 }
-                generateButton(iconName: "xmark") {
-                    print("--xmark---")
+                generateButton(iconName: "close") {
+                    print("--close---")
                     if desktopObject.shortcutType == .settings {
                         desktopObject.shortcutType = nil
                     }
@@ -97,7 +99,10 @@ struct SettingsView: View {
             Button {
                 tapClosure()
             } label: {
-                Image(systemName: iconName).resizable().frame(width: 14, height: 14)
+                Image(iconName).resizable()
+                    .renderingMode(.template)
+                    .foregroundColor(Color.darkSubTitle)
+                    .frame(width: 14, height: 14)
             }.buttonStyle(PlainButtonStyle())
             .padding(3.0)
         }
