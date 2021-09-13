@@ -30,12 +30,13 @@ struct Windows11App: App {
         }
     }
 
-    var contentView: AnyView {
+    @ViewBuilder
+    var contentView: some View {
         switch windowObject.status {
-        case .launch: return AnyView(LaunchScreen())
-        case .lockScreen: return AnyView(LockScreen())
-        case .login: return AnyView(LoginScreen())
-        case .desktop: return AnyView(DesktopScreen())
+        case .launch: LaunchScreen()
+        case .lockScreen: LockScreen()
+        case .login: LoginScreen()
+        case .desktop: DesktopScreen()
         }
     }
 }
