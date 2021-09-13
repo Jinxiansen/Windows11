@@ -80,7 +80,7 @@ If you have a strong interest in `SwiftUI`, you can join the SwiftUI QQ Group: *
 
 ## Statement
 
-This app is only provided for learning, demonstration and communication of SwiftUI, and does not contain any commercial purpose.\nIf you have any questions, you can contact me by email.
+This app is only provided for learning, demonstration and communication of SwiftUI, and does not contain any commercial purpose. If you have any questions, you can contact me by email.
 
 Email: hi@jinxiansen.com
 

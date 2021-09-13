@@ -9,7 +9,12 @@ import SwiftUI
 
 struct BackgroundView: View {
     var body: some View {
-        Image("background").resizable().aspectRatio(contentMode: .fill)
+        GeometryReader{ proxy in
+            Image("background")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: proxy.size.width, height: proxy.size.height)
+        }
     }
 }
 

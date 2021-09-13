@@ -21,13 +21,8 @@ struct DesktopScreen: View {
                 }.contextMenu {
                     RightClickView()
                 }
-            VStack {
-                HStack {
-                    LeadingShortcutView()
-                    Spacer()
-                }
-                Spacer()
-            }
+            
+            LeadingShortcutView()
             
             AboutWindowsView()
             renderShortcutViewIfNeed()
