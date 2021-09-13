@@ -45,21 +45,23 @@ struct DesktopScreen: View {
         }
     }
     
-    func renderStatusViewIfNeed() -> AnyView {
+    @ViewBuilder
+    func renderStatusViewIfNeed() -> some View {
         switch desktopObject.statusType {
-        case .notification: return NotificationsView().toAny()
-        case .time: return CalendarView(calendar: Calendar(identifier: .republicOfChina)).toAny()
+        case .notification: NotificationsView()
+        case .time: CalendarView(calendar: Calendar(identifier: .republicOfChina))
         default:
-            return EmptyView().toAny()
+            EmptyView()
         }
     }
     
-    func renderShortcutViewIfNeed() -> AnyView {
+    @ViewBuilder
+    func renderShortcutViewIfNeed() -> some View {
         switch desktopObject.shortcutType {
-        case .launchpad: return LaunchpadView().toAny()
-        case .settings: return SettingsView().toAny()
+        case .launchpad: LaunchpadView()
+        case .settings: SettingsView()
         default:
-            return EmptyView().toAny()
+            EmptyView()
         }
     }
 }

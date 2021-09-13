@@ -7,34 +7,18 @@
 
 import SwiftUI
 
-extension View {
-    func toAny() -> AnyView {
-        AnyView(self)
-    }
-}
-
 public extension View {
-    @inlinable
+    @inlinable @ViewBuilder
     func isHidden(_ isHidden: Bool) -> some View {
-        Group {
-            if isHidden {
-                EmptyView()
-                // hidden()
-            } else {
-                self
-            }
+        if !isHidden {
+            self
         }
     }
     
-    @inlinable
+    @inlinable @ViewBuilder
     func isShow(_ isShow: Bool) -> some View {
-        Group {
-            if isShow {
-                self
-            } else {
-                EmptyView()
-                // hidden() // will be placeholder position.
-            }
+        if isShow {
+            self
         }
     }
 }
