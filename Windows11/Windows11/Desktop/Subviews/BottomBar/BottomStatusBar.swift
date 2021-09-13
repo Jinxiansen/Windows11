@@ -57,10 +57,18 @@ struct BottomStatusBar: View {
                     toggle(type: .notification)
                 }.isShow(isDesktop)
                 
-                Divider().padding(.horizontal, 5.0)
+                Divider().padding(.leading, 5.0)
+                
+                Rectangle()
+                    .fill(Color.clear)
+                    .frame(width: 10)
+                    .onHoverBackground()
+                    .onTapGesture {
+                        desktopObject.resetAllStates()
+                    }
             }
             
-        }.padding(.trailing, 10.0)
+        }
     }
     
     func toggle(type: StatusBarMenuType) {
