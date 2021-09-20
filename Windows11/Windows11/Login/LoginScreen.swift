@@ -77,10 +77,8 @@ struct LoginScreen: View {
             .focusable()
             Spacer()
             Button {
-                print("Arrow")
-                withAnimation(.easeInOut(duration: 2)) {
-                    windowObject.status = .desktop
-                }
+                print("Login.click")
+                windowObject.status = .desktop
             } label: {
                 Text("􀰑").bold().font(.largeTitle).foregroundColor(.white.opacity(0.75))
             }.buttonStyle(PlainButtonStyle())
