@@ -55,6 +55,7 @@ struct DesktopScreen: View {
         switch desktopObject.shortcutType {
         case .launchpad: LaunchpadView()
         case .settings: SettingsView()
+        case .terminal: TerminalView()
         default:
             EmptyView()
         }

@@ -61,7 +61,7 @@ extension View {
     }
 }
 
-struct SupportDragDrop: ViewModifier {
+struct SupportDragModifier: ViewModifier {
     @GestureState private var dragOffset = CGSize.zero
     @State private var position = CGSize.zero
     
@@ -82,7 +82,7 @@ struct SupportDragDrop: ViewModifier {
 }
 
 extension View {
-    func supportDragDrop() -> some View {
-        modifier(SupportDragDrop())
+    func supportDrag() -> some View {
+        modifier(SupportDragModifier())
     }
 }

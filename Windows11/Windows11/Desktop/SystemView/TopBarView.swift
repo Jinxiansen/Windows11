@@ -15,7 +15,6 @@ struct TopBarView: View {
             HStack {
                 Button {
                     print("Back.")
-                    // desktopObject.shortcutType = .launchpad
                     desktopObject.resetAllStates()
                 } label: {
                     Image(systemName: "arrow.backward")
@@ -29,37 +28,21 @@ struct TopBarView: View {
                 
                 Text("Settings").padding(.leading, 10.0)
                 Spacer()
-                
-                generateButton(iconName: "minimize") {
-                    print("--minimize--")
-                    desktopObject.shortcutType = nil
-                }
-                generateButton(iconName: "maximize") {
-                    print("--maximize---")
-                }
-                generateButton(iconName: "close") {
-                    print("--close---")
-                    desktopObject.shortcutType = nil
+                WindowStatusBar(tintColor: Color.lightTitle) {
+                    self.statusBarClick(type: $0)
                 }
                 
             }.padding(.init(top: 10.0, leading: 10.0, bottom: 5.0, trailing: 10.0))
         }
     }
     
-    private func generateButton(iconName: String,
-                                tapClosure: @escaping (() -> Void)) -> some View {
-        HStack {
-            Button {
-                tapClosure()
-            } label: {
-                Image(iconName).resizable()
-                    .renderingMode(.template)
-                    .foregroundColor(Color.darkSubTitle)
-                    .frame(width: 14, height: 14)
-            }.buttonStyle(PlainButtonStyle())
-            .padding(3.0)
+    func statusBarClick(type: WindowStatusType) {
+        switch type {
+        case .maximize:
+            break
+        default:
+            desktopObject.shortcutType = nil
         }
-        .onHoverBackground()
     }
 }
 

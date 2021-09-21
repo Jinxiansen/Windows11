@@ -34,6 +34,7 @@
 <img src="Resources/Images/system.png"/>
 <img src="Resources/Images/calendar.png"/>
 <img src="Resources/Images/rightClick.png"/>
+<img src="Resources/Images/terminal.png"/>
 
 
 # 功能:

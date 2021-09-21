@@ -43,7 +43,7 @@ struct AboutWindowsView: View {
         .background(Color.lightTitle)
         .clipShape(RoundedRectangle(cornerRadius: 3.0))
         .shadow(color: .black.opacity(0.55), radius: 3, x: 0, y: 2)
-        .supportDragDrop()
+        .supportDrag()
     }
     
     private var descriptionView: some View {

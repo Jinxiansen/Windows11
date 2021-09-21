@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		412FA76126F897220060F774 /* WindowStatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412FA76026F897220060F774 /* WindowStatusBar.swift */; };
 		4132144426DE618C0078BE04 /* Windows11App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132144326DE618C0078BE04 /* Windows11App.swift */; };
 		4132144826DE618D0078BE04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4132144726DE618D0078BE04 /* Assets.xcassets */; };
 		4132144B26DE618D0078BE04 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4132144A26DE618D0078BE04 /* Preview Assets.xcassets */; };
@@ -52,6 +53,7 @@
 		413A035326EDDE94009E8406 /* SystemListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A035226EDDE94009E8406 /* SystemListView.swift */; };
 		413A035526EDDF2C009E8406 /* SystemDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A035426EDDF2C009E8406 /* SystemDetailView.swift */; };
 		413A035726EDE070009E8406 /* NotificationMenuType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A035626EDE070009E8406 /* NotificationMenuType.swift */; };
+		4152F29926F86DF40020E7C7 /* TerminalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4152F29826F86DF40020E7C7 /* TerminalView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		412FA76026F897220060F774 /* WindowStatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowStatusBar.swift; sourceTree = "<group>"; };
 		4132144026DE618C0078BE04 /* Windows11.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Windows11.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4132144326DE618C0078BE04 /* Windows11App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Windows11App.swift; sourceTree = "<group>"; };
 		4132144726DE618D0078BE04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -124,6 +127,7 @@
 		413A035226EDDE94009E8406 /* SystemListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemListView.swift; sourceTree = "<group>"; };
 		413A035426EDDF2C009E8406 /* SystemDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemDetailView.swift; sourceTree = "<group>"; };
 		413A035626EDE070009E8406 /* NotificationMenuType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationMenuType.swift; sourceTree = "<group>"; };
+		4152F29826F86DF40020E7C7 /* TerminalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerminalView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -266,6 +270,7 @@
 			isa = PBXGroup;
 			children = (
 				4132147B26E10AE70078BE04 /* DesktopScreen.swift */,
+				4152F29826F86DF40020E7C7 /* TerminalView.swift */,
 				413A035926EDE0B2009E8406 /* SystemView */,
 				413A035826EDE093009E8406 /* NotificationsView */,
 				413A034526EC6AD4009E8406 /* Launchpad */,
@@ -280,6 +285,7 @@
 				413A031F26E492E4009E8406 /* RightClickView.swift */,
 				4132148126E28FEE0078BE04 /* AboutWindowsView.swift */,
 				4132147926E0FE320078BE04 /* LeadingShortcutView.swift */,
+				412FA76026F897220060F774 /* WindowStatusBar.swift */,
 				413A033826E7A0AB009E8406 /* BottomBar */,
 			);
 			path = Subviews;
@@ -489,11 +495,13 @@
 				413A035526EDDF2C009E8406 /* SystemDetailView.swift in Sources */,
 				413A032C26E502B6009E8406 /* DesktopObject.swift in Sources */,
 				413A033326E79EBD009E8406 /* PinnedView.swift in Sources */,
+				412FA76126F897220060F774 /* WindowStatusBar.swift in Sources */,
 				413A034226EB96C4009E8406 /* RecommendedType.swift in Sources */,
 				4132147426DE69050078BE04 /* BottomStatusBar.swift in Sources */,
 				413A032426E4F751009E8406 /* WindowStatusObject.swift in Sources */,
 				413A034726EC6AF0009E8406 /* SettingsView.swift in Sources */,
 				4132147226DE68F40078BE04 /* BottomToolBar.swift in Sources */,
+				4152F29926F86DF40020E7C7 /* TerminalView.swift in Sources */,
 				413A032026E492E4009E8406 /* RightClickView.swift in Sources */,
 				413A033126E79E8B009E8406 /* SearchBar.swift in Sources */,
 				413A033C26E9011A009E8406 /* PinnedCell.swift in Sources */,

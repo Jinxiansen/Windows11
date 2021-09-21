@@ -13,7 +13,8 @@ enum SettingsConst {
 
 struct SettingsView: View {
     @State private var scale: CGFloat = 0.85
-
+    @EnvironmentObject private var desktopObject: DesktopObject
+    
     var body: some View {
         HStack(alignment: .bottom, spacing: 0) {
             contentView
@@ -27,7 +28,7 @@ struct SettingsView: View {
         .clipShape(RoundedRectangle(cornerRadius: 5.0))
         .shadow(color: Color.black.opacity(0.15), radius: 5, x: 2, y: 0)
         .frame(width: SettingsConst.maxWidth)
-        .supportDragDrop()
+        .supportDrag()
     }
 
     private var contentView: some View {
