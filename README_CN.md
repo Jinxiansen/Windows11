@@ -17,27 +17,12 @@
 
 [English Version📔](README.md)
 
-# 预览
+# 环境 
 
-### Gif: 
+- macOS 11.0
+- SwiftUI 2.0
 
-<img src="Resources/Gif/preview.gif"/>
-
-### 截图:
-
-<img src="Resources/Images/launch.png"/>
-<img src="Resources/Images/lock.png"/>
-<img src="Resources/Images/login.png"/>
-<img src="Resources/Images/desktop.png"/>
-<img src="Resources/Images/launchpad.png"/>
-<img src="Resources/Images/darkMode.png"/>
-<img src="Resources/Images/system.png"/>
-<img src="Resources/Images/calendar.png"/>
-<img src="Resources/Images/rightClick.png"/>
-<img src="Resources/Images/terminal.png"/>
-
-
-# 功能:
+# 功能
 
 - [x] 启动、锁屏、登录和桌面界面。
 - [x] 桌面应用和右键功能。
@@ -50,10 +35,24 @@
 - [ ] 其他 App ...
 - [ ] ...
 
-# 环境 
+# 预览
 
-- SwiftUI 2.0
-- macOS 11.0
+### Gif 预览: 
+
+<img src="Resources/Gif/preview.gif"/>
+
+### 页面预览:
+
+<img src="Resources/Images/launch.png"/>
+<img src="Resources/Images/lock.png"/>
+<img src="Resources/Images/login.png"/>
+<img src="Resources/Images/desktop.png"/>
+<img src="Resources/Images/launchpad.png"/>
+<img src="Resources/Images/darkMode.png"/>
+<img src="Resources/Images/system.png"/>
+<img src="Resources/Images/calendar.png"/>
+<img src="Resources/Images/rightClick.png"/>
+<img src="Resources/Images/terminal.png"/>
 
 
 # FAQ

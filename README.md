@@ -25,26 +25,7 @@ If you have a strong interest in `SwiftUI`, you can join the SwiftUI QQ Group: *
 - macOS 11.0
 - SwiftUI 2.0
 
-# Screenshot
-
-### Gif Preview: 
-
-<img src="Resources/Gif/preview.gif"/>
-
-### ScreenShot:
-
-<img src="Resources/Images/launch.png"/>
-<img src="Resources/Images/lock.png"/>
-<img src="Resources/Images/login.png"/>
-<img src="Resources/Images/desktop.png"/>
-<img src="Resources/Images/launchpad.png"/>
-<img src="Resources/Images/darkMode.png"/>
-<img src="Resources/Images/system.png"/>
-<img src="Resources/Images/calendar.png"/>
-<img src="Resources/Images/rightClick.png"/>
-<img src="Resources/Images/terminal.png"/>
-
-# Features:
+# Features
 
 - [x] Launch, Lock, Login and Desktop screen.
 - [x] Desktop apps and Right Click action
@@ -56,6 +37,26 @@ If you have a strong interest in `SwiftUI`, you can join the SwiftUI QQ Group: *
 - [ ] File Explorer
 - [ ] Other apps
 - [ ] ...
+
+
+# Screenshot
+
+### Gif Preview: 
+
+<img src="Resources/Gif/preview.gif"/>
+
+### View Preview:
+
+<img src="Resources/Images/launch.png"/>
+<img src="Resources/Images/lock.png"/>
+<img src="Resources/Images/login.png"/>
+<img src="Resources/Images/desktop.png"/>
+<img src="Resources/Images/launchpad.png"/>
+<img src="Resources/Images/darkMode.png"/>
+<img src="Resources/Images/system.png"/>
+<img src="Resources/Images/calendar.png"/>
+<img src="Resources/Images/rightClick.png"/>
+<img src="Resources/Images/terminal.png"/>
 
 
 # FAQ
