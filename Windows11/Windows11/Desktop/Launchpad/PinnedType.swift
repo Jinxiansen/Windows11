@@ -24,7 +24,6 @@ enum PinnedType: String, CaseIterable {
     case camera
     case cortana
     case oneNote
-    case github
     case groove
     case oneDrive
     case mail
