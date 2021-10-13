@@ -74,9 +74,6 @@ If you have a strong interest in `SwiftUI`, you can join the SwiftUI QQ Group: *
 	- As part of the API of SwiftUI is not customizable, it is not completely consistent with Windows when implementing certain functions. I can only try some alternatives for the time being. If you have better suggestions, I look forward to letting me know!
 	- Due to my limited technical level and insufficient understanding of SwiftUI, I may write some code that is not so concise. I hope you can correct me or submit a [PR](https://github.com/Jinxiansen/Windows11/pulls) to modify it! thank you very much!
 
-- The source of inspiration for this project?
-	- Inspired by the [Windows 11 in React](https://github.com/blueedgetechno/windows11), provided me with some inspiration and useful icon materials, thanks!
-
 > English is not my native language; please excuse typing errors.
 
 
@@ -86,6 +83,6 @@ This app is only provided for learning, demonstration and communication of Swift
 
 Email: hi@jinxiansen.com
 
-## License	
+## License
 
 Windows11 is released under the [MIT license](LICENSE). See LICENSE for details.
